@@ -1,0 +1,74 @@
+<!--
+  Generated template for the Page4Sub01Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    	<ion-toolbar color="primary">
+		<!-- 이상하게 navPop 이 안먹는다 -->
+		<ion-buttons left>
+			<!--<button ion-button clear large (click)="goBack()">-->
+			<button ion-button clear large navPop>
+                <ion-icon name = "arrow-back"></ion-icon>
+            </button>
+		</ion-buttons>
+
+		<ion-title>
+            <h1>{{prpTechEvolu.parent}}</h1>
+			<span class="subscription">{{ prpTechEvolu.index+"."+prpTechEvolu.ko_title }}</span>
+		</ion-title>
+	</ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="row">
+        <ul class="problem" *ngFor="let item of prpTechEvolu.content.content[0].content_li" >
+            <li>
+                <span [innerHTML]=item.txt></span>
+            </li>
+        </ul>
+    </div>
+    <!--//.row-->
+    <div class="row" *ngIf="prpTechEvolu.content.content[0].content_li[0].txt_detail.length > 0" >
+        <ul class="solution" *ngFor="let item of prpTechEvolu.content.content[0].content_li">
+            <li>
+                <ul>
+                    <li *ngFor="let item2 of item.txt_detail" >
+                         <span [innerHTML]=item2></span>
+                    </li>                   
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--//.row-->
+    <div class="row">
+        <ul class="footnote" *ngFor="let item of prpTechEvolu.content.content[0].content_li">
+            <li *ngFor="let item2 of item.txt_refer">
+                <span [innerHTML]=item2.refer_title></span> : <span [innerHTML]=item2.refer_detail></span>
+                
+            </li>
+        </ul>
+    </div>
+    <!--//.row-->
+
+    <div class="exercise">
+        <h3>기술시스템</h3>
+        <div class="row">
+            <p class="img-wrapper">
+               
+                <img src='{{"assets/img/evolu/"+prpTechEvolu.content.content[0].content_picture_img}}' class="slide-image">
+                <!--
+                <lazy-img inputSrc='{{"assets/img/evolu/"+prpTechEvolu.content.content[0].content_picture_img}}' class="slide-image"></lazy-img>
+                -->
+                <!--
+                <img src='{{"assets/img/evolu/"+prpTechEvolu.content.content[0].content_picture_img}}'>
+                -->
+            </p>
+        </div>
+        <!--//.row-->
+    </div>
+    <!--//.exercise-->
+</ion-content>

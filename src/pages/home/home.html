@@ -1,14 +1,31 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="tutorial-page" >
+    
+    <ion-slides pager *ngIf="slides.length > 0">
+      
+        <ion-slide class="ads"  *ngFor="let item of slides" [style.backgroundImage]="'url(' + item.adsImg + ')'">
+        
+        <!--
+        <ion-slide class="ads" *ngFor="let item of slides" style="background-image: url('{{item.adsImg}}')" >
+            -->
+            <ion-toolbar>
+               
+                <ion-buttons end>
+                    <button ion-button color="primary" (click)="goToIndex()" class="btn_skip">Skip</button>
+                </ion-buttons>
+            </ion-toolbar>
+            <!--<img src="assets/img/home/solvingmill_bg.jpg" class="slide-image" />-->
+            <h2 class="slide-title">{{item.adsCompany}}</h2>
+            <p class="slide-text">
+                <span [innerHTML]="item.adsDesc"></span>
+            </p>
+            <!--
+            <button ion-button large clear onclick="window.open('http://naver.com');">
+            -->
+             <button ion-button large clear (click)=goToURL(item.adsUrl);>
+                {{item.adsUrl}}
+            </button>
+        </ion-slide>
+       
+    </ion-slides>
 </ion-content>

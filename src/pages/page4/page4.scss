@@ -1,0 +1,54 @@
+page-page4 {
+    @mixin text-ellipsis { width: 80%; overflow: hidden; text-overflow: ellipsis; white-space: no-wrap; }   
+    
+    .list-header { border-top: 0; }
+    .section, .section-active {
+        position: relative;
+        margin: 0 !important; padding: 0.7rem 0.5rem 0.7rem 1rem !important;
+        height: 4rem;
+        font-size: 1.5rem;
+        text-align: left;
+        > .item-inner { 
+            padding-right: 1rem !important; min-height: 2.6rem !important; line-height: 2.6rem;
+            > .item-icon { margin: 0; padding-top: 0.2rem; font-size: 2.5rem; color: #828282; }
+        }
+    }
+    .section-active .item-icon:before { color: #5aa0f5; }
+    .numbering { 
+        position: absolute; left: 0; top: 0; bottom: 0;
+        display: block; padding: 0.7rem 0 0.7rem 1rem; width: 7rem;
+        text-align: left; font-size: 1.6rem; color: #9fa5b0;
+    }
+    .section-active .numbering { color: #3c5073 }
+    .section-active .title-ko { color: #1978e1; }
+
+
+    .first-list { 
+        background: #fff;
+        height: 100%;
+        margin-bottom: 1rem;
+        padding: 1rem 2rem 0 !important;
+        .list-header { border-bottom-color: #dcdcdc !important; }
+        .label { 
+            @include text-ellipsis;
+            margin: 0 !important; padding: 0 !important; vertical-align: top;
+        }
+    }
+    .second-list {
+        margin-bottom: 1rem;
+        padding: 0 0 0 1rem;
+        .list-header { 
+            padding: 0 0.7rem !important; min-height: 2rem;
+            .child-item.item-block {
+                padding: 0 0 0 1rem !important;
+                height: 1rem;
+                font-size: 1.5rem; color: #3c3c3c;
+                > .item-inner { 
+                    padding: 0;
+                    > .item-icon { padding-top: 0.2rem; font-size: 2.5rem; }
+                }
+                label { @include text-ellipsis; }
+            }    
+        }
+    }
+}

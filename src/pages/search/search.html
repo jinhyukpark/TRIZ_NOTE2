@@ -1,0 +1,39 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons left>
+            <button ion-button clear large navPop>
+                <ion-icon name = "arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>search</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-item-group>
+        <ion-item-divider color = "light">40가지 발명 원리</ion-item-divider>
+        <button ion-item *ngFor="let item of arrayObj_01; let i = index;" (click)="go40Page(item.index-1)">
+            {{ item.index+". "+item.title}}
+        </button>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color = "light">분리의 원리</ion-item-divider>
+        <button ion-item *ngFor="let item of arrayObj_02; let i = index;" (click)="goPhyPage(item.index-1)">
+            {{ item.index+". "+item.title}}
+        </button>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color = "light">시스템 진화</ion-item-divider>
+        <button ion-item *ngFor="let item of arrayObj_03; let i = index;" (click)="goEvoluPage(item.index-1)">
+            {{ item.index+". "+item.title}}
+        </button>
+    </ion-item-group>
+    
+</ion-content>

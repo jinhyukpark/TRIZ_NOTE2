@@ -1,0 +1,159 @@
+<!--
+  Generated template for the Page3Sub01Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <!--
+	<ion-navbar color="primary">
+		<ion-buttons start>
+			<button ion-button icon-only (click)="closeModal()">
+             close
+          </button>
+		</ion-buttons>
+
+		<ion-title >{{ objData.ko_title}}</ion-title>
+
+	</ion-navbar>
+    -->
+    <ion-navbar color="primary">
+        <ion-title>
+            <h1>{{strClass.class}}</h1>
+			<span class="subscription">{{ objData.parent}}</span>
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="closeModal()"><ion-icon name="close" md="md-close"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <!--div [innerHTML]=newItem></div -->
+    <!-- 
+   {{objData.content_ex[0].txt}}
+   <Br>
+   {{objData.content_ex[0].txt_detail}}
+    <img src= '{{ "assets/img/76/"+objData.content_img}}'/>
+    -->
+
+    <h2 class="content-title">{{ objData.ko_title}}</h2>
+    <div class="row">
+        <ul class="problem" *ngFor="let item of objData.content_li">
+            <li><span [innerHTML]=item.txt></span></li>
+        </ul>
+    </div>
+    <!--//.row-->
+    <div class="row">
+        <ul class="solution" *ngFor="let item of objData.content_li">
+            <li *ngFor="let item2 of item.txt_detail">
+                <span [innerHTML]=item2></span>
+            </li>
+        </ul>
+    </div>
+    <!--//.row-->
+    <div class="row">
+        <ul class="footnote" *ngFor="let item of objData.content_li">
+            <li *ngFor="let item2 of item.txt_refer">
+                <span [innerHTML]=item2></span>
+            </li>
+        </ul>
+    </div>
+    <!--//.row-->
+    <div class="row">
+        <!--table class="style1">
+            <colgroup>
+                <col style="width: 45%">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">물질-장 모델</th>
+                    <th scope="col">표준해 1-1-1</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="../assets/images/page3/class01_01.jpg" alt="" style="width: 106px;"></td>
+                    <td><img src="../assets/images/page3/class01_02.jpg" alt="" style="width: 134px;"></td>
+                </tr>
+            </tbody>
+        </table--> 
+        <p class="img-wrapper" *ngIf="objData.content_li_img" >
+            <img src='{{"assets/img/76/"+objData.content_li_img}}'/>
+        </p>
+    </div>
+    <!--//.row-->
+    <div class="exercise">
+        <div  *ngIf="objData.ko_title.indexOf('5-1-1') == -1; then trueBlock else falseBlock" ></div>
+        <ng-template #trueBlock>
+            <h3>예제</h3>
+            <div class="row">
+                <p class="problem" *ngFor="let item of objData.content_ex">
+                    <span [innerHTML]=item.txt></span>
+                </p>
+            </div>
+            <!--//.row-->
+            <div class="row">
+                <ul class="solution" *ngFor="let item of objData.content_ex">
+                    <li *ngFor="let item2 of item.txt_detail">
+                        <span [innerHTML]=item2></span>
+                    </li>
+                </ul>
+            </div>
+            <!--//.row-->
+            <div class="row">
+                <ul class="footnote" *ngFor="let item of objData.content_ex">
+                    <li *ngFor="let item2 of item.txt_refer">
+                        <span [innerHTML]=item2></span>
+                    </li>
+                </ul>
+            </div>
+            <!--//.row-->
+            <div class="row" *ngIf="objData.content_ex_img != ''" >
+                <p>
+                    <img src='{{ "assets/img/76/"+objData.content_ex_img}}' />
+                </p>
+            </div>
+            
+        </ng-template>
+
+        <ng-template #falseBlock >
+            <div *ngFor="let item of objData.content_ex[0].txt;let i = index;">
+                 <h3>예제 &nbsp;({{objData.content_ex[0].txtNum[i]}})</h3>
+                <div class="row">
+                    <p class="problem">
+                        <span [innerHTML]=item></span>
+                    </p>
+                </div>
+                <!--//.row-->
+                <div class="row">
+                    <ul class="solution" *ngFor="let item of objData.content_ex">
+                        <li *ngFor="let item2 of item.txt_detail">
+                            <span [innerHTML]=item2></span>
+                        </li>
+                    </ul>
+                </div>
+                <!--//.row-->
+                <div class="row">
+                    <ul class="footnote" *ngFor="let item of objData.content_ex">
+                        <li *ngIf="item.txt_refer[i]" >
+                            <span [innerHTML]=item.txt_refer[i]></span>
+                        </li>
+                    </ul>
+                </div>
+                <!--//.row-->
+                <div class="row" *ngIf="objData.content_ex_img[i]" >
+                    <p>
+                        <img src='{{ "assets/img/76/"+objData.content_ex_img[i]}}' />
+                    </p>
+                </div>
+            </div>
+        </ng-template>
+        <!--//.row-->
+    </div>
+    <!--//.exercise-->
+    <!--div [innerHTML]=newItem></div -->
+    <Br>
+</ion-content>

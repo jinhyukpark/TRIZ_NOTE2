@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title>Triz for Creative</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="tutorial-page">
+    <!--div class="spin">
+        <ion-spinner name="circles" text-center *ngIf="slides.length == 0">
+        </ion-spinner>
+    </div-->
+  
+    <ion-slides pager *ngIf="slides.length > 0">
+        <ion-slide *ngFor="let item of slides">
+            <ion-toolbar>
+                <ion-buttons end>
+                    <button ion-button color="primary" (click)="goToIndex()">Ads Skip</button>
+                </ion-buttons>
+            </ion-toolbar>
+            <!--img [src]="slides[0]?.adsImg" class="slide-image" /-->
+            <lazy-img inputSrc="{{item.adsImg}}" class="slide-image"></lazy-img>
+
+            <h2 class="slide-title">{{ slides[0]?.adsTitle}}</h2>
+            <p></p>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

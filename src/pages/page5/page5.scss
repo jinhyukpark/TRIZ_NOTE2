@@ -1,0 +1,29 @@
+page-page5 {
+    .fixed-content,
+    .scroll-content { margin-top: 56px !important; }//toolbar 높이에 맞추어서 변수처리 해야하는데...
+    ion-list { 
+        padding: 1.5rem 0;
+        .item:first-child { border-top: 0 !important; }
+
+        .item { 
+            padding: 0 5%;
+        }
+        ion-label {
+            position: relative;
+            margin: 0 !important;
+            padding: 0.7em 3em 0.3em 4.5em;
+            padding-left: 4.5em;
+            font-size: 0.9em;
+            .numbering { 
+                position: absolute; left: 0; top: 0; bottom: 0;
+                display: inline-block; width: 1.5em;
+                line-height: 5.0rem; font-weight: 200;
+                text-align: right; font-size: 30px; color: #9fa5b0;
+            }
+            .title-ko { display: block; line-height: 1em; }
+            .title-eng { line-height: 1em; font-size: 0.73em; font-weight: 300; color: #a4a4a4; }
+        }
+    }
+
+    
+}

@@ -1,0 +1,65 @@
+<!--
+  Generated template for the Page5Sub01Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+   <ion-toolbar color="primary">
+        <!-- 이상하게 navPop 이 안먹는다 -->
+        <ion-buttons left>
+            <!--<button ion-button clear large (click)="goBack()">-->
+            <button ion-button clear large navPop>
+                <ion-icon name = "arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+
+        <ion-title>
+            <h1>{{prp40Obj.index+". "+prp40Obj.shortKo }}</h1>
+            <p class="subscription">{{ prp40Obj.shortEng }}</p>
+        </ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+
+
+<ion-content class="page5_sub01">
+    <ion-list no-lines>
+        <ion-list-header class="section-title">요약</ion-list-header>
+        <ion-item>
+            <ion-grid *ngFor = "let arrItem of prp40Obj.content  ; let i = index " >
+                <ion-row>
+                    <ion-col col-auto class="numbering-wrapper">
+                        <span class="numbering">{{i+1}}</span>
+                    </ion-col>
+                    <ion-col text-wrap>
+                        <p class="summary-title">{{ arrItem.title }}</p>
+                        <p *ngFor="let arritem2 of arrItem.subTitle" class="summary-text">
+                            {{arritem2}}
+                        </p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+        
+        <ion-list-header no-lines class="section-title">생활 속 사례</ion-list-header>
+        <ion-card>
+           
+            <div class="thumbnail">
+                 <img src= '{{ "assets/img/40/"+prp40Obj.expImg}}' class="slide-image" />
+                 <!--lazy-img inputSrc='{{ "assets/img/40/"+prp40Obj.expImg}}' class="slide-image"></lazy-img -->
+            </div>
+            <ion-card-content>
+                <ion-card-title>
+                    {{ prp40Obj.expTitle }}
+                </ion-card-title>
+                <p class="ion-card-text">
+                    {{ prp40Obj.expExp }}
+                </p>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+</ion-content>

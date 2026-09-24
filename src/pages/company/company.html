@@ -1,0 +1,71 @@
+<!--
+  Generated template for the CompanyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    
+    <ion-toolbar>
+        <ion-buttons left>
+            <!--
+                <button ion-button clear large navPop>
+            -->
+            <button ion-button clear large (click)=goBack()>
+                <ion-icon name = "arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>Company</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+   
+
+    <ion-list>
+        <ion-list-header>Partners</ion-list-header>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/company/thumb_solvingmill.jpg">
+            </ion-avatar>
+            <h2>솔빙밀(Solving-mill)</h2>
+            <p class="description">
+                <span>솔빙밀은 문제상황 분석부터 해결방안의 효율성 점검에 이르기까지 특수한 기술 문제 해결의 지원을 위해 설계된 소프트웨어를 만드는 회사입니다.</span>
+                <a href="#" (click)="goToURL('http://www.solving-mill.com')" >Solving-mill.com</a>
+            </p>
+            <!--<ion-note item-end>3:43 pm</ion-note>-->
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/company/thumb_bntree.jpg">
+            </ion-avatar>
+            <h2>비앤트리(Bntree)</h2>
+            <p class="description">
+                <span>교육, 컨퍼런스, 세미나 등 비즈니스 이벤트를 기획·운영하는 회사로, 휴먼 네트워킹과 지식 유통 서비스를 제공하고 있습니다.</span>
+                <a href="#" (click)="goToURL('http://www.bntree.com')">Bntree.com</a>
+            </p>
+            <!--<ion-note item-end>1:12 pm</ion-note>-->
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-list-header>Created by</ion-list-header>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/company/thumb_inventiondrill.jpg">
+            </ion-avatar>
+            <h2>박진혁(Software Developer)</h2>           
+            <p class="description">
+                <span>메인광고 및 컨설팅 문의 : </span>
+                devdevil0625@naver.com
+                <a href="#" (click)="goToURL('http://inventiondrill.com')">inventiondrill.com</a>
+            </p>
+            <!--<ion-note item-end>10:03 am</ion-note>-->
+        </ion-item>
+        
+
+    </ion-list>
+</ion-content>
+

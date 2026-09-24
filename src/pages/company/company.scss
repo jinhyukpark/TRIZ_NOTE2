@@ -1,0 +1,53 @@
+page-company {
+  .text-center { 
+    text-align: center;
+    img { display: inline-block; margin-bottom: 1.5rem; width: 80px; height: 80px; }
+  }
+  font-size : 1.3rem;
+  
+  ion-list {
+    & + ion-list { padding-top: 1rem; }
+    ion-label { white-space: normal !important; text-overflow: initial; overflow: auto; }
+    ion-item { align-items: flex-start !important }
+    > ion-item:last-child { 
+      border-bottom: 0 !important;
+    }
+    ion-list-header {
+      border: 0 !important;
+    }
+    h2 { margin: 0 0 0.7rem !important; }
+    .description {   
+      ul { padding-left: 0; }    
+      span, ul li { display: block; font-size: 1.3rem; line-height: 1.8rem; }
+      ul li:before { content: "-"; padding-right: 0.5rem; }
+      a {
+        display: inline-block;
+        margin: 0.7rem 0.5rem 0 0; padding: 0.5rem 1rem; 
+        border-radius: 0.4rem;
+        font-size: 1.2rem; font-weight: 500; color: #fff; text-decoration: none;
+        background: #32aaeb;
+        &:before { display: block; content: "" }
+      }
+      
+    }
+  }
+  .list-ios .item-block .item-inner,
+  .list-ios > .item-block:last-child .item-inner,
+  .list-ios > .item-wrapper:last-child .item-block .item-inner { border-bottom: 0.55px solid #dedede !important; }
+
+
+  ion-card {
+    margin-bottom: 2em;
+    margin:0px;
+    ion-card-content {
+      background-color: #F4F5F8;
+    }
+
+    ion-card img {
+      width: auto;
+      height: 44px;
+      display: block;
+      margin: 20px auto;
+    }
+  }
+}

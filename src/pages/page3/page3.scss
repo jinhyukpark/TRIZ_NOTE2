@@ -1,0 +1,100 @@
+page-page3 {
+
+       
+     
+    .section, .section-active {
+        position: relative;
+        margin: 0 !important; padding: 0.7rem 0.5rem 0.7rem 8.5rem !important;
+        height: 4rem;
+        font-size: 1.5rem;
+        text-align: left;
+        > .item-inner { 
+            padding-right: 1rem !important; min-height: 2.6rem !important; line-height: 2.6rem;
+            > .item-icon { margin: 0; padding-top: 0.2rem; font-size: 2.5rem; color: #828282; }
+        }
+    }
+    .section-active .item-icon:before { color: #5aa0f5; }
+    .numbering { 
+        position: absolute; left: 0; top: 0; bottom: 0;
+        display: block; padding: 0.7rem 0 0.7rem 1rem; width: 7rem;
+        text-align: left; font-size: 1.6rem; color: #9fa5b0;
+    }
+    .section-active .numbering { color: #3c5073 }
+    .section-active .title-ko { color: #1978e1; }
+
+
+    .first-list { 
+        background: #fff;
+        height: 100%;
+        margin-bottom: 1rem;
+        padding: 1rem 2rem 0 !important;
+        .list-header { border-bottom-color: #dcdcdc !important; }
+        .label { margin: 0 !important; padding: 0 !important; vertical-align: top; }
+    }
+    .second-list {
+        margin-bottom: 1rem;
+        padding: 0 0 0 1rem;
+        .list-header { 
+            padding: 0 0.7rem !important; min-height: 2rem;
+            .child-item.item-block {
+                padding: 0 0 0 1rem !important;
+                height: 1rem;
+                font-size: 1.5rem; color: #3c3c3c;
+                > .item-inner { 
+                    padding: 0;
+                    > .item-icon { padding-top: 0.2rem; font-size: 2.5rem; }
+                }
+            }    
+        }
+    }
+
+    .third-list {
+        margin-bottom: 1rem;
+        background-color: #f0f0f0;
+        .item-block { 
+            padding: 0 0 0 2.5rem;
+            font-size: 1.5rem; color: #3c3c3c;
+            > .item-inner { 
+                padding: 0;
+                .label { 
+                    padding: 0 0 0 0.7rem !important;
+                }
+                .label:before { content: "-"; padding-right: 10px; }
+                .item-icon { display: none; }
+            }
+            
+        }
+    }
+/*
+    .section {
+        background: #fff;
+        color: #000;
+        margin-bottom: 4px;
+    }
+    .section-active {
+        background: #4da6ff;
+        color: #fff;
+    }
+ 
+    .child {
+        background: #e8e7e6;
+        color: #000;
+        margin-bottom: 4px;
+    }
+    .child-item {
+        background: #f3f2f1;
+        padding: 10px;
+    }
+    .label {
+        margin: 0px;
+    }
+    .list {
+        margin-bottom: 4px;
+    }
+
+    .text_style {
+        font-size: 1.2em;
+        color: gray;
+    }
+    */
+}

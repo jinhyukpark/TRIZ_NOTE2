@@ -1,0 +1,59 @@
+<!--
+  Generated template for the Page5Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <!--  <ion-toolbar>
+          <ion-buttons left>
+              <button ion-button clear large navPop>
+                  <ion-icon name = "arrow-back"></ion-icon>
+              </button>
+          </ion-buttons>
+          <ion-title> 40가지 발명원리</ion-title>
+      </ion-toolbar>-->
+
+    <ion-toolbar color="primary">
+        <!-- 이상하게 navPop 이 안먹는다 -->
+        <ion-buttons left>
+            <!--<button ion-button clear large (click)="goBack()">-->
+            <button ion-button clear large navPop>
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+
+        <ion-title>40가지 발명원리</ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+    <div [ngSwitch]="platformType2">
+        <div *ngSwitchCase="'ios'">
+            <ion-list>
+                <button ion-item *ngFor="let item of data40list" (tap)="goSubPage(item.index-1)">
+                    <span class="numbering">{{ item.index }}</span>
+                    <span class="title-ko">{{ item.shortKo }}</span>
+                    <span class="title-eng">{{ item.shortEng }}</span>
+                </button>
+            </ion-list>
+        </div>
+        
+        <div *ngSwitchDefault>
+            <ion-list >
+                 <button ion-item   *ngFor="let item of data40list" (tap)="goSubPage(item.index-1)" >
+                    <!--
+                    {{ item.index+". "+item.shortKo+ "("+ item.shortEng +")" }}
+                    <ion-icon name='ios-arrow-forward' item-end ></ion-icon>
+                    -->
+                    <span class="numbering">{{ item.index }}</span>
+                    <span class="title-ko">{{ item.shortKo }}</span>
+                    <span class="title-eng">{{ item.shortEng }}</span>
+                </button>
+            </ion-list>
+        </div>
+    </div>
+
+</ion-content>

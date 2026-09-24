@@ -1,0 +1,97 @@
+
+    .toolbar { min-height: 56px; }/*모든 toolbar 높이 최소 56px*/
+page-page4-sub01 {
+    $color1 : #d7ebfa;
+    $text-color1 : #37a7f5;
+    $text-color2 : #3c3c3c;
+    $text-color3 : #505050;
+    $content-padding : 0 2.7rem;
+    @mixin solution-box { 
+        margin: 0.3rem 0 0 0 !important; padding: 0.7rem 0 0 0 !important; width: 100%;
+        > li {
+            position: relative;
+            padding: 1rem 1.6rem; min-height: 4rem;
+            border-radius: 2px;
+            color: #5c5e60;
+            background-color: $color1;
+            &:not(:first-child):before {
+                content: ""; position: absolute; left: calc(50% - 3px); top: -1.1rem;
+                display: block; width: 0; height: 0;
+                border-bottom: 6px solid none;
+                border-top: 6px solid #aad7f7;
+                border-right: 6px solid transparent;
+                border-left: 6px solid  transparent;
+            }
+            & + li { margin-top: 1.6rem; }
+            > ul > li:before { content: "-"; padding-right: 0.7rem; }
+        }
+    }
+    .word { color: $text-color1; }
+    .after-br:after { display: block; width: 100%; height: 0; }
+    ion-title {
+        padding: 1rem 4rem !important;
+        h1 {  margin-top:1.2em;  line-height: 1.2rem; font-size: 1.7rem; font-weight: 400; }
+        .subscription { margin: 0; font-size: 1.1rem; font-weight: 300; }
+    }
+    .content-title { padding: 0 2rem; font-size: 1.6rem; color: $text-color2; }
+    .row {
+        padding: $content-padding;
+        color: $text-color3;
+        ul { 
+            margin: 0; padding-left: 0;
+            list-style: none;
+            li { position: relative; }
+            &.problem {
+                padding: 1.5rem 0 0;
+                li { 
+                    position: relative; padding: 0 0 0 1.8rem;
+                    &:before {
+                        content: ""; position: absolute; left: 0; top: 0.8rem;
+                        display: block; width: 4px; height: 4px; border-radius: 2px; background: #5885e4;
+                    }
+                }
+            }
+            &.solution {
+                @include solution-box;
+            }
+            &.footnote {
+                margin: 1rem 0 0 0; padding: 0;
+                font-size: 1.3rem;
+                li {
+                    padding-left: 0.7rem;
+                    color: #505050;
+                    &:before { content:"※"; padding-right: 0.5rem; }
+                }
+            }
+        }
+        table.style1 {
+            margin: 2rem 0 0; width: 100%;
+            border-bottom: 1px solid #c8c8c8;
+            th, td { 
+                padding: 1rem 0;
+                font-weight: 500;
+                text-align: center; border-top: 1px solid #c8c8c8;
+                & + * { border-left: 1px solid #c8c8c8; }
+                img { height: auto !important; }
+            }
+        }
+        p { margin: 0; }
+    }
+
+    .exercise {
+        padding: 1rem 0 2rem;
+        h3 { 
+            margin-bottom: 1.5rem; padding: 0.4rem 2rem; min-height: 2.6rem;
+            font-size: 1.4rem; font-weight: 400;
+            background-color: #5fa5f0; color: #fff;
+        }
+        .row {
+            padding: $content-padding;
+            .img-wrapper { 
+                margin: 1rem 0 0; width: 100%;
+                background-color: #eaedf1;
+                img { width: 100%; height: auto !important; vertical-align: top; }
+            }
+        }
+    }
+}
