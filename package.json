@@ -3,10 +3,21 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@supabase/supabase-js": "2.116.0",
     "expo": "~57.0.24",
+    "expo-apple-authentication": "~57.0.2",
+    "expo-crypto": "~57.0.3",
+    "expo-iap": "5.6.3",
+    "expo-linking": "~57.0.10",
+    "expo-localization": "~57.0.2",
+    "expo-secure-store": "~57.0.4",
     "expo-status-bar": "~57.0.1",
+    "expo-web-browser": "~57.0.3",
     "react": "19.2.3",
-    "react-native": "0.86.3"
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-url-polyfill": "4.0.0"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
@@ -14,9 +25,19 @@
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "typecheck": "tsc --noEmit",
+    "check:release": "node scripts/check-release.mjs",
+    "assets": "node scripts/generate-assets.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "export:native": "expo export --platform all --output-dir dist-native"
   },
-  "private": true
+  "private": true,
+  "overrides": {
+    "xcode": {
+      "uuid": "11.1.1"
+    }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

@@ -1,0 +1,606 @@
+{
+  "/assets/legacy/phy/트리즈41.jpg": {
+    "src": "/assets/advanced/physical-41.png",
+    "title": "시간의 분리"
+  },
+  "/assets/legacy/phy/트리즈42.jpg": {
+    "src": "/assets/advanced/physical-42.png",
+    "title": "공간의 분리"
+  },
+  "/assets/legacy/phy/트리즈43.jpg": {
+    "src": "/assets/advanced/physical-43.png",
+    "title": "전체와 부분의 분리"
+  },
+  "/assets/legacy/phy/트리즈44.jpg": {
+    "src": "/assets/advanced/physical-44.png",
+    "title": "조건에 의한 분리"
+  },
+  "/assets/legacy/evolu/sub01.jpg": {
+    "src": "/assets/advanced/evolution-sub01.jpg",
+    "title": "시스템 완전성의 법칙"
+  },
+  "/assets/legacy/evolu/sub02.jpg": {
+    "src": "/assets/advanced/evolution-sub02.jpg",
+    "title": "에너지 전도성의 법칙"
+  },
+  "/assets/legacy/evolu/sub03.jpg": {
+    "src": "/assets/advanced/evolution-sub03.jpg",
+    "title": "리듬 조화의 법칙"
+  },
+  "/assets/legacy/evolu/sub04.jpg": {
+    "src": "/assets/advanced/evolution-sub04.jpg",
+    "title": "이상성 증가의 법칙"
+  },
+  "/assets/legacy/evolu/sub05.jpg": {
+    "src": "/assets/advanced/evolution-sub05.jpg",
+    "title": "시스템 불균등 발전 법칙"
+  },
+  "/assets/legacy/evolu/sub06.jpg": {
+    "src": "/assets/advanced/evolution-sub06.jpg",
+    "title": "상위 시스템으로의 이동 법칙"
+  },
+  "/assets/legacy/evolu/sub07.jpg": {
+    "src": "/assets/advanced/evolution-sub07.jpg",
+    "title": "마이크로 수준으로 이동 법칙"
+  },
+  "/assets/legacy/evolu/sub08.jpg": {
+    "src": "/assets/advanced/evolution-sub08.jpg",
+    "title": "물질-장 수준 증가의 법칙"
+  },
+  "/assets/legacy/evolu/sub09.jpg": {
+    "src": "/assets/advanced/evolution-sub09.jpg",
+    "title": "역동성 증가의 법칙"
+  },
+  "/assets/legacy/76/img_ex_1-1-1.png": {
+    "src": "/assets/advanced/standards-img_ex_1-1-1.jpg",
+    "title": "1-1-1. 물질-장의 완성 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_1-1-3.png": {
+    "src": "/assets/advanced/standards-img_li_1-1-3.jpg",
+    "title": "1-1-3. 외부에 새로운 물질을 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_1-1-3.png": {
+    "src": "/assets/advanced/standards-img_ex_1-1-3.jpg",
+    "title": "1-1-3. 외부에 새로운 물질을 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_1-1-4.png": {
+    "src": "/assets/advanced/standards-img_ex_1-1-4.jpg",
+    "title": "1-1-4. 외부환경요소를 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_1-1-5.png": {
+    "src": "/assets/advanced/standards-img_li_1-1-5.jpg",
+    "title": "1-1-5. 외부 환경 요소 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_1-1-5.png": {
+    "src": "/assets/advanced/standards-img_ex_1-1-5.jpg",
+    "title": "1-1-5. 외부 환경 요소 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_1-1-6.png": {
+    "src": "/assets/advanced/standards-img_li_1-1-6.jpg",
+    "title": "1-1-6. 작용의 최소모드 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_1-1-6.png": {
+    "src": "/assets/advanced/standards-img_ex_1-1-6.jpg",
+    "title": "1-1-6. 작용의 최소모드 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_1-1-7.png": {
+    "src": "/assets/advanced/standards-img_ex_1-1-7.jpg",
+    "title": "1-1-7. 작용의 최대모드 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_1-1-8-1.png": {
+    "src": "/assets/advanced/standards-img_ex_1-1-8-1.jpg",
+    "title": "1-1-8-1. 선택적 최소 모드 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_1-1-8-2.png": {
+    "src": "/assets/advanced/standards-img_li_1-1-8-2.jpg",
+    "title": "1-1-8-2. 선택적 최대 모드 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_1-1-8-2.png": {
+    "src": "/assets/advanced/standards-img_ex_1-1-8-2.jpg",
+    "title": "1-1-8-2. 선택적 최대 모드 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_1-2-1.png": {
+    "src": "/assets/advanced/standards-img_ex_1-2-1.jpg",
+    "title": "1-2-1. 제 3의 물질 도입을 통한 유해작용 차단 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_1-2-2.png": {
+    "src": "/assets/advanced/standards-img_li_1-2-2.jpg",
+    "title": "1-2-2. 기존 물질의 변형 물질 도입을 통한 유해 작용의 차단 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_1-2-2.png": {
+    "src": "/assets/advanced/standards-img_ex_1-2-2.jpg",
+    "title": "1-2-2. 기존 물질의 변형 물질 도입을 통한 유해 작용의 차단 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_1-2-3.png": {
+    "src": "/assets/advanced/standards-img_ex_1-2-3.jpg",
+    "title": "1-2-3. 유해 작용을 제거할 수 있는 다른 물질 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_1-2-4.png": {
+    "src": "/assets/advanced/standards-img_li_1-2-4.jpg",
+    "title": "1-2-4. 유해 작용 완화 및 유익 작용 유지를 위한 이중 장 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_1-2-4.png": {
+    "src": "/assets/advanced/standards-img_ex_1-2-4.jpg",
+    "title": "1-2-4. 유해 작용 완화 및 유익 작용 유지를 위한 이중 장 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_1-2-5.png": {
+    "src": "/assets/advanced/standards-img_ex_1-2-5.jpg",
+    "title": "1-2-5. 자성의 가역변화를 이용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-1-1.png": {
+    "src": "/assets/advanced/standards-img_li_2-1-1.jpg",
+    "title": "2-1-1. Chain 물질-장으로의 전이 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-1-1.png": {
+    "src": "/assets/advanced/standards-img_ex_2-1-1.jpg",
+    "title": "2-1-1. Chain 물질-장으로의 전이 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-1-2.png": {
+    "src": "/assets/advanced/standards-img_li_2-1-2.jpg",
+    "title": "2-1-2. 이중 물질-장의 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-1-2.png": {
+    "src": "/assets/advanced/standards-img_ex_2-1-2.jpg",
+    "title": "2-1-2. 이중 물질-장의 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-2-1.png": {
+    "src": "/assets/advanced/standards-img_li_2-2-1.jpg",
+    "title": "2-2-1. 제어성이 용이한 장 활용으로의 전이 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-2-1.png": {
+    "src": "/assets/advanced/standards-img_ex_2-2-1.jpg",
+    "title": "2-2-1. 제어성이 용이한 장 활용으로의 전이 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_2-2-2.png": {
+    "src": "/assets/advanced/standards-img_ex_2-2-2.jpg",
+    "title": "2-2-2. 도구의 세분화 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-2-3.png": {
+    "src": "/assets/advanced/standards-img_li_2-2-3.jpg",
+    "title": "2-2-3. 다공성 물질로의 전이 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-2-3.png": {
+    "src": "/assets/advanced/standards-img_ex_2-2-3.jpg",
+    "title": "2-2-3. 다공성 물질로의 전이 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-2-4.png": {
+    "src": "/assets/advanced/standards-img_li_2-2-4.jpg",
+    "title": "2-2-4. 역동성 증가 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-2-4.png": {
+    "src": "/assets/advanced/standards-img_ex_2-2-4.jpg",
+    "title": "2-2-4. 역동성 증가 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-2-5.png": {
+    "src": "/assets/advanced/standards-img_li_2-2-5.jpg",
+    "title": "2-2-5. 장의 구조화 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-2-5.png": {
+    "src": "/assets/advanced/standards-img_ex_2-2-5.jpg",
+    "title": "2-2-5. 장의 구조화 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_2-2-6.png": {
+    "src": "/assets/advanced/standards-img_ex_2-2-6.jpg",
+    "title": "2-2-6. 도구의 구조화 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_2-3-1.png": {
+    "src": "/assets/advanced/standards-img_ex_2-3-1.jpg",
+    "title": "2-3-1. 물질과 장 사이의 고유 진동수 일치 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_2-3-2.png": {
+    "src": "/assets/advanced/standards-img_ex_2-3-2.jpg",
+    "title": "2-3-2. 장들의 주파수의 일치/불일치 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-3-3.png": {
+    "src": "/assets/advanced/standards-img_li_2-3-3.jpg",
+    "title": "2-3-3. 작용 시간의 조화 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-3-3.png": {
+    "src": "/assets/advanced/standards-img_ex_2-3-3.jpg",
+    "title": "2-3-3. 작용 시간의 조화 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-4-1.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-1.jpg",
+    "title": "2-4-1. 강자성 물질과 자기장의 활용 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-1.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-1.jpg",
+    "title": "2-4-1. 강자성 물질과 자기장의 활용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-4-2.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-2.jpg",
+    "title": "2-4-2. 물질의 강자성 입자로의 대체 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-2.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-2.jpg",
+    "title": "2-4-2. 물질의 강자성 입자로의 대체 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-4-3.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-3.jpg",
+    "title": "2-4-3. 자성유체의 첨가 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-3.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-3.jpg",
+    "title": "2-4-3. 자성유체의 첨가 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_1-1-1.png": {
+    "src": "/assets/advanced/standards-img_li_1-1-1.jpg",
+    "title": "1-1-1. 물질-장의 완성 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_1-1-2.png": {
+    "src": "/assets/advanced/standards-img_li_1-1-2.jpg",
+    "title": "1-1-2. 내부에 새로운 물질을 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_1-1-2.png": {
+    "src": "/assets/advanced/standards-img_ex_1-1-2.jpg",
+    "title": "1-1-2. 내부에 새로운 물질을 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_1-1-4.png": {
+    "src": "/assets/advanced/standards-img_li_1-1-4.jpg",
+    "title": "1-1-4. 외부환경요소를 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_1-1-8-1.png": {
+    "src": "/assets/advanced/standards-img_li_1-1-8-1.jpg",
+    "title": "1-1-8-1. 선택적 최소 모드 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_1-2-1.png": {
+    "src": "/assets/advanced/standards-img_li_1-2-1.jpg",
+    "title": "1-2-1. 제 3의 물질 도입을 통한 유해작용 차단 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_1-2-3.png": {
+    "src": "/assets/advanced/standards-img_li_1-2-3.jpg",
+    "title": "1-2-3. 유해 작용을 제거할 수 있는 다른 물질 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_2-4-4.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-4.jpg",
+    "title": "2-4-4. 다공성 강자성 물질 활용 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-4.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-4.jpg",
+    "title": "2-4-4. 다공성 강자성 물질 활용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-4-5.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-5.jpg",
+    "title": "2-4-5. 물질의 내부/외부에 강자성 물질 첨가 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-5.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-5.jpg",
+    "title": "2-4-5. 물질의 내부/외부에 강자성 물질 첨가 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-4-6.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-6.jpg",
+    "title": "2-4-6. 외부 환경 강자성 물질/자기장 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-6.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-6.jpg",
+    "title": "2-4-6. 외부 환경 강자성 물질/자기장 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-4-7.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-7.jpg",
+    "title": "2-4-7. 물리적 현상 이용 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_2-4-8.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-8.jpg",
+    "title": "2-4-8. 강자성 물질-장의 역동성 증가 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-8.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-8.jpg",
+    "title": "2-4-8. 강자성 물질-장의 역동성 증가 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-4-9.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-9.jpg",
+    "title": "2-4-9. 강자성 물질-장에 구조화 된 장 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-9.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-9.jpg",
+    "title": "2-4-9. 강자성 물질-장에 구조화 된 장 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-4-10.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-10.jpg",
+    "title": "2-4-10. 강자성 물질-장의 구성요소 간의 리듬 일치 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-10.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-10.jpg",
+    "title": "2-4-10. 강자성 물질-장의 구성요소 간의 리듬 일치 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-4-11.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-11.jpg",
+    "title": "2-4-11. 강자성 물질-장의 구성요소 간의 리듬 일치 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-11.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-11.jpg",
+    "title": "2-4-11. 강자성 물질-장의 구성요소 간의 리듬 일치 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_2-4-12.png": {
+    "src": "/assets/advanced/standards-img_li_2-4-12.jpg",
+    "title": "2-4-12. 전기에 반응하는 유체의 활용 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_2-4-12.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-12.jpg",
+    "title": "2-4-12. 전기에 반응하는 유체의 활용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_3-1-1.png": {
+    "src": "/assets/advanced/standards-img_li_3-1-1.jpg",
+    "title": "3-1-1. Bi-System과 Poly-System의 구성 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_3-1-1.png": {
+    "src": "/assets/advanced/standards-img_ex_3-1-1.jpg",
+    "title": "3-1-1. Bi-System과 Poly-System의 구성 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_3-1-2.png": {
+    "src": "/assets/advanced/standards-img_li_3-1-2.jpg",
+    "title": "3-1-2. Bi-System과 Poly-System의 진화 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_3-1-2.png": {
+    "src": "/assets/advanced/standards-img_ex_3-1-2.jpg",
+    "title": "3-1-2. Bi-System과 Poly-System의 진화 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_3-1-3.png": {
+    "src": "/assets/advanced/standards-img_li_3-1-3.jpg",
+    "title": "3-1-3. Bi, Poly-System의 요소 간의 차이 증가 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_3-1-3.png": {
+    "src": "/assets/advanced/standards-img_ex_3-1-3.jpg",
+    "title": "3-1-3. Bi, Poly-System의 요소 간의 차이 증가 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_3-1-4.png": {
+    "src": "/assets/advanced/standards-img_li_3-1-4.jpg",
+    "title": "3-1-4. Bi, Poly-System의 요소 간의 통합 및 부가 요소 제거 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_3-1-4.png": {
+    "src": "/assets/advanced/standards-img_ex_3-1-4.jpg",
+    "title": "3-1-4. Bi, Poly-System의 요소 간의 통합 및 부가 요소 제거 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_3-1-5.png": {
+    "src": "/assets/advanced/standards-img_li_3-1-5.jpg",
+    "title": "3-1-5. 전체와 부분간 반대특성 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_3-1-5.png": {
+    "src": "/assets/advanced/standards-img_ex_3-1-5.jpg",
+    "title": "3-1-5. 전체와 부분간 반대특성 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_3-2-1.png": {
+    "src": "/assets/advanced/standards-img_li_3-2-1.jpg",
+    "title": "3-2-1. 거시 구조의 미세 구조로의 전이 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_3-2-1.png": {
+    "src": "/assets/advanced/standards-img_ex_3-2-1.jpg",
+    "title": "3-2-1. 거시 구조의 미세 구조로의 전이 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_4-1-1.png": {
+    "src": "/assets/advanced/standards-img_ex_4-1-1.jpg",
+    "title": "4-1-1. 측정 및 검출의 필요성 제거 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_4-1-2.png": {
+    "src": "/assets/advanced/standards-img_ex_4-1-2.jpg",
+    "title": "4-1-2. 대상의 복사물을 측정/검출 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_4-1-3.png": {
+    "src": "/assets/advanced/standards-img_ex_4-1-3.jpg",
+    "title": "4-1-3. 측정 문제를 연속 검출 문제로 변환 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_4-2-1.png": {
+    "src": "/assets/advanced/standards-img_li_4-2-1.jpg",
+    "title": "4-2-1. 측정 시스템의 완성 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_4-2-1.png": {
+    "src": "/assets/advanced/standards-img_ex_4-2-1.jpg",
+    "title": "4-2-1. 측정 시스템의 완성 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_4-2-2.png": {
+    "src": "/assets/advanced/standards-img_li_4-2-2.jpg",
+    "title": "4-2-2. 용이하게 측정이 가능한 첨가물의 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_4-2-2.png": {
+    "src": "/assets/advanced/standards-img_ex_4-2-2.jpg",
+    "title": "4-2-2. 용이하게 측정이 가능한 첨가물의 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_4-2-3.png": {
+    "src": "/assets/advanced/standards-img_ex_4-2-3.jpg",
+    "title": "4-2-3. 용이하게 측정이 가능한 첨가물을 외부 환경에 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_4-2-4.png": {
+    "src": "/assets/advanced/standards-img_li_4-2-4.jpg",
+    "title": "4-2-4. 외부 환경 변화 유도 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_4-2-4.png": {
+    "src": "/assets/advanced/standards-img_ex_4-2-4.jpg",
+    "title": "4-2-4. 외부 환경 변화 유도 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_4-3-1.png": {
+    "src": "/assets/advanced/standards-img_li_4-3-1.jpg",
+    "title": "4-3-1. 물리적 효과의 적용 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_4-3-1.png": {
+    "src": "/assets/advanced/standards-img_ex_4-3-1.jpg",
+    "title": "4-3-1. 물리적 효과의 적용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_4-3-2.png": {
+    "src": "/assets/advanced/standards-img_li_4-3-2.jpg",
+    "title": "4-3-2. 시스템의 공진 주파수 변화의 활용 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_4-3-2.png": {
+    "src": "/assets/advanced/standards-img_ex_4-3-2.jpg",
+    "title": "4-3-2. 시스템의 공진 주파수 변화의 활용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_4-3-3.png": {
+    "src": "/assets/advanced/standards-img_ex_4-3-3.jpg",
+    "title": "4-3-3. 외부 환경의 공진 주파수 변화의 활용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_4-4-1.png": {
+    "src": "/assets/advanced/standards-img_ex_4-4-1.jpg",
+    "title": "4-4-1. 강자성 물질과 자기장의 활용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_4-4-2.png": {
+    "src": "/assets/advanced/standards-img_li_4-4-2.jpg",
+    "title": "4-4-2. 강자성 물질 첨가 혹은 강자성 물질로 변환 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_4-4-2.png": {
+    "src": "/assets/advanced/standards-img_ex_4-4-2.jpg",
+    "title": "4-4-2. 강자성 물질 첨가 혹은 강자성 물질로 변환 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_4-4-3.png": {
+    "src": "/assets/advanced/standards-img_li_4-4-3.jpg",
+    "title": "4-4-3. 강자성 첨가제의 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_4-4-3.png": {
+    "src": "/assets/advanced/standards-img_ex_4-4-3.jpg",
+    "title": "4-4-3. 강자성 첨가제의 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_4-4-4.png": {
+    "src": "/assets/advanced/standards-img_li_4-4-4.jpg",
+    "title": "4-4-4. 외부 환경에 강자성 입자 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_4-4-4.png": {
+    "src": "/assets/advanced/standards-img_ex_4-4-4.jpg",
+    "title": "4-4-4. 외부 환경에 강자성 입자 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_4-4-5.png": {
+    "src": "/assets/advanced/standards-img_ex_4-4-5.jpg",
+    "title": "4-4-5. 강자성 물질-장에 물리적 효과 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_4-5-1.png": {
+    "src": "/assets/advanced/standards-img_li_4-5-1.jpg",
+    "title": "4-5-1. Bi/Poly 시스템의 형성 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_4-5-1.png": {
+    "src": "/assets/advanced/standards-img_ex_4-5-1.jpg",
+    "title": "4-5-1. Bi/Poly 시스템의 형성 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_4-5-2.png": {
+    "src": "/assets/advanced/standards-img_li_4-5-2.jpg",
+    "title": "4-5-2. 파생물의 측정 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_4-5-2.png": {
+    "src": "/assets/advanced/standards-img_ex_4-5-2.jpg",
+    "title": "4-5-2. 파생물의 측정 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-1-1-1.png": {
+    "src": "/assets/advanced/standards-img_ex_5-1-1-1.jpg",
+    "title": "5-1-1. 물질의 직접 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-1-1-2.png": {
+    "src": "/assets/advanced/standards-img_ex_5-1-1-2.jpg",
+    "title": "5-1-1. 물질의 직접 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-1-1-3.png": {
+    "src": "/assets/advanced/standards-img_ex_5-1-1-3.jpg",
+    "title": "5-1-1. 물질의 직접 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-1-1-4.png": {
+    "src": "/assets/advanced/standards-img_ex_5-1-1-4.jpg",
+    "title": "5-1-1. 물질의 직접 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-1-1-5.png": {
+    "src": "/assets/advanced/standards-img_ex_5-1-1-5.jpg",
+    "title": "5-1-1. 물질의 직접 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-1-1-6.png": {
+    "src": "/assets/advanced/standards-img_ex_5-1-1-6.jpg",
+    "title": "5-1-1. 물질의 직접 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-1-2.png": {
+    "src": "/assets/advanced/standards-img_ex_5-1-2.jpg",
+    "title": "5-1-2. 기존의 장을 우선 활용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-1-4.png": {
+    "src": "/assets/advanced/standards-img_ex_5-1-4.jpg",
+    "title": "5-1-4. 팽창하는 물질 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-2-1.png": {
+    "src": "/assets/advanced/standards-img_ex_5-2-1.jpg",
+    "title": "5-2-1. 기존의 장을 우선 활용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-2-2.png": {
+    "src": "/assets/advanced/standards-img_ex_5-2-2.jpg",
+    "title": "5-2-2. 외부 환경에 존재하는 장을 이용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-3-1.png": {
+    "src": "/assets/advanced/standards-img_ex_5-3-1.jpg",
+    "title": "5-3-1. 물질의 상을 변화시킴 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-3-2.png": {
+    "src": "/assets/advanced/standards-img_ex_5-3-2.jpg",
+    "title": "5-3-2. 상이 변하는 물질의 이용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-3-3.png": {
+    "src": "/assets/advanced/standards-img_ex_5-3-3.jpg",
+    "title": "5-3-3. 상 전이에 수반된 물리 효과를 이용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-3-4.png": {
+    "src": "/assets/advanced/standards-img_ex_5-3-4.jpg",
+    "title": "5-3-4. 2중 상태로 전이 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-3-5.png": {
+    "src": "/assets/advanced/standards-img_ex_5-3-5.jpg",
+    "title": "5-3-5. 요소간 상호작용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-4-1.png": {
+    "src": "/assets/advanced/standards-img_ex_5-4-1.jpg",
+    "title": "5-4-1. 대상 스스로 상전이 되는 물질 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-4-2.png": {
+    "src": "/assets/advanced/standards-img_ex_5-4-2.jpg",
+    "title": "5-4-2. 출력장의 증폭 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-5-1.png": {
+    "src": "/assets/advanced/standards-img_ex_5-5-1.jpg",
+    "title": "5-5-1. 분해를 통해 물질 입자를 획득 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-5-3.png": {
+    "src": "/assets/advanced/standards-img_ex_5-5-3.jpg",
+    "title": "5-5-3. 분해한 물질의 합성 · 적용 사례"
+  },
+  "/assets/legacy/76/img_li_1-2-5.png": {
+    "src": "/assets/advanced/standards-img_li_1-2-5.jpg",
+    "title": "1-2-5. 자성의 가역변화를 이용 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_2-2-2.png": {
+    "src": "/assets/advanced/standards-img_li_2-2-2.jpg",
+    "title": "2-2-2. 도구의 세분화 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_2-2-6.png": {
+    "src": "/assets/advanced/standards-img_li_2-2-6.jpg",
+    "title": "2-2-6. 도구의 구조화 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_2-3-1.png": {
+    "src": "/assets/advanced/standards-img_li_2-3-1.jpg",
+    "title": "2-3-1. 물질과 장 사이의 고유 진동수 일치 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_2-3-2.png": {
+    "src": "/assets/advanced/standards-img_li_2-3-2.jpg",
+    "title": "2-3-2. 장들의 주파수의 일치/불일치 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_1-1-7.png": {
+    "src": "/assets/advanced/standards-img_li_1-1-7.jpg",
+    "title": "1-1-7. 작용의 최대모드 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_4-2-3.png": {
+    "src": "/assets/advanced/standards-img_li_4-2-3.jpg",
+    "title": "4-2-3. 용이하게 측정이 가능한 첨가물을 외부 환경에 도입 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_4-4-1.png": {
+    "src": "/assets/advanced/standards-img_li_4-4-1.jpg",
+    "title": "4-4-1. 강자성 물질과 자기장의 활용 · 원리 모델"
+  },
+  "/assets/legacy/76/img_li_4-3-3.png": {
+    "src": "/assets/advanced/standards-img_li_4-3-3.jpg",
+    "title": "4-3-3. 외부 환경의 공진 주파수 변화의 활용 · 원리 모델"
+  },
+  "/assets/legacy/76/img_ex_5-2-3.png": {
+    "src": "/assets/advanced/standards-img_ex_5-2-3.jpg",
+    "title": "5-2-3. 장을 발생시키는 물질의 이용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-1-1-7.png": {
+    "src": "/assets/advanced/standards-img_ex_5-1-1-7.jpg",
+    "title": "5-1-1. 물질의 직접 도입 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_2-4-7.png": {
+    "src": "/assets/advanced/standards-img_ex_2-4-7.jpg",
+    "title": "2-4-7. 물리적 현상 이용 · 적용 사례"
+  },
+  "/assets/legacy/76/img_ex_5-5-2.png": {
+    "src": "/assets/advanced/standards-img_ex_5-5-2.jpg",
+    "title": "5-5-2. 합성을 통해 물질 입자를 획득 · 적용 사례"
+  }
+}

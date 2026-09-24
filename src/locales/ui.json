@@ -1,0 +1,535 @@
+{
+  "보기 방식": { "en": "View mode", "ja": "表示形式", "zh": "视图模式" },
+  "아이콘형": { "en": "Icons", "ja": "アイコン", "zh": "图标" },
+  "카드형": { "en": "Cards", "ja": "カード", "zh": "卡片" },
+  "저장에서 제외했어요": {
+    "en": "Removed from saved",
+    "ja": "保存を解除しました",
+    "zh": "已取消收藏"
+  },
+  "나중에 다시 볼 수 있게 저장했어요": {
+    "en": "Saved for later",
+    "ja": "保存しました",
+    "zh": "已收藏"
+  },
+  "학습 표시를 취소했어요": {
+    "en": "Completion cleared",
+    "ja": "学習済みを解除しました",
+    "zh": "已取消完成标记"
+  },
+  "오늘의 원리를 익혔어요": {
+    "en": "Principle completed",
+    "ja": "学習を完了しました",
+    "zh": "已完成学习"
+  },
+  "주요 메뉴": {
+    "en": "Main menu",
+    "ja": "メインメニュー",
+    "zh": "主菜单"
+  },
+  "오늘": {
+    "en": "Today",
+    "ja": "今日",
+    "zh": "今日"
+  },
+  "40가지 원리": {
+    "en": "40 principles",
+    "ja": "40の原理",
+    "zh": "40项原理"
+  },
+  "모순 풀기": {
+    "en": "Solve contradictions",
+    "ja": "矛盾を解く",
+    "zh": "解决矛盾"
+  },
+  "저장됨": {
+    "en": "Saved",
+    "ja": "保存済み",
+    "zh": "已收藏"
+  },
+  "동기화됨": {
+    "en": "Synced",
+    "ja": "同期済み",
+    "zh": "已同步"
+  },
+  "게스트 모드": {
+    "en": "Guest mode",
+    "ja": "ゲストモード",
+    "zh": "访客模式"
+  },
+  "기기에 저장 중": {
+    "en": "Saved on this device",
+    "ja": "この端末に保存",
+    "zh": "保存在此设备"
+  },
+  "계정": {
+    "en": "Account",
+    "ja": "アカウント",
+    "zh": "账户"
+  },
+  "더 깊이 탐구하기": {
+    "en": "Explore further",
+    "ja": "さらに学ぶ",
+    "zh": "深入探索"
+  },
+  "물리적 모순 · 4가지 분리": {
+    "en": "Physical contradictions · 4 separations",
+    "ja": "物理的矛盾・4つの分離",
+    "zh": "物理矛盾·四种分离"
+  },
+  "76가지 표준해": {
+    "en": "76 standard solutions",
+    "ja": "76の標準解",
+    "zh": "76个标准解"
+  },
+  "시스템 진화": {
+    "en": "System evolution",
+    "ja": "システムの進化",
+    "zh": "系统进化"
+  },
+  "40가지 발명원리": {
+    "en": "40 inventive principles",
+    "ja": "40の発明原理",
+    "zh": "40项发明原理"
+  },
+  "익숙한 해법에서 벗어나기 위한 40개의 사고 전환 렌즈": {
+    "en": "40 ways to rethink familiar solutions",
+    "ja": "いつもの解決策を見直す40の視点",
+    "zh": "用40种视角重新思考熟悉的解法"
+  },
+  "저장한 원리": {
+    "en": "Saved principles",
+    "ja": "保存した原理",
+    "zh": "收藏的原理"
+  },
+  "다시 꺼내 볼 생각의 도구를 한곳에 모았어요": {
+    "en": "Your thinking tools, ready to revisit",
+    "ja": "また使いたい思考の道具をまとめました",
+    "zh": "将值得回顾的思考工具集中收藏"
+  },
+  "모바일 메뉴": {
+    "en": "Navigation",
+    "ja": "ナビゲーション",
+    "zh": "导航"
+  },
+  "원리": {
+    "en": "Principles",
+    "ja": "原理",
+    "zh": "原理"
+  },
+  "모순": {
+    "en": "Contradictions",
+    "ja": "矛盾",
+    "zh": "矛盾"
+  },
+  "저장": {
+    "en": "Save",
+    "ja": "保存",
+    "zh": "收藏"
+  },
+  "오늘의 사고 훈련": {
+    "en": "Daily thinking practice",
+    "ja": "今日の思考トレーニング",
+    "zh": "每日思维训练"
+  },
+  "문제를 바꾸지 말고,": {
+    "en": "Keep the problem.",
+    "ja": "問題はそのままに、",
+    "zh": "不必改变问题，"
+  },
+  "보는 방식을 바꿔보세요.": {
+    "en": "Change your perspective.",
+    "ja": "見方を変えてみよう。",
+    "zh": "试着换个角度。"
+  },
+  "오늘의 원리": {
+    "en": "Today's principle",
+    "ja": "今日の原理",
+    "zh": "今日原理"
+  },
+  "3분 학습 시작": {
+    "en": "Start a 3-minute lesson",
+    "ja": "3分の学習を始める",
+    "zh": "开始3分钟学习"
+  },
+  "문제 해결 도구": {
+    "en": "Problem-solving tools",
+    "ja": "問題解決ツール",
+    "zh": "问题解决工具"
+  },
+  "모순에서 원리 찾기": {
+    "en": "Find principles from contradictions",
+    "ja": "矛盾から原理を探す",
+    "zh": "从矛盾寻找原理"
+  },
+  "좋아지는 것과 나빠지는 것을 선택하세요.": {
+    "en": "Choose what improves and what worsens.",
+    "ja": "改善する特性と悪化する特性を選びます。",
+    "zh": "选择改善和恶化的特性。"
+  },
+  "생각이 막혔다면": {
+    "en": "Need a fresh idea?",
+    "ja": "発想に行き詰まったら",
+    "zh": "思路卡住了？"
+  },
+  "무작위 원리 뽑기": {
+    "en": "Pick a random principle",
+    "ja": "原理をランダムに選ぶ",
+    "zh": "随机选择原理"
+  },
+  "예상 밖의 관점으로 문제를 다시 봅니다.": {
+    "en": "Try an unexpected perspective.",
+    "ja": "意外な視点から問題を見直します。",
+    "zh": "用意想不到的视角重新看问题。"
+  },
+  "빠른 탐색": {
+    "en": "Quick exploration",
+    "ja": "クイック探索",
+    "zh": "快速探索"
+  },
+  "자주 쓰는 발명원리": {
+    "en": "Frequently used principles",
+    "ja": "よく使う発明原理",
+    "zh": "常用发明原理"
+  },
+  "모두 보기": {
+    "en": "View all",
+    "ja": "すべて見る",
+    "zh": "查看全部"
+  },
+  "원리 이름, 키워드, 번호로 검색": {
+    "en": "Search by name, keyword or number",
+    "ja": "原理名・キーワード・番号で検索",
+    "zh": "按名称、关键词或编号搜索"
+  },
+  "아직 저장한 원리가 없어요": {
+    "en": "No saved principles yet",
+    "ja": "保存した原理はありません",
+    "zh": "还没有收藏的原理"
+  },
+  "검색 결과가 없어요": {
+    "en": "No results",
+    "ja": "検索結果がありません",
+    "zh": "没有搜索结果"
+  },
+  "마음에 드는 원리의 북마크 버튼을 눌러보세요.": {
+    "en": "Bookmark a principle to find it here.",
+    "ja": "気になる原理の保存ボタンを押してください。",
+    "zh": "点击原理的收藏按钮即可保存。"
+  },
+  "다른 단어로 찾아보세요.": {
+    "en": "Try another search term.",
+    "ja": "別の言葉で検索してください。",
+    "zh": "请尝试其他关键词。"
+  },
+  "원리 목록": {
+    "en": "Principle list",
+    "ja": "原理一覧",
+    "zh": "原理列表"
+  },
+  "한눈에 이해하기": {
+    "en": "At a glance",
+    "ja": "ひと目で理解",
+    "zh": "一目了然"
+  },
+  "3D로 보는 적용 사례": {
+    "en": "Example in 3D",
+    "ja": "3Dで見る活用例",
+    "zh": "3D应用示例"
+  },
+  "원리와 기존 사례 더 읽기": {
+    "en": "Original Korean reference",
+    "ja": "韓国語の原資料を読む",
+    "zh": "阅读韩语原始资料"
+  },
+  "기존 사례 설명": {
+    "en": "Original example",
+    "ja": "元の事例説明",
+    "zh": "原始案例说明"
+  },
+  "원리 이해하기": {
+    "en": "Understand the principle",
+    "ja": "原理を理解する",
+    "zh": "理解原理"
+  },
+  "내 문제에 적용하기": {
+    "en": "Apply it to your problem",
+    "ja": "自分の問題に応用する",
+    "zh": "应用到自己的问题"
+  },
+  "학습 완료": {
+    "en": "Completed",
+    "ja": "学習済み",
+    "zh": "已完成"
+  },
+  "이 원리 익히기": {
+    "en": "Mark as learned",
+    "ja": "学習済みにする",
+    "zh": "标记为已学"
+  },
+  "다음 원리": {
+    "en": "Next principle",
+    "ja": "次の原理",
+    "zh": "下一原理"
+  },
+  "기술적 모순 해결": {
+    "en": "Resolve technical contradictions",
+    "ja": "技術的矛盾を解く",
+    "zh": "解决技术矛盾"
+  },
+  "좋아지면,": {
+    "en": "What improves?",
+    "ja": "何かを良くすると、",
+    "zh": "有所改善时，"
+  },
+  "무엇이 나빠지나요?": {
+    "en": "What gets worse?",
+    "ja": "何が悪くなる？",
+    "zh": "什么会变差？"
+  },
+  "39가지 특성으로 문제를 정리하고 발명원리를 찾아보세요.": {
+    "en": "Use 39 parameters to frame your problem.",
+    "ja": "39の特性で問題を整理し、原理を探しましょう。",
+    "zh": "用39项参数梳理问题，寻找发明原理。"
+  },
+  "개선하려는 특성": {
+    "en": "Improving parameter",
+    "ja": "改善する特性",
+    "zh": "改善的参数"
+  },
+  "나빠지는 특성": {
+    "en": "Worsening parameter",
+    "ja": "悪化する特性",
+    "zh": "恶化的参数"
+  },
+  "추천 원리 ·": {
+    "en": "Suggested principles ·",
+    "ja": "推奨原理 ·",
+    "zh": "推荐原理 ·"
+  },
+  "이 관점부터 검토해 보세요": {
+    "en": "Start with these perspectives",
+    "ja": "この視点から考えてみよう",
+    "zh": "从这些视角开始"
+  },
+  "서로 다른 특성을 선택하세요": {
+    "en": "Choose different parameters",
+    "ja": "異なる特性を選んでください",
+    "zh": "请选择不同参数"
+  },
+  "이 조합에 등록된 추천이 없어요": {
+    "en": "No recommendations for this pair",
+    "ja": "この組み合わせの推奨はありません",
+    "zh": "此组合暂无推荐"
+  },
+  "이메일에서 로그인 링크를 확인하세요": {
+    "en": "Check your email for a sign-in link",
+    "ja": "メールのログインリンクをご確認ください",
+    "zh": "请查收邮件中的登录链接"
+  },
+  "로그아웃했어요": {
+    "en": "Signed out",
+    "ja": "ログアウトしました",
+    "zh": "已退出登录"
+  },
+  "계정이 연결되어 있어요": {
+    "en": "Account connected",
+    "ja": "アカウント接続済み",
+    "zh": "账户已连接"
+  },
+  "학습 기록을 이어가세요": {
+    "en": "Keep your learning in sync",
+    "ja": "学習記録を引き継ごう",
+    "zh": "同步你的学习记录"
+  },
+  "이메일 링크로 로그인하면 북마크와 학습 진도를 모든 기기에서 동기화합니다.": {
+    "en": "Sign in by email to sync bookmarks and progress across devices.",
+    "ja": "メールでログインすると、保存した原理と学習状況を端末間で同期できます。",
+    "zh": "通过邮件登录，即可跨设备同步收藏和学习进度。"
+  },
+  "Supabase 연결 대기 중": {
+    "en": "Cloud connection pending",
+    "ja": "クラウド接続待ち",
+    "zh": "等待云端连接"
+  },
+  ".env.local에 프로젝트 URL과 publishable key를 입력하면 로그인이 활성화됩니다.": {
+    "en": "Sign-in will be available once the cloud service is configured.",
+    "ja": "クラウドの設定が完了するとログインできます。",
+    "zh": "云服务配置完成后即可登录。"
+  },
+  "로그아웃": {
+    "en": "Sign out",
+    "ja": "ログアウト",
+    "zh": "退出登录"
+  },
+  "보내는 중…": {
+    "en": "Sending…",
+    "ja": "送信中…",
+    "zh": "发送中…"
+  },
+  "로그인 링크 받기": {
+    "en": "Send sign-in link",
+    "ja": "ログインリンクを送信",
+    "zh": "发送登录链接"
+  },
+  "비밀번호 없이 안전한 일회용 링크를 사용합니다.": {
+    "en": "Use a one-time link without a password.",
+    "ja": "パスワード不要のワンタイムリンクを使用します。",
+    "zh": "使用一次性链接，无需密码。"
+  },
+  "도해 확대 보기": {
+    "en": "Open diagram viewer",
+    "ja": "図解を拡大表示",
+    "zh": "打开图解查看器"
+  },
+  "— 부품명과 작동 설명이 표시된 3D 도해": {
+    "en": "— annotated 3D diagram",
+    "ja": "— 注釈付き3D図解",
+    "zh": "— 带标注的3D图解"
+  },
+  "도해 확대": {
+    "en": "Enlarge",
+    "ja": "図解を拡大",
+    "zh": "放大图解"
+  },
+  "확대 도해": {
+    "en": "Diagram viewer",
+    "ja": "拡大図解",
+    "zh": "图解查看器"
+  },
+  "확대 보기 닫기": {
+    "en": "Close viewer",
+    "ja": "拡大表示を閉じる",
+    "zh": "关闭查看器"
+  },
+  "상세 도해": {
+    "en": "Detailed diagram",
+    "ja": "詳細図解",
+    "zh": "详细图解"
+  },
+  "축소": {
+    "en": "Zoom out",
+    "ja": "縮小",
+    "zh": "缩小"
+  },
+  "확대": {
+    "en": "Zoom in",
+    "ja": "拡大",
+    "zh": "放大"
+  },
+  "확대 후 좌우로 밀어 설명을 읽어보세요.": {
+    "en": "Zoom in, then swipe to read the labels.",
+    "ja": "拡大してから左右に動かして注釈を読めます。",
+    "zh": "放大后滑动查看标注。"
+  },
+  "그림 속 핵심 요소": {
+    "en": "Key diagram elements",
+    "ja": "図の主要要素",
+    "zh": "图中关键要素"
+  },
+  "그림 읽는 순서": {
+    "en": "Read the diagram",
+    "ja": "図の読み方",
+    "zh": "图解阅读指南"
+  },
+  "이 부분을 살펴보세요": {
+    "en": "Look for these elements",
+    "ja": "ここに注目しよう",
+    "zh": "关注这些要素"
+  },
+  "그림의 연결선으로 위치를 확인하세요. 작은 글씨는 ‘도해 확대’에서 읽을 수 있어요.": {
+    "en": "Image labels are in Korean. Use the translated key below; enlarge for detail.",
+    "ja": "画像内の注釈は韓国語です。翻訳した項目と照らし合わせてご覧ください。",
+    "zh": "图中标注为韩语，请对照翻译后的要素名称阅读，可放大查看。"
+  },
+  "작동 과정": {
+    "en": "How it works",
+    "ja": "動作の流れ",
+    "zh": "工作过程"
+  },
+  "세 단계로 이해하기": {
+    "en": "Understand in three steps",
+    "ja": "3ステップで理解",
+    "zh": "三步理解"
+  },
+  "알아두세요": {
+    "en": "Keep in mind",
+    "ja": "補足",
+    "zh": "注意"
+  },
+  "원리를 설명하기 위한 3D 개념 도해입니다. 실제 제품의 구조·크기와 다를 수 있습니다.": {
+    "en": "Conceptual 3D illustration, not a technical specification.",
+    "ja": "原理を説明する概念図です。実製品の構造や寸法とは異なる場合があります。",
+    "zh": "这是原理概念图，并非实际产品的结构或尺寸规格。"
+  },
+  "물리적 모순": {
+    "en": "Physical contradictions",
+    "ja": "物理的矛盾",
+    "zh": "物理矛盾"
+  },
+  "원본 적용 사례 도해": {
+    "en": "Original example diagram",
+    "ja": "原資料の事例図",
+    "zh": "原始案例图"
+  },
+  "원본 원리 설명 도해": {
+    "en": "Original principle diagram",
+    "ja": "原資料の原理図",
+    "zh": "原始原理图"
+  },
+  "학습 홈": {
+    "en": "Learning home",
+    "ja": "学習ホーム",
+    "zh": "学习首页"
+  },
+  "TRIZ 라이브러리": {
+    "en": "TRIZ library",
+    "ja": "TRIZライブラリ",
+    "zh": "TRIZ资料库"
+  },
+  "자료 검색": {
+    "en": "Search references",
+    "ja": "資料を検索",
+    "zh": "搜索资料"
+  },
+  "제목으로 검색": {
+    "en": "Search by title",
+    "ja": "タイトルで検索",
+    "zh": "按标题搜索"
+  },
+  "설정": {
+    "en": "Settings",
+    "ja": "設定",
+    "zh": "设置"
+  },
+  "앱 언어": {
+    "en": "App language",
+    "ja": "アプリの言語",
+    "zh": "应用语言"
+  },
+  "언어를 선택하세요. 선택한 언어는 이 기기에 저장됩니다.": {
+    "en": "Choose a language. Your preference is saved on this device.",
+    "ja": "言語を選んでください。設定はこの端末に保存されます。",
+    "zh": "选择语言，设置将保存在此设备上。"
+  },
+  "닫기": {
+    "en": "Close",
+    "ja": "閉じる",
+    "zh": "关闭"
+  },
+  "원본 자료 안내": {
+    "en": "About original references",
+    "ja": "原資料について",
+    "zh": "原始资料说明"
+  },
+  "심화 자료와 이미지 안의 글자는 한국어 원본입니다.": {
+    "en": "Advanced references and text embedded in images remain in Korean.",
+    "ja": "詳細な原資料と画像内の文字は韓国語のままです。",
+    "zh": "深入参考资料及图片内文字保留韩语原文。"
+  },
+  "이 원리를 내 문제에 어떻게 적용할 수 있을까요?": {
+    "en": "How could this principle help your problem?",
+    "ja": "この原理を自分の問題にどう使えますか？",
+    "zh": "如何将此原理应用到你的问题？"
+  }
+}

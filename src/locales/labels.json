@@ -1,0 +1,812 @@
+{
+  "단일 분사": {
+    "en": "Single jet",
+    "ja": "単一噴射",
+    "zh": "单一喷射"
+  },
+  "분할된 노즐": {
+    "en": "Multiple nozzles",
+    "ja": "分割ノズル",
+    "zh": "分流喷嘴"
+  },
+  "미세 물방울": {
+    "en": "Fine droplets",
+    "ja": "微細な水滴",
+    "zh": "细小水滴"
+  },
+  "식물 보호": {
+    "en": "Plant protection",
+    "ja": "植物の保護",
+    "zh": "植物保护"
+  },
+  "조명부": {
+    "en": "Lamp",
+    "ja": "照明部",
+    "zh": "照明部"
+  },
+  "분리된 배터리": {
+    "en": "Separate battery",
+    "ja": "分離した電池",
+    "zh": "分离电池"
+  },
+  "연결 케이블": {
+    "en": "Connecting cable",
+    "ja": "接続ケーブル",
+    "zh": "连接电缆"
+  },
+  "머리 하중 감소": {
+    "en": "Reduced head load",
+    "ja": "頭の負担軽減",
+    "zh": "减轻头部负荷"
+  },
+  "소형 팬": {
+    "en": "Small fan",
+    "ja": "小型ファン",
+    "zh": "小型风扇"
+  },
+  "국부 냉각": {
+    "en": "Local cooling",
+    "ja": "局所冷却",
+    "zh": "局部冷却"
+  },
+  "얼굴 주변 기류": {
+    "en": "Airflow around face",
+    "ja": "顔の周りの気流",
+    "zh": "面部周围气流"
+  },
+  "비대칭 몸체": {
+    "en": "Asymmetric body",
+    "ja": "非対称の本体",
+    "zh": "非对称外壳"
+  },
+  "엄지 받침": {
+    "en": "Thumb rest",
+    "ja": "親指の受け",
+    "zh": "拇指支撑"
+  },
+  "손목의 자연스러운 각도": {
+    "en": "Natural wrist angle",
+    "ja": "自然な手首の角度",
+    "zh": "自然手腕角度"
+  },
+  "통합 소켓": {
+    "en": "Combined socket",
+    "ja": "統合ソケット",
+    "zh": "集成插座"
+  },
+  "슬라이드 선택부": {
+    "en": "Slide selector",
+    "ja": "スライド選択部",
+    "zh": "滑动选择器"
+  },
+  "교체형 플러그": {
+    "en": "Interchangeable plug",
+    "ja": "交換式プラグ",
+    "zh": "可更换插头"
+  },
+  "접이식 가방": {
+    "en": "Folding bag",
+    "ja": "折りたたみバッグ",
+    "zh": "折叠包"
+  },
+  "노트북 받침": {
+    "en": "Laptop support",
+    "ja": "パソコンの台",
+    "zh": "电脑支撑台"
+  },
+  "마우스 작업면": {
+    "en": "Mouse surface",
+    "ja": "マウス作業面",
+    "zh": "鼠标操作面"
+  },
+  "테이퍼형 바구니": {
+    "en": "Tapered basket",
+    "ja": "先細りのかご",
+    "zh": "锥形篮筐"
+  },
+  "카트 바구니": {
+    "en": "Cart basket",
+    "ja": "カートのかご",
+    "zh": "购物车篮筐"
+  },
+  "중첩 보관": {
+    "en": "Nested storage",
+    "ja": "重ねて収納",
+    "zh": "嵌套存放"
+  },
+  "공간 절약": {
+    "en": "Space saving",
+    "ja": "省スペース",
+    "zh": "节省空间"
+  },
+  "부력 손잡이": {
+    "en": "Buoyant handle",
+    "ja": "浮力を持つ柄",
+    "zh": "浮力手柄"
+  },
+  "수면": {
+    "en": "Water surface",
+    "ja": "水面",
+    "zh": "水面"
+  },
+  "국자 몸체": {
+    "en": "Ladle body",
+    "ja": "おたま本体",
+    "zh": "汤勺主体"
+  },
+  "위로 작용하는 부력": {
+    "en": "Upward buoyancy",
+    "ja": "上向きの浮力",
+    "zh": "向上浮力"
+  },
+  "미리 휜 판 스프링": {
+    "en": "Pre-curved leaf spring",
+    "ja": "事前に曲げた板ばね",
+    "zh": "预弯板簧"
+  },
+  "차체 하중": {
+    "en": "Vehicle load",
+    "ja": "車体荷重",
+    "zh": "车身载荷"
+  },
+  "탄성 복원력": {
+    "en": "Elastic restoring force",
+    "ja": "弾性復元力",
+    "zh": "弹性恢复力"
+  },
+  "차축": {
+    "en": "Axle",
+    "ja": "車軸",
+    "zh": "车轴"
+  },
+  "우표": {
+    "en": "Stamp",
+    "ja": "切手",
+    "zh": "邮票"
+  },
+  "사전 도포 접착층": {
+    "en": "Pre-applied adhesive",
+    "ja": "事前塗布した接着層",
+    "zh": "预涂胶层"
+  },
+  "이형지": {
+    "en": "Release liner",
+    "ja": "剥離紙",
+    "zh": "离型纸"
+  },
+  "떼어 바로 부착": {
+    "en": "Peel and stick",
+    "ja": "はがして貼る",
+    "zh": "撕下即贴"
+  },
+  "스마트폰": {
+    "en": "Smartphone",
+    "ja": "スマートフォン",
+    "zh": "智能手机"
+  },
+  "탄성 범퍼": {
+    "en": "Elastic bumper",
+    "ja": "弾性バンパー",
+    "zh": "弹性缓冲框"
+  },
+  "충격 흡수부": {
+    "en": "Impact absorber",
+    "ja": "衝撃吸収部",
+    "zh": "吸能部"
+  },
+  "모서리 보호": {
+    "en": "Corner protection",
+    "ja": "角の保護",
+    "zh": "边角保护"
+  },
+  "화물 적재함": {
+    "en": "Cargo bed",
+    "ja": "荷台",
+    "zh": "货台"
+  },
+  "높이 조절 플랫폼": {
+    "en": "Height-adjustable platform",
+    "ja": "高さ調整台",
+    "zh": "高度可调平台"
+  },
+  "팔레트": {
+    "en": "Pallet",
+    "ja": "パレット",
+    "zh": "托盘"
+  },
+  "수평 이송": {
+    "en": "Horizontal transfer",
+    "ja": "水平移送",
+    "zh": "水平转移"
+  },
+  "이동 벨트": {
+    "en": "Moving belt",
+    "ja": "移動ベルト",
+    "zh": "移动跑带"
+  },
+  "구동 롤러": {
+    "en": "Drive roller",
+    "ja": "駆動ローラー",
+    "zh": "驱动滚筒"
+  },
+  "제자리 운동": {
+    "en": "Exercise in place",
+    "ja": "その場で運動",
+    "zh": "原地运动"
+  },
+  "벨트 이동 방향": {
+    "en": "Belt direction",
+    "ja": "ベルトの移動方向",
+    "zh": "跑带移动方向"
+  },
+  "누르는 손잡이": {
+    "en": "Push handle",
+    "ja": "押す持ち手",
+    "zh": "下压手柄"
+  },
+  "회전 바스켓": {
+    "en": "Spinning basket",
+    "ja": "回転バスケット",
+    "zh": "旋转篮筐"
+  },
+  "물걸레 헤드": {
+    "en": "Mop head",
+    "ja": "モップヘッド",
+    "zh": "拖把头"
+  },
+  "원심 탈수": {
+    "en": "Centrifugal drying",
+    "ja": "遠心脱水",
+    "zh": "离心脱水"
+  },
+  "저속 주행": {
+    "en": "Low-speed travel",
+    "ja": "低速走行",
+    "zh": "低速行驶"
+  },
+  "고속 주행": {
+    "en": "High-speed travel",
+    "ja": "高速走行",
+    "zh": "高速行驶"
+  },
+  "가변 차체": {
+    "en": "Variable body",
+    "ja": "可変車体",
+    "zh": "可变车身"
+  },
+  "공기 저항 감소": {
+    "en": "Reduced drag",
+    "ja": "空気抵抗の低減",
+    "zh": "减小空气阻力"
+  },
+  "여분의 곡식": {
+    "en": "Excess grain",
+    "ja": "余分な穀物",
+    "zh": "多余谷物"
+  },
+  "평탄화 막대": {
+    "en": "Leveling bar",
+    "ja": "すり切り棒",
+    "zh": "刮平棒"
+  },
+  "정량 용기": {
+    "en": "Measuring vessel",
+    "ja": "計量容器",
+    "zh": "定量容器"
+  },
+  "넘친 부분 제거": {
+    "en": "Remove excess",
+    "ja": "余分を除く",
+    "zh": "去除多余部分"
+  },
+  "회전식 거치대": {
+    "en": "Rotating rack",
+    "ja": "回転式ラック",
+    "zh": "旋转架"
+  },
+  "자전거 고정부": {
+    "en": "Bicycle fixture",
+    "ja": "自転車固定部",
+    "zh": "自行车固定部"
+  },
+  "수직 공간 활용": {
+    "en": "Use vertical space",
+    "ja": "垂直空間の利用",
+    "zh": "利用垂直空间"
+  },
+  "확보된 바닥 공간": {
+    "en": "Freed floor space",
+    "ja": "確保した床面積",
+    "zh": "腾出的地面空间"
+  },
+  "진동 장치": {
+    "en": "Vibration unit",
+    "ja": "振動装置",
+    "zh": "振动装置"
+  },
+  "가지 고정부": {
+    "en": "Branch clamp",
+    "ja": "枝の固定部",
+    "zh": "树枝夹持部"
+  },
+  "떨어지는 열매": {
+    "en": "Falling fruit",
+    "ja": "落下する果実",
+    "zh": "落下的果实"
+  },
+  "수집 받침": {
+    "en": "Collection tray",
+    "ja": "受け皿",
+    "zh": "收集托盘"
+  },
+  "압축 공기": {
+    "en": "Compressed air",
+    "ja": "圧縮空気",
+    "zh": "压缩空气"
+  },
+  "왕복 피스톤": {
+    "en": "Reciprocating piston",
+    "ja": "往復ピストン",
+    "zh": "往复活塞"
+  },
+  "파쇄 정": {
+    "en": "Breaker chisel",
+    "ja": "破砕用たがね",
+    "zh": "破碎凿头"
+  },
+  "반복 충격": {
+    "en": "Repeated impacts",
+    "ja": "繰り返す衝撃",
+    "zh": "重复冲击"
+  },
+  "반 바퀴 비틀림": {
+    "en": "Half twist",
+    "ja": "半回転のねじれ",
+    "zh": "半圈扭转"
+  },
+  "연마 벨트": {
+    "en": "Abrasive belt",
+    "ja": "研磨ベルト",
+    "zh": "磨带"
+  },
+  "양면 활용": {
+    "en": "Use both faces",
+    "ja": "両面の活用",
+    "zh": "利用双面"
+  },
+  "느린 절단": {
+    "en": "Slow cutting",
+    "ja": "遅い切断",
+    "zh": "缓慢切割"
+  },
+  "변형된 단면": {
+    "en": "Deformed section",
+    "ja": "変形した断面",
+    "zh": "变形截面"
+  },
+  "고속 절단 날": {
+    "en": "Fast cutting blade",
+    "ja": "高速切断刃",
+    "zh": "高速切割刀"
+  },
+  "원형 단면 유지": {
+    "en": "Preserved round section",
+    "ja": "円形断面の維持",
+    "zh": "保持圆形截面"
+  },
+  "독성 원료": {
+    "en": "Toxic source",
+    "ja": "有毒原料",
+    "zh": "有毒原料"
+  },
+  "성분 분리": {
+    "en": "Component separation",
+    "ja": "成分分離",
+    "zh": "成分分离"
+  },
+  "정제 성분": {
+    "en": "Purified component",
+    "ja": "精製成分",
+    "zh": "提纯成分"
+  },
+  "의약 연구 활용": {
+    "en": "Pharmaceutical research",
+    "ja": "医薬研究への活用",
+    "zh": "医药研究用途"
+  },
+  "공기압 센서": {
+    "en": "Pressure sensor",
+    "ja": "空気圧センサー",
+    "zh": "气压传感器"
+  },
+  "무선 송신": {
+    "en": "Wireless transmission",
+    "ja": "無線送信",
+    "zh": "无线发送"
+  },
+  "계기판 표시": {
+    "en": "Dashboard display",
+    "ja": "計器表示",
+    "zh": "仪表显示"
+  },
+  "상태 피드백": {
+    "en": "State feedback",
+    "ja": "状態のフィードバック",
+    "zh": "状态反馈"
+  },
+  "항아리 매개체": {
+    "en": "Pot intermediary",
+    "ja": "つぼの仲介",
+    "zh": "陶罐中介物"
+  },
+  "먹이": {
+    "en": "Bait",
+    "ja": "餌",
+    "zh": "诱饵"
+  },
+  "문어": {
+    "en": "Octopus",
+    "ja": "タコ",
+    "zh": "章鱼"
+  },
+  "회수 로프": {
+    "en": "Retrieval rope",
+    "ja": "回収ロープ",
+    "zh": "回收绳索"
+  },
+  "타이어 외피": {
+    "en": "Tire exterior",
+    "ja": "タイヤ外皮",
+    "zh": "轮胎外层"
+  },
+  "관통 부위": {
+    "en": "Puncture",
+    "ja": "貫通部",
+    "zh": "穿孔处"
+  },
+  "밀봉제 층": {
+    "en": "Sealant layer",
+    "ja": "密封材層",
+    "zh": "密封剂层"
+  },
+  "누출부 봉합": {
+    "en": "Leak sealing",
+    "ja": "漏れの封止",
+    "zh": "封堵漏孔"
+  },
+  "충돌 시험 더미": {
+    "en": "Crash-test dummy",
+    "ja": "衝突試験ダミー",
+    "zh": "碰撞试验假人"
+  },
+  "안전벨트": {
+    "en": "Seat belt",
+    "ja": "シートベルト",
+    "zh": "安全带"
+  },
+  "충격 센서": {
+    "en": "Impact sensor",
+    "ja": "衝撃センサー",
+    "zh": "冲击传感器"
+  },
+  "측정 데이터": {
+    "en": "Measured data",
+    "ja": "測定データ",
+    "zh": "测量数据"
+  },
+  "화분": {
+    "en": "Plant pot",
+    "ja": "植木鉢",
+    "zh": "花盆"
+  },
+  "단열 포장재": {
+    "en": "Insulating wrapping",
+    "ja": "断熱包装材",
+    "zh": "隔热包装材料"
+  },
+  "외부 얼음막": {
+    "en": "Outer ice layer",
+    "ja": "外側の氷層",
+    "zh": "外部冰层"
+  },
+  "임시 보호층": {
+    "en": "Temporary protection",
+    "ja": "一時保護層",
+    "zh": "临时保护层"
+  },
+  "방범창": {
+    "en": "Security bars",
+    "ja": "防犯格子",
+    "zh": "防盗窗"
+  },
+  "진동 감지부": {
+    "en": "Vibration sensor",
+    "ja": "振動検知部",
+    "zh": "振动检测部"
+  },
+  "경보 장치": {
+    "en": "Alarm",
+    "ja": "警報装置",
+    "zh": "警报装置"
+  },
+  "소리로 알림": {
+    "en": "Audible alert",
+    "ja": "音で通知",
+    "zh": "声音提醒"
+  },
+  "공압 셀": {
+    "en": "Pneumatic cell",
+    "ja": "空気圧セル",
+    "zh": "气室"
+  },
+  "유연한 격벽": {
+    "en": "Flexible partition",
+    "ja": "柔軟な隔壁",
+    "zh": "柔性隔壁"
+  },
+  "공기 공급관": {
+    "en": "Air supply line",
+    "ja": "空気供給管",
+    "zh": "供气管"
+  },
+  "압력차에 의한 굽힘": {
+    "en": "Pressure-driven bending",
+    "ja": "圧力差による曲げ",
+    "zh": "压差弯曲"
+  },
+  "유연한 막 / 필름": {
+    "en": "Flexible membrane / film",
+    "ja": "柔軟な膜・フィルム",
+    "zh": "柔性膜／薄膜"
+  },
+  "대기압": {
+    "en": "Atmospheric pressure",
+    "ja": "大気圧",
+    "zh": "大气压"
+  },
+  "분말형 화물": {
+    "en": "Granular cargo",
+    "ja": "粉粒体の貨物",
+    "zh": "颗粒状货物"
+  },
+  "보조 필터": {
+    "en": "Auxiliary filter",
+    "ja": "補助フィルター",
+    "zh": "辅助过滤器"
+  },
+  "흡입 배관": {
+    "en": "Suction pipe",
+    "ja": "吸引配管",
+    "zh": "吸气管道"
+  },
+  "진공 펌프": {
+    "en": "Vacuum pump",
+    "ja": "真空ポンプ",
+    "zh": "真空泵"
+  },
+  "다공성 내벽": {
+    "en": "Porous inner wall",
+    "ja": "多孔質内壁",
+    "zh": "多孔内壁"
+  },
+  "외부 주입부": {
+    "en": "External inlet",
+    "ja": "外部注入口",
+    "zh": "外部注入口"
+  },
+  "미세 기공": {
+    "en": "Micropores",
+    "ja": "微細孔",
+    "zh": "微孔"
+  },
+  "부착물 제거": {
+    "en": "Deposit removal",
+    "ja": "付着物の除去",
+    "zh": "去除附着物"
+  },
+  "자외선 약함": {
+    "en": "Weak UV",
+    "ja": "弱い紫外線",
+    "zh": "弱紫外线"
+  },
+  "자외선 강함": {
+    "en": "Strong UV",
+    "ja": "強い紫外線",
+    "zh": "强紫外线"
+  },
+  "투명 렌즈": {
+    "en": "Clear lens",
+    "ja": "透明レンズ",
+    "zh": "透明镜片"
+  },
+  "착색 렌즈": {
+    "en": "Darkened lens",
+    "ja": "着色レンズ",
+    "zh": "变暗镜片"
+  },
+  "구리 내용물": {
+    "en": "Copper contents",
+    "ja": "銅の内容物",
+    "zh": "铜内容物"
+  },
+  "구리 용기": {
+    "en": "Copper vessel",
+    "ja": "銅容器",
+    "zh": "铜容器"
+  },
+  "동일 재질 접촉면": {
+    "en": "Same-material interface",
+    "ja": "同材質の接触面",
+    "zh": "同材质接触面"
+  },
+  "우주왕복선": {
+    "en": "Space shuttle",
+    "ja": "スペースシャトル",
+    "zh": "航天飞机"
+  },
+  "외부 연료탱크": {
+    "en": "External propellant tank",
+    "ja": "外部推進剤タンク",
+    "zh": "外部推进剂贮箱"
+  },
+  "연료 소모 후 분리": {
+    "en": "Separate after depletion",
+    "ja": "消費後に分離",
+    "zh": "耗尽后分离"
+  },
+  "질량 감소": {
+    "en": "Mass reduction",
+    "ja": "質量低減",
+    "zh": "减少质量"
+  },
+  "회전 날개": {
+    "en": "Rotating paddles",
+    "ja": "回転羽根",
+    "zh": "旋转叶片"
+  },
+  "광물 입자": {
+    "en": "Mineral particles",
+    "ja": "鉱物粒子",
+    "zh": "矿物颗粒"
+  },
+  "열풍 공급": {
+    "en": "Warm air supply",
+    "ja": "温風供給",
+    "zh": "热风供应"
+  },
+  "수분 배출": {
+    "en": "Moisture outlet",
+    "ja": "水分排出",
+    "zh": "排出水分"
+  },
+  "금속 똑딱이": {
+    "en": "Metal click disc",
+    "ja": "金属ディスク",
+    "zh": "金属触发片"
+  },
+  "과포화 용액": {
+    "en": "Supersaturated solution",
+    "ja": "過飽和溶液",
+    "zh": "过饱和溶液"
+  },
+  "결정화": {
+    "en": "Crystallization",
+    "ja": "結晶化",
+    "zh": "结晶"
+  },
+  "열 방출": {
+    "en": "Heat release",
+    "ja": "放熱",
+    "zh": "放热"
+  },
+  "치아 모형": {
+    "en": "Dental model",
+    "ja": "歯の模型",
+    "zh": "牙齿模型"
+  },
+  "브래킷": {
+    "en": "Bracket",
+    "ja": "ブラケット",
+    "zh": "托槽"
+  },
+  "형상기억합금 와이어": {
+    "en": "Shape-memory alloy wire",
+    "ja": "形状記憶合金ワイヤー",
+    "zh": "形状记忆合金丝"
+  },
+  "온도에 따른 복원력": {
+    "en": "Temperature-dependent recovery",
+    "ja": "温度に応じた復元力",
+    "zh": "随温度变化的恢复力"
+  },
+  "밀폐 챔버": {
+    "en": "Sealed chamber",
+    "ja": "密閉室",
+    "zh": "密闭腔室"
+  },
+  "오존 발생부": {
+    "en": "Ozone generator",
+    "ja": "オゾン発生部",
+    "zh": "臭氧发生部"
+  },
+  "칫솔모": {
+    "en": "Toothbrush bristles",
+    "ja": "歯ブラシの毛先",
+    "zh": "牙刷刷毛"
+  },
+  "산화 작용": {
+    "en": "Oxidation",
+    "ja": "酸化作用",
+    "zh": "氧化作用"
+  },
+  "질소 충전": {
+    "en": "Nitrogen filling",
+    "ja": "窒素充填",
+    "zh": "充氮"
+  },
+  "산소 접촉 감소": {
+    "en": "Reduced oxygen contact",
+    "ja": "酸素接触の低減",
+    "zh": "减少氧气接触"
+  },
+  "공기 제거": {
+    "en": "Air removal",
+    "ja": "空気の除去",
+    "zh": "抽出空气"
+  },
+  "밀봉 포장": {
+    "en": "Sealed packaging",
+    "ja": "密封包装",
+    "zh": "密封包装"
+  },
+  "세라믹 비늘": {
+    "en": "Ceramic scales",
+    "ja": "セラミックの鱗片",
+    "zh": "陶瓷鳞片"
+  },
+  "섬유 지지층": {
+    "en": "Fiber backing",
+    "ja": "繊維支持層",
+    "zh": "纤维支撑层"
+  },
+  "복합 구조": {
+    "en": "Composite structure",
+    "ja": "複合構造",
+    "zh": "复合结构"
+  },
+  "충격 분산": {
+    "en": "Impact distribution",
+    "ja": "衝撃の分散",
+    "zh": "分散冲击"
+  },
+  "화물의 굴곡을 따라 밀착하는 얇은 경계면입니다.": {
+    "en": "A thin boundary that conforms to the cargo surface.",
+    "ja": "貨物の凹凸に沿って密着する薄い境界です。",
+    "zh": "贴合货物表面起伏的薄层。"
+  },
+  "내부 압력이 낮아졌을 때 막을 바깥에서 누르는 쪽의 압력입니다.": {
+    "en": "Outside pressure presses the film when internal pressure falls.",
+    "ja": "内部圧力が低下した時に外から膜を押す圧力です。",
+    "zh": "内部压力降低时，从外部压向薄膜的压力。"
+  },
+  "분말이 공기와 함께 배관 쪽으로 들어가는 것을 줄입니다.": {
+    "en": "Reduces powder entering the piping with the air.",
+    "ja": "粉末が空気とともに配管に入るのを抑えます。",
+    "zh": "减少粉末随空气进入管道。"
+  },
+  "필터를 통과한 공기가 펌프 쪽으로 이동하는 통로입니다.": {
+    "en": "Carries filtered air toward the pump.",
+    "ja": "フィルターを通った空気がポンプへ進む通路です。",
+    "zh": "过滤后的空气流向泵的通道。"
+  },
+  "막 아래의 공기를 빼내 압력 차를 만듭니다.": {
+    "en": "Removes air beneath the film to create a pressure difference.",
+    "ja": "膜の下の空気を抜き、圧力差を作ります。",
+    "zh": "抽出薄膜下方的空气以形成压差。"
+  },
+  "막으로 표면을 덮고 고정하려는 대상입니다.": {
+    "en": "The material covered and restrained by the film.",
+    "ja": "膜で覆い固定する対象です。",
+    "zh": "由薄膜覆盖并固定的对象。"
+  }
+}

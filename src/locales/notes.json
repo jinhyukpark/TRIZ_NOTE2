@@ -1,0 +1,37 @@
+{
+  "의약 연구의 개념 사례입니다. 원료의 독성이 곧 치료 효과를 뜻하지 않으며, 효능·안전성은 별도 검증이 필요합니다.": {
+    "en": "This pharmaceutical research example does not imply that toxicity provides therapeutic benefit. Efficacy and safety require separate validation.",
+    "ja": "医薬研究の概念例です。毒性が治療効果を意味するわけではなく、有効性と安全性の検証が必要です。",
+    "zh": "这是医药研究的概念示例。毒性不等于疗效，有效性与安全性需另行验证。"
+  },
+  "모든 손상에 대응하는 구조는 아닙니다. 실제 타이어의 점검·수리 기준을 대신하지 않습니다.": {
+    "en": "Not all damage can be repaired this way. This illustration does not replace tire inspection and repair standards.",
+    "ja": "すべての損傷に対応するわけではありません。実際のタイヤの点検・修理基準に代わるものではありません。",
+    "zh": "此结构无法应对所有损伤，不能替代实际轮胎的检查与维修标准。"
+  },
+  "원본 사례를 재해석한 개념 도해입니다. 식물별 실제 냉해 방지 방법이나 효과를 보증하지 않습니다.": {
+    "en": "A conceptual reinterpretation of the original example, not a guarantee of frost protection for any plant.",
+    "ja": "原例を再解釈した概念図であり、植物の凍害防止方法や効果を保証しません。",
+    "zh": "这是原始案例的概念性重绘，并不保证任何植物的防冻方法或效果。"
+  },
+  "같은 재질이라는 이유만으로 모든 반응이나 부식을 막을 수 있는 것은 아닙니다.": {
+    "en": "Using the same material does not prevent every reaction or type of corrosion.",
+    "ja": "同じ材質でも、あらゆる反応や腐食を防げるわけではありません。",
+    "zh": "相同材质并不能防止所有反应或腐蚀。"
+  },
+  "형상기억 효과와 일반적인 열팽창은 다른 현상입니다. 여기서는 온도에 따른 재료 특성 활용의 사례로 살펴봅니다.": {
+    "en": "Shape memory and ordinary thermal expansion are different phenomena. This example illustrates the use of temperature-dependent material properties.",
+    "ja": "形状記憶と通常の熱膨張は異なる現象です。ここでは温度による材料特性の活用例として扱います。",
+    "zh": "形状记忆与普通热膨胀是不同现象。此处用于说明对温度相关材料特性的利用。"
+  },
+  "학습용 도해이며 사용 지침이 아닙니다. 제품의 처리 성능과 안전성은 별도 검증이 필요합니다.": {
+    "en": "An educational diagram, not operating instructions. Product performance and safety require separate validation.",
+    "ja": "学習用の図であり、使用手順ではありません。製品の性能と安全性は別途検証が必要です。",
+    "zh": "本图用于学习，并非操作指南。产品性能与安全性需另行验证。"
+  },
+  "재료 결합을 설명하는 개념 도해입니다. 특정 제품의 방호 등급이나 성능을 보증하지 않습니다.": {
+    "en": "A conceptual material-combination diagram, not a certification of any product's protection rating or performance.",
+    "ja": "材料の組合せを説明する概念図であり、特定製品の防護等級や性能を保証しません。",
+    "zh": "这是材料组合的概念图，不保证任何特定产品的防护等级或性能。"
+  }
+}

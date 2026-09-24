@@ -1,0 +1,442 @@
+[
+  {
+    "id": 1,
+    "name": "Segmentation",
+    "title": "Water spray",
+    "summary": "A single jet concentrates force. Split the flow through several nozzles. Fine droplets spread the force over the plants.",
+    "steps": [
+      "A single jet concentrates force.",
+      "Split the flow through several nozzles.",
+      "Fine droplets spread the force over the plants."
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Taking out",
+    "title": "Separate headlamp battery",
+    "summary": "A combined lamp and battery load the head. Move the battery into a separate pack. A cable supplies power while reducing head-borne weight.",
+    "steps": [
+      "A combined lamp and battery load the head.",
+      "Move the battery into a separate pack.",
+      "A cable supplies power while reducing head-borne weight."
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Local quality",
+    "title": "Handheld fan",
+    "summary": "Identify the area that needs cooling. Direct a small fan toward the face. Cool the needed area instead of the entire space.",
+    "steps": [
+      "Identify the area that needs cooling.",
+      "Direct a small fan toward the face.",
+      "Cool the needed area instead of the entire space."
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Asymmetry",
+    "title": "Ergonomic mouse",
+    "summary": "Observe the natural position of the hand. Shape an asymmetric body and thumb rest. Adapt the contact surface to the user's posture.",
+    "steps": [
+      "Observe the natural position of the hand.",
+      "Shape an asymmetric body and thumb rest.",
+      "Adapt the contact surface to the user's posture."
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Merging",
+    "title": "Travel adapter",
+    "summary": "Provide parts for different plug formats. Select or exchange the required plug. Combine several adapters in one object.",
+    "steps": [
+      "Provide parts for different plug formats.",
+      "Select or exchange the required plug.",
+      "Combine several adapters in one object."
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Universality",
+    "title": "Laptop bag and desk",
+    "summary": "Carry the device inside the bag. Unfold the bag into a laptop and mouse surface. One object supports both transport and work.",
+    "steps": [
+      "Carry the device inside the bag.",
+      "Unfold the bag into a laptop and mouse surface.",
+      "One object supports both transport and work."
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Nesting",
+    "title": "Shopping carts",
+    "summary": "Shape the basket and frame to fit inside another. Push one cart into the next. Store more carts in the same floor area.",
+    "steps": [
+      "Shape the basket and frame to fit inside another.",
+      "Push one cart into the next.",
+      "Store more carts in the same floor area."
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Anti-weight",
+    "title": "Floating ladle",
+    "summary": "Add a buoyant section to the handle. Water exerts an upward buoyant force. Support the ladle so it does not sink completely.",
+    "steps": [
+      "Add a buoyant section to the handle.",
+      "Water exerts an upward buoyant force.",
+      "Support the ladle so it does not sink completely."
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Preliminary anti-action",
+    "title": "Leaf spring",
+    "summary": "Install pre-curved leaves between body and axle. The spring deforms under the vehicle load. Elastic restoring force counters the load.",
+    "steps": [
+      "Install pre-curved leaves between body and axle.",
+      "The spring deforms under the vehicle load.",
+      "Elastic restoring force counters the load."
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Preliminary action",
+    "title": "Self-adhesive stamp",
+    "summary": "Apply adhesive during manufacture. Protect it with a release liner. Peel and stick when needed.",
+    "steps": [
+      "Apply adhesive during manufacture.",
+      "Protect it with a release liner.",
+      "Peel and stick when needed."
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Beforehand cushioning",
+    "title": "Phone bumper case",
+    "summary": "Locate corners vulnerable to impact. Place an elastic bumper around them. Deformation of the buffer softens impact.",
+    "steps": [
+      "Locate corners vulnerable to impact.",
+      "Place an elastic bumper around them.",
+      "Deformation of the buffer softens impact."
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Equipotentiality",
+    "title": "Cargo loading platform",
+    "summary": "Identify the difference in working heights. Adjust the platform to match the loading bed. Transfer the cargo horizontally once aligned.",
+    "steps": [
+      "Identify the difference in working heights.",
+      "Adjust the platform to match the loading bed.",
+      "Transfer the cargo horizontally once aligned."
+    ]
+  },
+  {
+    "id": 13,
+    "name": "The other way round",
+    "title": "Treadmill",
+    "summary": "The runner stays in the same location. Rollers move the belt backward. Walking or running needs less travel space.",
+    "steps": [
+      "The runner stays in the same location.",
+      "Rollers move the belt backward.",
+      "Walking or running needs less travel space."
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Spheroidality",
+    "title": "Spin mop",
+    "summary": "Press the handle to produce rotation. The round mop head and basket rotate. Water moves outward through the basket.",
+    "steps": [
+      "Press the handle to produce rotation.",
+      "The round mop head and basket rotate.",
+      "Water moves outward through the basket."
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Dynamics",
+    "title": "Variable-shape vehicle",
+    "summary": "Use an upright configuration at low speed. Adjust joints and body to the conditions. A lower, longer shape can reduce aerodynamic drag.",
+    "steps": [
+      "Use an upright configuration at low speed.",
+      "Adjust joints and body to the conditions.",
+      "A lower, longer shape can reduce aerodynamic drag."
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Partial or excessive action",
+    "title": "Leveling a grain measure",
+    "summary": "Fill the measure slightly above the rim. Move a straight bar along the rim. Remove excess grain to match the vessel volume.",
+    "steps": [
+      "Fill the measure slightly above the rim.",
+      "Move a straight bar along the rim.",
+      "Remove excess grain to match the vessel volume."
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Another dimension",
+    "title": "Vertical bicycle rack",
+    "summary": "Secure bicycles to a rotating rack. Use the vertical space above the floor. Rotate the required bicycle to an accessible position.",
+    "steps": [
+      "Secure bicycles to a rotating rack.",
+      "Use the vertical space above the floor.",
+      "Rotate the required bicycle to an accessible position."
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Mechanical vibration",
+    "title": "Blueberry harvesting",
+    "summary": "Grip the branch with a clamp. Apply repeated vibration to the branch. Collect falling fruit in the tray below.",
+    "steps": [
+      "Grip the branch with a clamp.",
+      "Apply repeated vibration to the branch.",
+      "Collect falling fruit in the tray below."
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Periodic action",
+    "title": "Pneumatic breaker",
+    "summary": "Compressed air enters through a hose. Air drives a reciprocating piston. The piston delivers repeated blows to the chisel.",
+    "steps": [
+      "Compressed air enters through a hose.",
+      "Air drives a reciprocating piston.",
+      "The piston delivers repeated blows to the chisel."
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Continuity of useful action",
+    "title": "Twisted abrasive belt",
+    "summary": "Join an abrasive belt with a half twist. Rollers drive the continuous loop. Different belt surfaces reach the working area in turn.",
+    "steps": [
+      "Join an abrasive belt with a half twist.",
+      "Rollers drive the continuous loop.",
+      "Different belt surfaces reach the working area in turn."
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Skipping",
+    "title": "Fast plastic cutting",
+    "summary": "Slow cutting can deform a plastic tube. Move the blade rapidly through the material. Design the process to reduce cross-section distortion.",
+    "steps": [
+      "Slow cutting can deform a plastic tube.",
+      "Move the blade rapidly through the material.",
+      "Design the process to reduce cross-section distortion."
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Blessing in disguise",
+    "title": "Research using venom components",
+    "summary": "Treat a harmful material as a research resource. Separate and purify its components. Evaluate potential usefulness through independent testing.",
+    "steps": [
+      "Treat a harmful material as a research resource.",
+      "Separate and purify its components.",
+      "Evaluate potential usefulness through independent testing."
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Feedback",
+    "title": "Smart tire",
+    "summary": "A sensor measures tire pressure. Transmit the information wirelessly. The dashboard indicates when inspection may be needed.",
+    "steps": [
+      "A sensor measures tire pressure.",
+      "Transmit the information wirelessly.",
+      "The dashboard indicates when inspection may be needed."
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Intermediary",
+    "title": "Octopus pot",
+    "summary": "Place a pot underwater. It provides shelter or an attracting space. Retrieve the pot using the attached rope.",
+    "steps": [
+      "Place a pot underwater.",
+      "It provides shelter or an attracting space.",
+      "Retrieve the pot using the attached rope."
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Self-service",
+    "title": "Self-sealing tire",
+    "summary": "Place a sealant layer inside the tire. Sealant moves toward a small puncture. Filling the path can reduce air loss.",
+    "steps": [
+      "Place a sealant layer inside the tire.",
+      "Sealant moves toward a small puncture.",
+      "Filling the path can reduce air loss."
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Copying",
+    "title": "Crash-test dummy",
+    "summary": "Secure a test dummy in the seat. Sensors measure forces and movement. Analyze the recorded data to compare designs.",
+    "steps": [
+      "Secure a test dummy in the seat.",
+      "Sensors measure forces and movement.",
+      "Analyze the recorded data to compare designs."
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Cheap short-lived objects",
+    "title": "Temporary plant protection",
+    "summary": "Identify what needs protection and for how long. Consider adding a temporary protective layer. Remove or replace it after its role is finished.",
+    "steps": [
+      "Identify what needs protection and for how long.",
+      "Consider adding a temporary protective layer.",
+      "Remove or replace it after its role is finished."
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Mechanics substitution",
+    "title": "Alarm-equipped window bars",
+    "summary": "A sensor detects vibration at the window. It transmits a signal to an alarm. Sound alerts people to the changed condition.",
+    "steps": [
+      "A sensor detects vibration at the window.",
+      "It transmits a signal to an alarm.",
+      "Sound alerts people to the changed condition."
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Pneumatics and hydraulics",
+    "title": "Soft pneumatic arm",
+    "summary": "Supply air to individual pneumatic cells. Vary their pressure and expansion. Flexible partitions deform and the arm bends.",
+    "steps": [
+      "Supply air to individual pneumatic cells.",
+      "Vary their pressure and expansion.",
+      "Flexible partitions deform and the arm bends."
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Flexible shells and thin films",
+    "title": "Vacuum membrane cargo restraint",
+    "summary": "Cover granular cargo with a flexible film. A pump removes air through filters and piping. The pressure difference presses the film onto the cargo.",
+    "steps": [
+      "Cover granular cargo with a flexible film.",
+      "A pump removes air through filters and piping.",
+      "The pressure difference presses the film onto the cargo."
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Porous materials",
+    "title": "Porous pipe",
+    "summary": "Make the inner wall porous. Inject fluid through pores from the outside. Create flow that helps remove wall deposits.",
+    "steps": [
+      "Make the inner wall porous.",
+      "Inject fluid through pores from the outside.",
+      "Create flow that helps remove wall deposits."
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Color changes",
+    "title": "Photochromic glasses",
+    "summary": "Use a lens material that responds to ultraviolet light. The lens darkens under stronger ultraviolet exposure. Use the reversible change as conditions change.",
+    "steps": [
+      "Use a lens material that responds to ultraviolet light.",
+      "The lens darkens under stronger ultraviolet exposure.",
+      "Use the reversible change as conditions change."
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Homogeneity",
+    "title": "Copper storage vessel",
+    "summary": "Identify the contact surface between contents and container. The example pairs copper contents with a copper vessel. Consider reducing differences between contacting materials.",
+    "steps": [
+      "Identify the contact surface between contents and container.",
+      "The example pairs copper contents with a copper vessel.",
+      "Consider reducing differences between contacting materials."
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Discarding and recovering",
+    "title": "Space shuttle external tank",
+    "summary": "The tank stores propellant for flight. Its role ends after the propellant is consumed. Separate it to reduce the mass carried onward.",
+    "steps": [
+      "The tank stores propellant for flight.",
+      "Its role ends after the propellant is consumed.",
+      "Separate it to reduce the mass carried onward."
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Parameter changes",
+    "title": "Mineral dryer",
+    "summary": "Rotating paddles mix mineral particles. Expose the particles to warm air. Remove evaporated moisture as drying proceeds.",
+    "steps": [
+      "Rotating paddles mix mineral particles.",
+      "Expose the particles to warm air.",
+      "Remove evaporated moisture as drying proceeds."
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Phase transitions",
+    "title": "Reusable heat pack",
+    "summary": "Place a supersaturated solution and metal disc in a pack. Trigger the disc to initiate crystallization. Use the heat released during crystallization.",
+    "steps": [
+      "Place a supersaturated solution and metal disc in a pack.",
+      "Trigger the disc to initiate crystallization.",
+      "Use the heat released during crystallization."
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Thermal expansion",
+    "title": "Shape-memory orthodontic wire",
+    "summary": "Attach a shape-memory alloy wire to brackets. Its recovery behavior depends on temperature. Study how a design can use that restoring force.",
+    "steps": [
+      "Attach a shape-memory alloy wire to brackets.",
+      "Its recovery behavior depends on temperature.",
+      "Study how a design can use that restoring force."
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Strong oxidants",
+    "title": "Ozone toothbrush enclosure",
+    "summary": "Place toothbrush bristles inside an enclosure. An ozone generator creates an oxidizing environment. Actual products require leakage and residual-ozone control.",
+    "steps": [
+      "Place toothbrush bristles inside an enclosure.",
+      "An ozone generator creates an oxidizing environment.",
+      "Actual products require leakage and residual-ozone control."
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Inert atmosphere",
+    "title": "Nitrogen and vacuum packaging",
+    "summary": "Nitrogen packaging changes the gas composition. Vacuum packaging removes air before sealing. Both approaches reduce contact with oxygen in different ways.",
+    "steps": [
+      "Nitrogen packaging changes the gas composition.",
+      "Vacuum packaging removes air before sealing.",
+      "Both approaches reduce contact with oxygen in different ways."
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Composite materials",
+    "title": "Ceramic and fiber protection",
+    "summary": "Combine ceramic elements and a fiber backing. Different materials play different roles under load. Use the combined properties of the structure.",
+    "steps": [
+      "Combine ceramic elements and a fiber backing.",
+      "Different materials play different roles under load.",
+      "Use the combined properties of the structure."
+    ]
+  }
+]

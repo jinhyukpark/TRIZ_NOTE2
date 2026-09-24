@@ -1,0 +1,1411 @@
+{
+  "/assets/advanced/evolution-sub01.jpg": {
+    "clean": "/assets/localized/evolution-01.png",
+    "width": 1536,
+    "height": 1024,
+    "labels": [
+      {
+        "x": 66,
+        "y": 34,
+        "width": 826,
+        "height": 104,
+        "fontSize": 69,
+        "text": {
+          "ko": "시스템 완전성의 법칙",
+          "en": "System completeness",
+          "ja": "システム完全性の法則",
+          "zh": "系统完整性法则"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1049,
+        "y": 162,
+        "width": 218,
+        "height": 53,
+        "fontSize": 35,
+        "text": {
+          "ko": "도구(날개)",
+          "en": "Tool (blades)",
+          "ja": "作業部（羽根）",
+          "zh": "工具（叶片）"
+        },
+        "align": "left"
+      },
+      {
+        "x": 315,
+        "y": 215,
+        "width": 209,
+        "height": 54,
+        "fontSize": 36,
+        "text": {
+          "ko": "엔진(모터)",
+          "en": "Engine (motor)",
+          "ja": "動力源（モーター）",
+          "zh": "动力装置（电机）"
+        },
+        "align": "left"
+      },
+      {
+        "x": 717,
+        "y": 215,
+        "width": 310,
+        "height": 50,
+        "fontSize": 33,
+        "text": {
+          "ko": "전달장치(회전축)",
+          "en": "Transmission (shaft)",
+          "ja": "伝達部（回転軸）",
+          "zh": "传动装置（转轴）"
+        },
+        "align": "left"
+      },
+      {
+        "x": 226,
+        "y": 540,
+        "width": 187,
+        "height": 52,
+        "fontSize": 34,
+        "text": {
+          "ko": "에너지원",
+          "en": "Energy source",
+          "ja": "エネルギー源",
+          "zh": "能源"
+        },
+        "align": "left"
+      },
+      {
+        "x": 834,
+        "y": 689,
+        "width": 335,
+        "height": 56,
+        "fontSize": 37,
+        "text": {
+          "ko": "제어장치(조작버튼)",
+          "en": "Control (buttons)",
+          "ja": "制御部（操作ボタン）",
+          "zh": "控制装置（按钮）"
+        },
+        "align": "left"
+      }
+    ]
+  },
+  "/assets/advanced/evolution-sub02.jpg": {
+    "clean": "/assets/localized/evolution-02.png",
+    "width": 1536,
+    "height": 1024,
+    "labels": [
+      {
+        "x": 56,
+        "y": 36,
+        "width": 823,
+        "height": 93,
+        "fontSize": 61,
+        "text": {
+          "ko": "에너지 전도성의 법칙",
+          "en": "Energy conductivity",
+          "ja": "エネルギー伝導性の法則",
+          "zh": "能量传导法则"
+        },
+        "align": "left"
+      },
+      {
+        "x": 87,
+        "y": 147,
+        "width": 203,
+        "height": 50,
+        "fontSize": 33,
+        "text": {
+          "ko": "적용 사례",
+          "en": "Application",
+          "ja": "適用例",
+          "zh": "应用示例"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1139,
+        "y": 90,
+        "width": 87,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "날개",
+          "en": "Blades",
+          "ja": "羽根",
+          "zh": "叶片"
+        },
+        "align": "left"
+      },
+      {
+        "x": 409,
+        "y": 264,
+        "width": 93,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "모터",
+          "en": "Motor",
+          "ja": "モーター",
+          "zh": "电机"
+        },
+        "align": "left"
+      },
+      {
+        "x": 937,
+        "y": 541,
+        "width": 147,
+        "height": 57,
+        "fontSize": 38,
+        "text": {
+          "ko": "회전축",
+          "en": "Shaft",
+          "ja": "回転軸",
+          "zh": "转轴"
+        },
+        "align": "left"
+      },
+      {
+        "x": 273,
+        "y": 572,
+        "width": 232,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "전기 에너지",
+          "en": "Electrical energy",
+          "ja": "電気エネルギー",
+          "zh": "电能"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1329,
+        "y": 224,
+        "width": 178,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "공기 흐름",
+          "en": "Airflow",
+          "ja": "空気の流れ",
+          "zh": "气流"
+        },
+        "align": "right"
+      }
+    ]
+  },
+  "/assets/advanced/evolution-sub03.jpg": {
+    "clean": "/assets/localized/evolution-03.png",
+    "width": 1536,
+    "height": 1024,
+    "labels": [
+      {
+        "x": 483,
+        "y": 10,
+        "width": 740,
+        "height": 107,
+        "fontSize": 71,
+        "text": {
+          "ko": "리듬 조화의 법칙",
+          "en": "Rhythm coordination",
+          "ja": "リズム調和の法則",
+          "zh": "节奏协调法则"
+        },
+        "align": "left"
+      },
+      {
+        "x": 220,
+        "y": 107,
+        "width": 1148,
+        "height": 49,
+        "fontSize": 32,
+        "text": {
+          "ko": "기술시스템을 구성하는 4가지 구성요소들 사이에는 서로 리듬(크기, 고유진동수, 주파수등)이",
+          "en": "The four system components must coordinate their size, natural frequency and operating rhythm.",
+          "ja": "システムの四つの構成要素は、大きさ・固有振動数・周波数などの",
+          "zh": "技术系统的四个组成部分在尺寸、固有频率和工作节奏等方面"
+        },
+        "align": "left"
+      },
+      {
+        "x": 635,
+        "y": 151,
+        "width": 319,
+        "height": 45,
+        "fontSize": 30,
+        "text": {
+          "ko": "조화를 이루어야 한다.",
+          "en": "They must work in harmony.",
+          "ja": "リズムを互いに調和させる必要があります。",
+          "zh": "必须相互协调。"
+        },
+        "align": "left"
+      },
+      {
+        "x": 290,
+        "y": 215,
+        "width": 266,
+        "height": 55,
+        "fontSize": 37,
+        "text": {
+          "ko": "조화로운 구성",
+          "en": "Matched components",
+          "ja": "調和した構成",
+          "zh": "协调的配置"
+        },
+        "align": "left"
+      },
+      {
+        "x": 396,
+        "y": 299,
+        "width": 148,
+        "height": 40,
+        "fontSize": 26,
+        "text": {
+          "ko": "날개 부하",
+          "en": "Blade load",
+          "ja": "羽根の負荷",
+          "zh": "叶片负载"
+        },
+        "align": "left"
+      },
+      {
+        "x": 418,
+        "y": 338,
+        "width": 164,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "(적정 크기)",
+          "en": "(Suitable size)",
+          "ja": "（適切な大きさ）",
+          "zh": "（适当尺寸）"
+        },
+        "align": "left"
+      },
+      {
+        "x": 610,
+        "y": 313,
+        "width": 148,
+        "height": 39,
+        "fontSize": 26,
+        "text": {
+          "ko": "회전 속도",
+          "en": "Rotation speed",
+          "ja": "回転速度",
+          "zh": "转速"
+        },
+        "align": "left"
+      },
+      {
+        "x": 623,
+        "y": 363,
+        "width": 157,
+        "height": 34,
+        "fontSize": 22,
+        "text": {
+          "ko": "(적정 용량)",
+          "en": "(Suitable capacity)",
+          "ja": "（適切な容量）",
+          "zh": "（适当容量）"
+        },
+        "align": "left"
+      },
+      {
+        "x": 833,
+        "y": 290,
+        "width": 148,
+        "height": 40,
+        "fontSize": 27,
+        "text": {
+          "ko": "날개 부하",
+          "en": "Blade load",
+          "ja": "羽根の負荷",
+          "zh": "叶片负载"
+        },
+        "align": "left"
+      },
+      {
+        "x": 860,
+        "y": 336,
+        "width": 178,
+        "height": 34,
+        "fontSize": 23,
+        "text": {
+          "ko": "(과도한 크기)",
+          "en": "(Oversized)",
+          "ja": "（大きすぎる）",
+          "zh": "（尺寸过大）"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1030,
+        "y": 217,
+        "width": 268,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "맞지 않는 구성",
+          "en": "Mismatched components",
+          "ja": "合わない構成",
+          "zh": "不匹配的配置"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1068,
+        "y": 317,
+        "width": 148,
+        "height": 40,
+        "fontSize": 27,
+        "text": {
+          "ko": "회전 속도",
+          "en": "Rotation speed",
+          "ja": "回転速度",
+          "zh": "转速"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1083,
+        "y": 363,
+        "width": 151,
+        "height": 34,
+        "fontSize": 22,
+        "text": {
+          "ko": "(낮은 용량)",
+          "en": "(Low capacity)",
+          "ja": "（容量不足）",
+          "zh": "（容量不足）"
+        },
+        "align": "left"
+      }
+    ]
+  },
+  "/assets/advanced/evolution-sub04.jpg": {
+    "clean": "/assets/localized/evolution-04.png",
+    "width": 1536,
+    "height": 1024,
+    "labels": [
+      {
+        "x": 449,
+        "y": 14,
+        "width": 803,
+        "height": 109,
+        "fontSize": 72,
+        "text": {
+          "ko": "이상성 증가의 법칙",
+          "en": "Increasing ideality",
+          "ja": "理想性増大の法則",
+          "zh": "理想度提升法则"
+        },
+        "align": "left"
+      },
+      {
+        "x": 367,
+        "y": 113,
+        "width": 866,
+        "height": 56,
+        "fontSize": 37,
+        "text": {
+          "ko": "모든 기술시스템은 이상성을 증가하는 방향으로 진화한다.",
+          "en": "Technical systems evolve toward greater ideality.",
+          "ja": "技術システムは理想性を高める方向へ進化します。",
+          "zh": "技术系统向更高理想度的方向演化。"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1321,
+        "y": 117,
+        "width": 175,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "환형 출구",
+          "en": "Ring outlet",
+          "ja": "環状吹出口",
+          "zh": "环形出风口"
+        },
+        "align": "right"
+      },
+      {
+        "x": 43,
+        "y": 202,
+        "width": 248,
+        "height": 45,
+        "fontSize": 30,
+        "text": {
+          "ko": "외부 회전 날개",
+          "en": "Exposed rotating blades",
+          "ja": "外部の回転羽根",
+          "zh": "外露旋转叶片"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1340,
+        "y": 361,
+        "width": 169,
+        "height": 45,
+        "fontSize": 30,
+        "text": {
+          "ko": "공기 흐름",
+          "en": "Airflow",
+          "ja": "空気の流れ",
+          "zh": "气流"
+        },
+        "align": "right"
+      },
+      {
+        "x": 688,
+        "y": 457,
+        "width": 166,
+        "height": 42,
+        "fontSize": 28,
+        "text": {
+          "ko": "공기 흐름",
+          "en": "Airflow",
+          "ja": "空気の流れ",
+          "zh": "气流"
+        },
+        "align": "left"
+      },
+      {
+        "x": 554,
+        "y": 673,
+        "width": 355,
+        "height": 45,
+        "fontSize": 30,
+        "text": {
+          "ko": "유용한 기능을 유지하며",
+          "en": "Retain useful functions",
+          "ja": "有用な機能を保ち",
+          "zh": "保留有用功能"
+        },
+        "align": "left"
+      },
+      {
+        "x": 570,
+        "y": 713,
+        "width": 326,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "불편을 줄이는 방향",
+          "en": "Reduce inconvenience",
+          "ja": "不便を減らす方向へ",
+          "zh": "减少不便"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1289,
+        "y": 673,
+        "width": 199,
+        "height": 45,
+        "fontSize": 30,
+        "text": {
+          "ko": "내부 임펠러",
+          "en": "Internal impeller",
+          "ja": "内部インペラー",
+          "zh": "内部叶轮"
+        },
+        "align": "left"
+      },
+      {
+        "x": 235,
+        "y": 871,
+        "width": 212,
+        "height": 47,
+        "fontSize": 31,
+        "text": {
+          "ko": "일반 선풍기",
+          "en": "Conventional fan",
+          "ja": "一般的な扇風機",
+          "zh": "普通风扇"
+        },
+        "align": "left"
+      },
+      {
+        "x": 909,
+        "y": 871,
+        "width": 520,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "환형 에어멀티플라이어(링형 선풍기)",
+          "en": "Ring-type air multiplier",
+          "ja": "環状エアマルチプライヤー",
+          "zh": "环形空气倍增风扇"
+        },
+        "align": "left"
+      }
+    ]
+  },
+  "/assets/advanced/evolution-sub05.jpg": {
+    "clean": "/assets/localized/evolution-05.png",
+    "width": 1536,
+    "height": 1024,
+    "labels": [
+      {
+        "x": 148,
+        "y": 34,
+        "width": 915,
+        "height": 95,
+        "fontSize": 63,
+        "text": {
+          "ko": "시스템 불균등 발전 법칙",
+          "en": "Uneven system development",
+          "ja": "システム不均等発展の法則",
+          "zh": "系统不均衡发展法则"
+        },
+        "align": "left"
+      },
+      {
+        "x": 751,
+        "y": 188,
+        "width": 354,
+        "height": 65,
+        "fontSize": 43,
+        "text": {
+          "ko": "발전 속도의 차이",
+          "en": "Different development rates",
+          "ja": "発展速度の違い",
+          "zh": "发展速度的差异"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1184,
+        "y": 388,
+        "width": 121,
+        "height": 45,
+        "fontSize": 30,
+        "text": {
+          "ko": "배터리",
+          "en": "Battery",
+          "ja": "バッテリー",
+          "zh": "电池"
+        },
+        "align": "left"
+      },
+      {
+        "x": 186,
+        "y": 608,
+        "width": 297,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "전기차의 진화는",
+          "en": "EV development is paced by",
+          "ja": "電気自動車の進化は",
+          "zh": "电动汽车的演化"
+        },
+        "align": "left"
+      },
+      {
+        "x": 186,
+        "y": 653,
+        "width": 556,
+        "height": 62,
+        "fontSize": 41,
+        "text": {
+          "ko": "배터리의 진화속도에 맞춰진다.",
+          "en": "the development of its battery.",
+          "ja": "バッテリーの進化速度に左右されます。",
+          "zh": "受电池发展速度制约。"
+        },
+        "align": "left"
+      },
+      {
+        "x": 898,
+        "y": 727,
+        "width": 301,
+        "height": 54,
+        "fontSize": 36,
+        "text": {
+          "ko": "전체 성능의 병목",
+          "en": "Overall performance bottleneck",
+          "ja": "全体性能のボトルネック",
+          "zh": "整体性能瓶颈"
+        },
+        "color": "#ff737b",
+        "align": "left"
+      },
+      {
+        "x": 1319,
+        "y": 421,
+        "width": 175,
+        "height": 45,
+        "fontSize": 30,
+        "text": {
+          "ko": "구동 모터",
+          "en": "Drive motor",
+          "ja": "駆動モーター",
+          "zh": "驱动电机"
+        },
+        "align": "right"
+      },
+      {
+        "x": 1339,
+        "y": 880,
+        "width": 96,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "시간",
+          "en": "Time",
+          "ja": "時間",
+          "zh": "时间"
+        },
+        "align": "right"
+      },
+      {
+        "x": 22,
+        "y": 220,
+        "width": 77,
+        "height": 240,
+        "fontSize": 34,
+        "text": {
+          "ko": "배터리 크기",
+          "en": "Battery size",
+          "ja": "電池サイズ",
+          "zh": "电池尺寸"
+        },
+        "align": "center"
+      }
+    ]
+  },
+  "/assets/advanced/evolution-sub06.jpg": {
+    "clean": "/assets/localized/evolution-06.png",
+    "width": 1536,
+    "height": 1024,
+    "labels": [
+      {
+        "x": 364,
+        "y": 20,
+        "width": 968,
+        "height": 95,
+        "fontSize": 63,
+        "text": {
+          "ko": "상위 시스템으로의 이동 법칙",
+          "en": "Transition to a supersystem",
+          "ja": "上位システムへの移行の法則",
+          "zh": "向超系统转移法则"
+        },
+        "align": "left"
+      },
+      {
+        "x": 684,
+        "y": 116,
+        "width": 211,
+        "height": 54,
+        "fontSize": 36,
+        "text": {
+          "ko": "적용 사례",
+          "en": "Application",
+          "ja": "適用例",
+          "zh": "应用示例"
+        },
+        "align": "left"
+      },
+      {
+        "x": 47,
+        "y": 152,
+        "width": 261,
+        "height": 53,
+        "fontSize": 35,
+        "text": {
+          "ko": "길찾기 기능",
+          "en": "Navigation",
+          "ja": "経路案内機能",
+          "zh": "导航功能"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1248,
+        "y": 153,
+        "width": 239,
+        "height": 50,
+        "fontSize": 34,
+        "text": {
+          "ko": "상위 시스템",
+          "en": "Supersystem",
+          "ja": "上位システム",
+          "zh": "超系统"
+        },
+        "align": "right"
+      },
+      {
+        "x": 1159,
+        "y": 301,
+        "width": 148,
+        "height": 26,
+        "fontSize": 17,
+        "text": {
+          "ko": "목적지를 검색하세요",
+          "en": "Search destination",
+          "ja": "目的地を検索",
+          "zh": "搜索目的地"
+        },
+        "color": "#596368",
+        "align": "left"
+      },
+      {
+        "x": 751,
+        "y": 482,
+        "width": 259,
+        "height": 65,
+        "fontSize": 43,
+        "text": {
+          "ko": "기능의 통합",
+          "en": "Function integration",
+          "ja": "機能の統合",
+          "zh": "功能整合"
+        },
+        "align": "left"
+      },
+      {
+        "x": 47,
+        "y": 524,
+        "width": 199,
+        "height": 51,
+        "fontSize": 34,
+        "text": {
+          "ko": "통신 기능",
+          "en": "Communication",
+          "ja": "通信機能",
+          "zh": "通信功能"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1070,
+        "y": 766,
+        "width": 54,
+        "height": 23,
+        "fontSize": 15,
+        "text": {
+          "ko": "키패드",
+          "en": "Keypad",
+          "ja": "キーパッド",
+          "zh": "拨号键盘"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1159,
+        "y": 772,
+        "width": 54,
+        "height": 23,
+        "fontSize": 15,
+        "text": {
+          "ko": "연락처",
+          "en": "Contacts",
+          "ja": "連絡先",
+          "zh": "联系人"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1248,
+        "y": 779,
+        "width": 72,
+        "height": 25,
+        "fontSize": 17,
+        "text": {
+          "ko": "통화기록",
+          "en": "Call history",
+          "ja": "通話履歴",
+          "zh": "通话记录"
+        },
+        "align": "left"
+      }
+    ]
+  },
+  "/assets/advanced/evolution-sub07.jpg": {
+    "clean": "/assets/localized/evolution-07.png",
+    "width": 1536,
+    "height": 1024,
+    "labels": [
+      {
+        "x": 76,
+        "y": 37,
+        "width": 1040,
+        "height": 106,
+        "fontSize": 70,
+        "text": {
+          "ko": "마이크로 수준으로 이동 법칙",
+          "en": "Transition to the micro-level",
+          "ja": "ミクロレベルへの移行の法則",
+          "zh": "向微观层面转移法则"
+        },
+        "align": "left"
+      },
+      {
+        "x": 116,
+        "y": 151,
+        "width": 217,
+        "height": 55,
+        "fontSize": 36,
+        "text": {
+          "ko": "적용 사례",
+          "en": "Application",
+          "ja": "適用例",
+          "zh": "应用示例"
+        },
+        "align": "left"
+      },
+      {
+        "x": 300,
+        "y": 255,
+        "width": 139,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "큰 부품",
+          "en": "Large components",
+          "ja": "大きな部品",
+          "zh": "大型部件"
+        },
+        "align": "left"
+      },
+      {
+        "x": 724,
+        "y": 340,
+        "width": 259,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "기능의 소형화",
+          "en": "Miniaturization",
+          "ja": "機能の小型化",
+          "zh": "功能微型化"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1319,
+        "y": 91,
+        "width": 182,
+        "height": 51,
+        "fontSize": 34,
+        "text": {
+          "ko": "집적 회로",
+          "en": "Integrated circuit",
+          "ja": "集積回路",
+          "zh": "集成电路"
+        },
+        "align": "right"
+      },
+      {
+        "x": 1266,
+        "y": 441,
+        "width": 250,
+        "height": 42,
+        "fontSize": 28,
+        "text": {
+          "ko": "미세한 구성요소",
+          "en": "Micro-components",
+          "ja": "微細な構成要素",
+          "zh": "微小元件"
+        },
+        "align": "right"
+      }
+    ]
+  },
+  "/assets/advanced/evolution-sub08.jpg": {
+    "clean": "/assets/localized/evolution-08.png",
+    "width": 1536,
+    "height": 1024,
+    "labels": [
+      {
+        "x": 413,
+        "y": 15,
+        "width": 865,
+        "height": 89,
+        "fontSize": 59,
+        "text": {
+          "ko": "물질-장 수준 증가의 법칙",
+          "en": "Increasing substance-field interaction",
+          "ja": "物質・場の相互作用増大の法則",
+          "zh": "物质—场作用增强法则"
+        },
+        "align": "left"
+      },
+      {
+        "x": 112,
+        "y": 95,
+        "width": 259,
+        "height": 48,
+        "fontSize": 32,
+        "text": {
+          "ko": "물리적 차단막",
+          "en": "Physical barrier",
+          "ja": "物理的な遮断壁",
+          "zh": "物理屏障"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1314,
+        "y": 91,
+        "width": 118,
+        "height": 45,
+        "fontSize": 30,
+        "text": {
+          "ko": "송풍기",
+          "en": "Blower",
+          "ja": "送風機",
+          "zh": "鼓风机"
+        },
+        "align": "right"
+      },
+      {
+        "x": 36,
+        "y": 335,
+        "width": 75,
+        "height": 37,
+        "fontSize": 24,
+        "text": {
+          "ko": "외부",
+          "en": "Outside",
+          "ja": "外部",
+          "zh": "外部"
+        },
+        "align": "left"
+      },
+      {
+        "x": 34,
+        "y": 376,
+        "width": 154,
+        "height": 30,
+        "fontSize": 20,
+        "text": {
+          "ko": "• 따뜻한 공기",
+          "en": "• Warm air",
+          "ja": "• 暖かい空気",
+          "zh": "• 暖空气"
+        },
+        "align": "left"
+      },
+      {
+        "x": 34,
+        "y": 406,
+        "width": 151,
+        "height": 28,
+        "fontSize": 19,
+        "text": {
+          "ko": "• 차가운 공기",
+          "en": "• Cold air",
+          "ja": "• 冷たい空気",
+          "zh": "• 冷空气"
+        },
+        "align": "left"
+      },
+      {
+        "x": 34,
+        "y": 434,
+        "width": 72,
+        "height": 29,
+        "fontSize": 19,
+        "text": {
+          "ko": "• 곤충",
+          "en": "• Insects",
+          "ja": "• 昆虫",
+          "zh": "• 昆虫"
+        },
+        "align": "left"
+      },
+      {
+        "x": 34,
+        "y": 463,
+        "width": 72,
+        "height": 31,
+        "fontSize": 21,
+        "text": {
+          "ko": "• 먼지",
+          "en": "• Dust",
+          "ja": "• ほこり",
+          "zh": "• 灰尘"
+        },
+        "align": "left"
+      },
+      {
+        "x": 34,
+        "y": 492,
+        "width": 69,
+        "height": 29,
+        "fontSize": 19,
+        "text": {
+          "ko": "• 바람",
+          "en": "• Wind",
+          "ja": "• 風",
+          "zh": "• 风"
+        },
+        "align": "left"
+      },
+      {
+        "x": 541,
+        "y": 347,
+        "width": 69,
+        "height": 34,
+        "fontSize": 23,
+        "text": {
+          "ko": "내부",
+          "en": "Inside",
+          "ja": "内部",
+          "zh": "内部"
+        },
+        "align": "left"
+      },
+      {
+        "x": 538,
+        "y": 390,
+        "width": 136,
+        "height": 28,
+        "fontSize": 19,
+        "text": {
+          "ko": "• 따뜻한 공기",
+          "en": "• Warm air",
+          "ja": "• 暖かい空気",
+          "zh": "• 暖空气"
+        },
+        "align": "left"
+      },
+      {
+        "x": 536,
+        "y": 420,
+        "width": 139,
+        "height": 25,
+        "fontSize": 17,
+        "text": {
+          "ko": "• 차가운 공기",
+          "en": "• Cold air",
+          "ja": "• 冷たい空気",
+          "zh": "• 冷空气"
+        },
+        "align": "left"
+      },
+      {
+        "x": 829,
+        "y": 340,
+        "width": 66,
+        "height": 34,
+        "fontSize": 23,
+        "text": {
+          "ko": "외부",
+          "en": "Outside",
+          "ja": "外部",
+          "zh": "外部"
+        },
+        "align": "left"
+      },
+      {
+        "x": 824,
+        "y": 374,
+        "width": 154,
+        "height": 31,
+        "fontSize": 21,
+        "text": {
+          "ko": "• 따뜻한 공기",
+          "en": "• Warm air",
+          "ja": "• 暖かい空気",
+          "zh": "• 暖空气"
+        },
+        "align": "left"
+      },
+      {
+        "x": 826,
+        "y": 403,
+        "width": 151,
+        "height": 29,
+        "fontSize": 19,
+        "text": {
+          "ko": "• 차가운 공기",
+          "en": "• Cold air",
+          "ja": "• 冷たい空気",
+          "zh": "• 冷空气"
+        },
+        "align": "left"
+      },
+      {
+        "x": 827,
+        "y": 434,
+        "width": 69,
+        "height": 29,
+        "fontSize": 19,
+        "text": {
+          "ko": "• 곤충",
+          "en": "• Insects",
+          "ja": "• 昆虫",
+          "zh": "• 昆虫"
+        },
+        "align": "left"
+      },
+      {
+        "x": 827,
+        "y": 464,
+        "width": 66,
+        "height": 26,
+        "fontSize": 17,
+        "text": {
+          "ko": "• 먼지",
+          "en": "• Dust",
+          "ja": "• ほこり",
+          "zh": "• 灰尘"
+        },
+        "align": "left"
+      },
+      {
+        "x": 827,
+        "y": 492,
+        "width": 69,
+        "height": 29,
+        "fontSize": 19,
+        "text": {
+          "ko": "• 바람",
+          "en": "• Wind",
+          "ja": "• 風",
+          "zh": "• 风"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1217,
+        "y": 405,
+        "width": 157,
+        "height": 43,
+        "fontSize": 29,
+        "text": {
+          "ko": "공기 흐름",
+          "en": "Airflow",
+          "ja": "空気の流れ",
+          "zh": "气流"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1407,
+        "y": 367,
+        "width": 66,
+        "height": 37,
+        "fontSize": 24,
+        "text": {
+          "ko": "내부",
+          "en": "Inside",
+          "ja": "内部",
+          "zh": "内部"
+        },
+        "align": "right"
+      },
+      {
+        "x": 1385,
+        "y": 402,
+        "width": 133,
+        "height": 31,
+        "fontSize": 21,
+        "text": {
+          "ko": "• 따뜻한 공기",
+          "en": "• Warm air",
+          "ja": "• 暖かい空気",
+          "zh": "• 暖空气"
+        },
+        "align": "right"
+      },
+      {
+        "x": 1385,
+        "y": 429,
+        "width": 133,
+        "height": 31,
+        "fontSize": 20,
+        "text": {
+          "ko": "• 차가운 공기",
+          "en": "• Cold air",
+          "ja": "• 冷たい空気",
+          "zh": "• 冷空气"
+        },
+        "align": "right"
+      },
+      {
+        "x": 333,
+        "y": 813,
+        "width": 163,
+        "height": 39,
+        "fontSize": 26,
+        "text": {
+          "ko": "폴딩 도어",
+          "en": "Folding door",
+          "ja": "折り戸",
+          "zh": "折叠门"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1112,
+        "y": 810,
+        "width": 166,
+        "height": 42,
+        "fontSize": 28,
+        "text": {
+          "ko": "에어 커튼",
+          "en": "Air curtain",
+          "ja": "エアカーテン",
+          "zh": "空气幕"
+        },
+        "align": "left"
+      },
+      {
+        "x": 429,
+        "y": 894,
+        "width": 714,
+        "height": 62,
+        "fontSize": 41,
+        "text": {
+          "ko": "고체 구조에서 제어 가능한 작용으로",
+          "en": "From solid barriers to controllable action",
+          "ja": "固体構造から制御可能な作用へ",
+          "zh": "从实体结构到可控作用"
+        },
+        "align": "left"
+      }
+    ]
+  },
+  "/assets/advanced/evolution-sub09.jpg": {
+    "clean": "/assets/localized/evolution-09.png",
+    "width": 1536,
+    "height": 1024,
+    "labels": [
+      {
+        "x": 440,
+        "y": 9,
+        "width": 819,
+        "height": 109,
+        "fontSize": 72,
+        "text": {
+          "ko": "역동성 증가의 법칙",
+          "en": "Increasing dynamism",
+          "ja": "動的性増大の法則",
+          "zh": "动态性增强法则"
+        },
+        "align": "left"
+      },
+      {
+        "x": 182,
+        "y": 107,
+        "width": 1231,
+        "height": 49,
+        "fontSize": 32,
+        "text": {
+          "ko": "기술시스템은 성능향상을 위하여 정적인(Static) 구조에서 동적인(Dynamic) 구조로 진화한다.",
+          "en": "Technical systems evolve from static to dynamic structures to improve performance.",
+          "ja": "技術システムは性能向上のため、静的な構造から動的な構造へ進化します。",
+          "zh": "技术系统为提高性能而从静态结构向动态结构演化。"
+        },
+        "align": "left"
+      },
+      {
+        "x": 239,
+        "y": 194,
+        "width": 160,
+        "height": 43,
+        "fontSize": 28,
+        "text": {
+          "ko": "고정 구조",
+          "en": "Rigid structure",
+          "ja": "固定構造",
+          "zh": "固定结构"
+        },
+        "align": "left"
+      },
+      {
+        "x": 793,
+        "y": 187,
+        "width": 160,
+        "height": 42,
+        "fontSize": 28,
+        "text": {
+          "ko": "관절 구조",
+          "en": "Articulated structure",
+          "ja": "関節構造",
+          "zh": "关节结构"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1310,
+        "y": 178,
+        "width": 199,
+        "height": 44,
+        "fontSize": 29,
+        "text": {
+          "ko": "유연한 구조",
+          "en": "Flexible structure",
+          "ja": "柔軟な構造",
+          "zh": "柔性结构"
+        },
+        "align": "right"
+      },
+      {
+        "x": 246,
+        "y": 571,
+        "width": 39,
+        "height": 42,
+        "fontSize": 28,
+        "text": {
+          "ko": "점",
+          "en": "Point",
+          "ja": "点",
+          "zh": "点"
+        },
+        "align": "left"
+      },
+      {
+        "x": 1376,
+        "y": 565,
+        "width": 39,
+        "height": 39,
+        "fontSize": 26,
+        "text": {
+          "ko": "면",
+          "en": "Surface",
+          "ja": "面",
+          "zh": "面"
+        },
+        "align": "right"
+      },
+      {
+        "x": 735,
+        "y": 585,
+        "width": 36,
+        "height": 39,
+        "fontSize": 26,
+        "text": {
+          "ko": "선",
+          "en": "Line",
+          "ja": "線",
+          "zh": "线"
+        },
+        "align": "left"
+      },
+      {
+        "x": 454,
+        "y": 883,
+        "width": 681,
+        "height": 56,
+        "fontSize": 37,
+        "text": {
+          "ko": "요구에 맞춰 형태와 작용 범위가 변합니다",
+          "en": "Shape and range of action adapt to requirements.",
+          "ja": "要求に応じて形と作用範囲が変わります。",
+          "zh": "形状和作用范围随需求变化。"
+        },
+        "align": "left"
+      }
+    ]
+  }
+}

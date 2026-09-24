@@ -1,0 +1,26 @@
+const q=(ko:string,en:string,ja:string,zh:string)=>({ko,en,ja,zh});
+export const complianceCopy={
+ preview:q('원리 1은 무료로 미리 볼 수 있습니다. 전체 콘텐츠는 연간 구독으로 이용하세요.','Preview principle 1 for free. An annual subscription unlocks the full library.','原理1は無料で試せます。全コンテンツは年間プランで利用できます。','原理1可免费预览，年度订阅可解锁全部内容。'),
+ benefits:q('40가지 발명원리·심화 학습·Effects 전체 콘텐츠와 구독 기간 중 추가되는 신규 Effects·학습 자료를 이용할 수 있습니다.','Access all 40 inventive principles, advanced learning, and Effects, plus new Effects and learning materials added during your subscription.','40の発明原理・応用学習・Effectsの全コンテンツと、契約期間中に追加される新しいEffects・学習教材を利用できます。','可访问40项发明原理、进阶学习和Effects全部内容，以及订阅期间新增的Effects和学习资料。'),
+ privacy:q('개인정보처리방침','Privacy policy','プライバシーポリシー','隐私政策'),terms:q('이용약관','Terms of use','利用規約','使用条款'),support:q('고객지원','Support','サポート','客户支持'),
+ manage:q('구독 관리·해지','Manage or cancel subscription','サブスクリプションの管理・解約','管理或取消订阅'),
+ unavailable:q('아직 설정되지 않았습니다. 출시 전 설정이 필요합니다.','Not configured yet. This must be configured before release.','未設定です。公開前に設定が必要です。','尚未配置，发布前必须完成设置。'),
+ delete:q('계정 삭제','Delete account','アカウント削除','删除账户'),
+ deleteInfo:q('계정, 서버에 저장된 메모·학습 기록·저장 목록과 이 기기의 해당 계정 적용 메모가 영구 삭제됩니다. 삭제는 되돌릴 수 없습니다.','Your account, cloud notes, learning records, bookmarks, and this account’s practice notes on this device will be permanently deleted. This cannot be undone.','アカウント、クラウドのメモ・学習記録・保存一覧、この端末の該当アカウントの練習メモを完全に削除します。元には戻せません。','将永久删除账户、云端笔记、学习记录、收藏及此设备上该账户的练习笔记。无法撤销。'),
+ deleteBilling:q('계정 삭제나 앱 삭제는 구독을 해지하지 않습니다. 원치 않는 갱신을 막으려면 먼저 구매한 스토어에서 구독을 해지하세요. 다른 스토어에서 구매했다면 그 스토어에서도 확인하세요.','Deleting your account or app does not cancel a subscription. Cancel in the store where you subscribed to prevent unwanted renewal. Check the other store too if you subscribed there.','アカウントやアプリを削除しても契約は解約されません。更新を止めるには購入したストアで解約してください。別のストアで購入した場合も確認してください。','删除账户或应用不会取消订阅。请在购买订阅的商店中取消，以免继续续费。如在其他商店订阅，也请前往确认。'),
+ password:q('본인 확인을 위해 비밀번호를 입력하세요.','Enter your password to confirm your identity.','本人確認のためパスワードを入力してください。','请输入密码以验证身份。'),
+ confirm:q('영구 삭제하기','Delete permanently','完全に削除する','永久删除'),cancel:q('취소','Cancel','キャンセル','取消'),
+ failed:q('요청을 완료하지 못했습니다. 다시 시도하거나 고객지원에 문의하세요.','Unable to complete the request. Try again or contact support.','処理を完了できませんでした。再試行するかサポートにお問い合わせください。','无法完成请求，请重试或联系客服。'),
+ appleDelete:q('Apple 계정으로 본인 확인 후 삭제합니다.','Confirm with Apple before deleting.','Appleで本人確認してから削除します。','通过Apple验证身份后删除。'),
+ webDelete:q('웹에서 계정 삭제 요청','Request account deletion on the web','Webで削除をリクエスト','在网页申请删除账户'),
+ annual:q('연간 구독 · 1년','Annual subscription · 1 year','年間プラン・1年','年度订阅 · 1年'),
+ subscribe:q('연간 구독하기','Subscribe annually','年間プランに登録','订阅年度套餐'),
+ renewal:q('구매 확인 시 스토어 계정에 결제되며, 해지하지 않으면 매년 자동 갱신됩니다. 다음 갱신을 원하지 않으면 현재 기간 종료 최소 24시간 전에 스토어에서 해지하세요. 해지 후에도 이미 결제한 기간까지 이용할 수 있습니다.','Payment is charged to your store account on confirmation. The subscription renews annually unless canceled. Cancel in your store at least 24 hours before the current period ends to avoid renewal. Access continues for the period already paid.','購入確認時にストアアカウントへ課金され、解約しない限り毎年自動更新されます。更新を希望しない場合は、期間終了の24時間前までにストアで解約してください。支払い済みの期間は引き続き利用できます。','确认购买时将从商店账户扣款，除非取消，否则每年自动续订。如不希望续订，请至少在当前周期结束前24小时在商店取消。已付费周期内仍可使用。'),
+ verified:q('구매를 확인했습니다.','Purchase verified.','購入を確認しました。','购买已验证。'),
+ pending:q('구매 확인을 기다리고 있습니다.','Waiting for purchase confirmation.','購入の確認を待っています。','正在等待购买确认。'),
+ noAnnual:q('연간 상품 정보를 불러오지 못했습니다. 잠시 후 다시 열어 주세요.','Unable to load the annual plan. Please reopen this screen later.','年間プランを取得できませんでした。後で画面を開き直してください。','无法加载年度套餐，请稍后重新打开此页面。'),
+ legalHint:q('가입 전에 이용약관과 개인정보처리방침을 확인해 주세요.','Read the terms and privacy policy before creating an account.','登録前に利用規約とプライバシーポリシーをご確認ください。','注册前请阅读使用条款和隐私政策。'),
+ active:q('구독 이용 중','Subscription active','契約中','订阅有效'),
+ inactive:q('활성 구독 없음','No active subscription','有効な契約なし','无有效订阅'),
+ expiry:q('이용 종료일','Access until','利用期限','使用截止日期')
+};

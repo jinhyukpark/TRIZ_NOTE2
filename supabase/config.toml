@@ -1,0 +1,9 @@
+project_id = "triz-note-native"
+
+[functions.verify-purchase]
+# Explicit getUser JWT verification supports Supabase signing-key rotation.
+verify_jwt = false
+
+[functions.delete-account]
+# The function verifies the bearer token with getUser and requires fresh credentials.
+verify_jwt = false

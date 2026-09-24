@@ -1,0 +1,207 @@
+{
+  "마이페이지": {
+    "en": "My Page",
+    "ja": "マイページ",
+    "zh": "个人中心"
+  },
+  "로그인": {
+    "en": "Sign in",
+    "ja": "ログイン",
+    "zh": "登录"
+  },
+  "회원가입": {
+    "en": "Create account",
+    "ja": "アカウント作成",
+    "zh": "注册"
+  },
+  "이메일": {
+    "en": "Email",
+    "ja": "メール",
+    "zh": "电子邮箱"
+  },
+  "비밀번호": {
+    "en": "Password",
+    "ja": "パスワード",
+    "zh": "密码"
+  },
+  "비밀번호 (8자 이상)": {
+    "en": "Password (8+ characters)",
+    "ja": "パスワード（8文字以上）",
+    "zh": "密码（至少8位）"
+  },
+  "처리 중…": {
+    "en": "Working…",
+    "ja": "処理中…",
+    "zh": "处理中…"
+  },
+  "새 비밀번호": {
+    "en": "New password",
+    "ja": "新しいパスワード",
+    "zh": "新密码"
+  },
+  "비밀번호 변경": {
+    "en": "Update password",
+    "ja": "パスワード変更",
+    "zh": "修改密码"
+  },
+  "비밀번호 재설정": {
+    "en": "Reset password",
+    "ja": "パスワード再設定",
+    "zh": "重置密码"
+  },
+  "이메일 확인": {
+    "en": "Check your email",
+    "ja": "メールを確認",
+    "zh": "请查收邮件"
+  },
+  "이메일의 인증 링크를 눌러 가입을 완료하세요.": {
+    "en": "Open the verification link in your email to finish signing up.",
+    "ja": "メールの認証リンクで登録を完了してください。",
+    "zh": "请点击邮件中的验证链接完成注册。"
+  },
+  "비밀번호 재설정 링크를 보냈습니다.": {
+    "en": "Password reset link sent.",
+    "ja": "再設定リンクを送信しました。",
+    "zh": "已发送密码重置链接。"
+  },
+  "다시 시도해주세요.": {
+    "en": "Please try again.",
+    "ja": "もう一度お試しください。",
+    "zh": "请重试。"
+  },
+  "계정은 Supabase로 안전하게 관리됩니다.": {
+    "en": "Your account is secured by Supabase.",
+    "ja": "アカウントはSupabaseで安全に管理されます。",
+    "zh": "您的账户由Supabase安全管理。"
+  },
+  "닫기": {
+    "en": "Close",
+    "ja": "閉じる",
+    "zh": "关闭"
+  },
+  "설정": {
+    "en": "Settings",
+    "ja": "設定",
+    "zh": "设置"
+  },
+  "로그아웃": {
+    "en": "Sign out",
+    "ja": "ログアウト",
+    "zh": "退出登录"
+  },
+  "결제 및 이용권": {
+    "en": "Purchases & access",
+    "ja": "購入と利用権",
+    "zh": "购买与使用权限"
+  },
+  "구매 복원": {
+    "en": "Restore purchases",
+    "ja": "購入を復元",
+    "zh": "恢复购买"
+  },
+  "결제 준비 중": {
+    "en": "Purchases coming soon",
+    "ja": "決済準備中",
+    "zh": "支付准备中"
+  },
+  "스토어 상품과 서버 검증 설정 후 구매할 수 있습니다.": {
+    "en": "Purchases become available after store and server verification setup.",
+    "ja": "ストア商品とサーバー検証の設定後に購入できます。",
+    "zh": "商店商品及服务器验证配置完成后即可购买。"
+  },
+  "구매": {
+    "en": "Purchase",
+    "ja": "購入",
+    "zh": "购买"
+  },
+  "동기화 실패": {
+    "en": "Sync failed",
+    "ja": "同期失敗",
+    "zh": "同步失败"
+  },
+  "메모": {
+    "en": "Notes",
+    "ja": "メモ",
+    "zh": "笔记"
+  },
+  "메모 저장": {
+    "en": "Save note",
+    "ja": "メモを保存",
+    "zh": "保存笔记"
+  },
+  "내 생각을 기록하세요.": {
+    "en": "Write your idea.",
+    "ja": "アイデアを記録しましょう。",
+    "zh": "记录您的想法。"
+  },
+  "기록을 저장했습니다.": {
+    "en": "Saved to your account.",
+    "ja": "保存しました。",
+    "zh": "已保存到账户。"
+  },
+  "학습": {
+    "en": "Learn",
+    "ja": "学習",
+    "zh": "学习"
+  },
+  "계정": {
+    "en": "Account",
+    "ja": "アカウント",
+    "zh": "账户"
+  },
+  "뒤로": {
+    "en": "Back",
+    "ja": "戻る",
+    "zh": "返回"
+  },
+  "이미지를 준비하고 있습니다.": {
+    "en": "Image unavailable.",
+    "ja": "画像を準備しています。",
+    "zh": "正在准备图片。"
+  },
+  "검색 결과가 없습니다.": {
+    "en": "No results found.",
+    "ja": "結果がありません。",
+    "zh": "没有找到结果。"
+  },
+  "구매 상태 확인": {
+    "en": "Check purchase status",
+    "ja": "購入状態を確認",
+    "zh": "查询购买状态"
+  },
+  "구매 복원이 완료되었습니다.": {
+    "en": "Purchases restored.",
+    "ja": "購入を復元しました。",
+    "zh": "已恢复购买。"
+  },
+  "사용 가능한 이용권": {
+    "en": "Your access",
+    "ja": "利用権",
+    "zh": "可用权限"
+  },
+  "언어": {
+    "en": "Language",
+    "ja": "言語",
+    "zh": "语言"
+  },
+  "재시도": {
+    "en": "Retry",
+    "ja": "再試行",
+    "zh": "重试"
+  },
+  "학습 자료 둘러보기": {
+    "en": "Explore learning materials",
+    "ja": "学習資料を見る",
+    "zh": "浏览学习资料"
+  },
+  "로그인하면 학습 기록을 동기화할 수 있습니다.": {
+    "en": "Sign in to sync learning records.",
+    "ja": "ログインすると学習記録を同期できます。",
+    "zh": "登录后可同步学习记录。"
+  },
+  "구매 내역이 없습니다.": {
+    "en": "No purchases found.",
+    "ja": "購入履歴がありません。",
+    "zh": "暂无购买记录。"
+  }
+}
