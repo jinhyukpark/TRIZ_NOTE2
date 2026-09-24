@@ -57,8 +57,8 @@ function ConnectedStore({userId}:{userId:string}){
   {!!error&&<Text accessibilityRole="alert" style={s.error}>{error}</Text>}{!!message&&<Text style={s.text}>{message}</Text>}
   {subscription.error&&<Text style={s.error}>{copy.failed[locale]}</Text>}
   {subscription.active&&<View style={s.card}><Text style={s.heading}>{copy.active[locale]}</Text><Text style={s.text}>{copy.expiry[locale]}: {subscription.expires?new Date(subscription.expires).toLocaleDateString(locale):''}</Text></View>}
-  {!products.length&&<Text style={s.muted}>{copy.noAnnual[locale]}</Text>}
-  {products.map(p=><View key={p.id} style={s.card}><Text style={s.heading}>{p.title}</Text><Text style={s.title}>{annualPlan(p,annualId,releaseConfig.googleBasePlan)!.price}</Text><Text style={s.text}>{copy.annual[locale]}</Text><Text style={s.text}>{copy.renewal[locale]}</Text><Button disabled={busy||!iap.connected||subscription.loading||subscription.error||subscription.active||!legalReady} title={copy.subscribe[locale]} onPress={()=>void buy(p)}/></View>)}
+  {!subscription.active&&!products.length&&<Text style={s.muted}>{copy.noAnnual[locale]}</Text>}
+  {!subscription.active&&products.map(p=><View key={p.id} style={s.card}><Text style={s.heading}>{p.title}</Text><Text style={s.title}>{annualPlan(p,annualId,releaseConfig.googleBasePlan)!.price}</Text><Text style={s.text}>{copy.annual[locale]}</Text><Text style={s.text}>{copy.renewal[locale]}</Text><Button disabled={busy||!iap.connected||subscription.loading||subscription.error||!legalReady} title={copy.subscribe[locale]} onPress={()=>void buy(p)}/></View>)}
   {!legalReady&&<Text style={s.muted}>{copy.unavailable[locale]}</Text>}
   <Button disabled={busy||!iap.connected} secondary title={t('구매 복원')} onPress={()=>void restore()}/><ManageSubscription/><LegalLinks/>
  </ScrollView>;

@@ -1,9 +1,21 @@
 import type {ImageSourcePropType} from 'react-native';
+import {expansionFeatured} from './expansionArtwork';
 import type {EffectText} from './effects';
-export type FeaturedLabel={x:number;y:number;width:number;text:EffectText};
+export type FeaturedLabel={x:number;y:number;width:number;text:EffectText;target?:{x:number;y:number}};
 export type FeaturedEffect={image:ImageSourcePropType;labels:FeaturedLabel[]};
 // Percent coordinates measured on the complete generated image. No crop or masking.
 export const featuredEffects:Record<string,FeaturedEffect>={
+ ...expansionFeatured,
+ 'skin-depth':{image:require('../../assets/content/effects/featured/skin-depth-v1.png'),labels:[
+  {x:3,y:34,width:24,target:{x:20,y:48},text:{ko:'구리 도체',en:'Copper conductor',ja:'銅導体',zh:'铜导体'}},
+  {x:35,y:18,width:25,target:{x:49,y:35},text:{ko:'표면 전류',en:'Surface current',ja:'表面電流',zh:'表面电流'}},
+  {x:76,y:43,width:23,target:{x:80,y:63},text:{ko:'교류 전원',en:'AC source',ja:'交流電源',zh:'交流电源'}},
+ ]},
+ 'hydrogenation':{image:require('../../assets/content/effects/featured/hydrogenation-v1.png'),labels:[
+  {x:7,y:21,width:24,target:{x:35,y:33},text:{ko:'에텐 · C₂H₄',en:'Ethene · C₂H₄',ja:'エテン · C₂H₄',zh:'乙烯 · C₂H₄'}},
+  {x:60,y:20,width:23,target:{x:65,y:36},text:{ko:'수소 · H₂',en:'Hydrogen · H₂',ja:'水素 · H₂',zh:'氢气 · H₂'}},
+  {x:64,y:88,width:32,target:{x:62,y:66},text:{ko:'촉매 표면',en:'Catalyst surface',ja:'触媒表面',zh:'催化剂表面'}},
+ ]},
 "ultrasonic-soldering":{image:require('../../assets/content/effects/featured/ultrasonic-soldering-v1.png'),labels:[{"x":31,"y":18,"width":18,"text":{"ko":"솔더링 팁","en":"Soldering tip","ja":"こて先","zh":"钎焊头"}},{"x":15,"y":31,"width":19,"text":{"ko":"구리선","en":"Copper wire","ja":"銅線","zh":"铜线"}},{"x":32,"y":69,"width":20,"text":{"ko":"유리 기판","en":"Glass substrate","ja":"ガラス基板","zh":"玻璃基板"}}]},
 "acoustic-cavitation":{image:require('../../assets/content/effects/featured/acoustic-cavitation-v1.png'),labels:[{"x":30,"y":13,"width":18,"text":{"ko":"기포 붕괴","en":"Bubble collapse","ja":"気泡崩壊","zh":"气泡崩溃"}},{"x":32,"y":46,"width":19,"text":{"ko":"미세 제트","en":"Microjet","ja":"微小ジェット","zh":"微射流"}},{"x":64,"y":44,"width":20,"text":{"ko":"충격파","en":"Shock wave","ja":"衝撃波","zh":"冲击波"}}]},
 "corona-discharge":{image:require('../../assets/content/effects/featured/corona-discharge-v1.png'),labels:[{"x":32,"y":28,"width":19,"text":{"ko":"코로나 발광","en":"Corona glow","ja":"コロナ発光","zh":"电晕辉光"}},{"x":52,"y":19,"width":20,"text":{"ko":"이온 이동","en":"Ion movement","ja":"イオン移動","zh":"离子运动"}},{"x":63,"y":4,"width":20,"text":{"ko":"링 전극","en":"Ring electrode","ja":"リング電極","zh":"环形电极"}}]},

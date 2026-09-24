@@ -2,11 +2,16 @@ import React from 'react';
 import {Image,StyleSheet,Text,useWindowDimensions,View} from 'react-native';
 import {assets} from './data/assets';
 import type {Effect,EffectStep} from './data/effects';
+import {effectTitle} from './data/effectCatalog';
 import {useLanguage} from './i18n';
 import {colors} from './theme';
 import {cavitationPortraits,cavitationEquipmentLabels,cavitationFlows} from './data/cavitationPortrait';
 import {coronaPortraits,coronaEquipmentLabels} from './data/coronaPortrait';
 import {remainingEffectPortraits} from './data/remainingEffectPortraits';
+import ScientificEffectArtwork from './ScientificEffectArtwork';
+import {scientificArtwork} from './data/scientificArtwork';
+import EquipmentCallout from './EquipmentCallout';
+import {effectCallouts} from './data/effectCallouts';
 
 // Keep the portrait pilot as direct Metro dependencies. Looking these up via
 // a generated string map can leave a blank frame in an already-running native
@@ -55,7 +60,10 @@ const solderingFlows=[
  */
 export default function EffectArtwork({item,step,index}:{item:Effect;step:EffectStep;index:number}){
  const {locale}=useLanguage();
+ const title=effectTitle(item);
+ const displayTitle=title[locale];
  const {width:windowWidth}=useWindowDimensions();
+ if(scientificArtwork[item.id])return <ScientificEffectArtwork item={item} step={step} index={index}/>;
  // Prefer artwork with the baked-in timeline removed from the actual bitmap.
  // Keep the original poster as a reversible source, not an opaque UI cover.
  // Versioned cleaned assets prevent Metro/iOS from reusing an older bitmap
@@ -88,11 +96,10 @@ export default function EffectArtwork({item,step,index}:{item:Effect;step:Effect
     <Image source={portrait} resizeMode="contain" style={{width:portraitWidth,height:portraitHeight}} accessible={false}/>
     <View pointerEvents="none" style={a.portraitHeadingOverlay}>
      <Text style={a.portraitEyebrow}>{String(index+1).padStart(2,'0')}  —  {step.label[locale]}</Text>
-     <Text style={[a.portraitTitle,a.portraitOverlayTitle]}>{item.title[locale]}</Text>
+     <Text style={[a.portraitTitle,a.portraitOverlayTitle]}>{displayTitle}</Text>
+     {locale!=='en'&&<Text numberOfLines={1} ellipsizeMode="tail" style={[a.englishSubtitle,a.portraitOverlayTitle]}>({title.en})</Text>}
     </View>
-    {equipmentLabels.map(label=><View key={label.number} style={[a.equipmentLabel,{left:label.x,top:label.y}]}>
-     <View style={a.equipmentDot}/><Text style={a.equipmentNumber}>{label.number}</Text><Text style={a.equipmentText}>{label.text[locale]}</Text>
-    </View>)}
+    {equipmentLabels.map((label,i)=><EquipmentCallout key={label.number} position={effectCallouts[item.id][index][i]} text={label.text[locale]} aspectRatio={portraitSize.width/portraitSize.height}/>)}
    </View>
    <View style={a.heatPipeTimeline}>
     <View style={a.heatPipeTrack}/>
@@ -151,7 +158,7 @@ export default function EffectArtwork({item,step,index}:{item:Effect;step:Effect
  }
  return <View style={[a.frame,{aspectRatio}]} accessibilityRole="image" accessibilityLabel={`${item.title[locale]}. ${step.title[locale]}. ${step.body[locale]}`}>
   <Image source={source} resizeMode="contain" style={StyleSheet.absoluteFill} accessible={false}/>
-  <View style={a.topMask}><Text style={a.kicker}>TRIZ NOTE  /  EFFECT LIBRARY</Text><Text numberOfLines={1} adjustsFontSizeToFit style={a.effectTitle}>{item.title[locale]}</Text></View>
+  <View style={a.topMask}><Text style={a.kicker}>TRIZ NOTE  /  EFFECT LIBRARY</Text><Text numberOfLines={1} adjustsFontSizeToFit style={a.effectTitle}>{displayTitle}</Text>{locale!=='en'&&<Text numberOfLines={1} ellipsizeMode="tail" style={a.englishSubtitle}>({title.en})</Text>}</View>
   <View style={a.rightMask}>
    <Text style={a.stage}>{String(index+1).padStart(2,'0')}  —  {step.label[locale]}</Text>
    <Text numberOfLines={3} adjustsFontSizeToFit minimumFontScale={0.65} style={a.headline}>{step.title[locale]}</Text>
@@ -175,13 +182,10 @@ const a=StyleSheet.create({
  portraitOverlayTitle:{textShadowColor:'#06100e',textShadowOffset:{width:0,height:1},textShadowRadius:4},
  portraitEyebrow:{color:colors.lime,fontSize:12,lineHeight:18,fontWeight:'900',letterSpacing:.6},
  portraitTitle:{color:'#f3eee4',fontFamily:'serif',fontSize:27,lineHeight:34,fontWeight:'800'},
+ englishSubtitle:{color:'#b9c5bf',fontSize:13,lineHeight:18,fontWeight:'400'},
  // Match the generated 4:5 bitmap so `contain` fills the available width
  // without cropping or introducing horizontal letterboxing.
  portraitApparatus:{alignSelf:'center',backgroundColor:'#06100e'},
- equipmentLabel:{position:'absolute',minHeight:24,maxWidth:'28%',paddingHorizontal:7,paddingVertical:4,borderRadius:4,flexDirection:'row',alignItems:'center',gap:4,backgroundColor:'rgba(5,16,14,.82)'},
- equipmentDot:{width:5,height:5,borderRadius:3,backgroundColor:colors.lime},
- equipmentNumber:{color:colors.lime,fontSize:9,lineHeight:13,fontWeight:'900'},
- equipmentText:{color:'#f3eee4',fontSize:10,lineHeight:14,fontWeight:'800',flexShrink:1},
  portraitExplanation:{width:'100%',paddingHorizontal:18,paddingTop:25,paddingBottom:30,gap:11,backgroundColor:'#071310'},
  portraitStage:{color:colors.lime,fontSize:13,lineHeight:19,fontWeight:'900'},
  portraitHeadline:{color:'#f3eee4',fontFamily:'serif',fontSize:28,lineHeight:37,fontWeight:'800'},

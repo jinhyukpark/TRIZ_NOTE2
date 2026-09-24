@@ -7,6 +7,7 @@ export const effectKinds={
  application:t('응용 기술','Applications','応用技術','应用技术'),
 };
 export const effectFields={
+ chemical:t('화학','Chemistry','化学','化学'),
  thermal:t('열','Thermal','熱','热学'),
  electromagnetic:t('전기·자기','Electricity & magnetism','電気・磁気','电与磁'),
  fluid:t('유체','Fluids','流体','流体'),
@@ -15,6 +16,7 @@ export const effectFields={
  material:t('재료','Materials','材料','材料'),
 };
 export const effectFunctions={
+ conversion:t('물질 변환','Chemical conversion','物質変換','物质转化'),
  heating:t('가열','Heating','加熱','加热'),
  cooling:t('냉각','Cooling','冷却','冷却'),
  joining:t('접합','Joining','接合','连接'),
@@ -45,6 +47,25 @@ const phaseChange:Foundation={title:t('용융·응고','Melting & solidification
 // Editorial classifications are separate from generated artwork and stable IDs.
 // Relations are defined once on applications; reverse links are derived below.
 export const effectCatalog:Record<string,EffectClassification>={
+ 'adhesive-bonding':{kind:'application',primaryField:'material',relatedFields:['chemical'],functions:['joining'],foundations:[{title:t('젖음과 계면 결합','Wetting & interfacial bonding','ぬれと界面結合','润湿与界面结合')}]},
+ 'condensation':{kind:'basic',primaryField:'thermal',relatedFields:['fluid'],functions:['cooling'],foundations:[]},
+ 'acoustic-levitation':{kind:'application',primaryField:'acoustic',relatedFields:['fluid'],functions:['transport'],foundations:[{title:t('음향 복사력','Acoustic radiation force','音響放射力','声辐射力')},{title:t('정상파','Standing waves','定在波','驻波')}]},
+ 'amphiphiles':{kind:'basic',primaryField:'chemical',relatedFields:['fluid'],functions:['cleaning'],foundations:[]},
+ 'electrodeposition':{kind:'application',primaryField:'electromagnetic',relatedFields:['chemical','material'],functions:['conversion'],foundations:[{title:t('전기화학적 환원','Electrochemical reduction','電気化学的還元','电化学还原')}]},
+ 'electrostatic-induction':{kind:'basic',primaryField:'electromagnetic',relatedFields:[],functions:['charge'],foundations:[]},
+ 'distillation':{kind:'application',primaryField:'thermal',relatedFields:['chemical','fluid'],functions:['conversion','cooling'],foundations:[{effectId:'condensation',title:t('응축','Condensation','凝縮','冷凝')},{title:t('기액 평형','Vapor–liquid equilibrium','気液平衡','气液平衡')}]},
+ 'photoionisation':{kind:'basic',primaryField:'optical',relatedFields:['electromagnetic'],functions:['charge'],foundations:[]},
+ 'creaming':{kind:'basic',primaryField:'fluid',relatedFields:['material'],functions:['transport'],foundations:[]},
+ 'bingham-plastic':{kind:'basic',primaryField:'fluid',relatedFields:['material'],functions:['deformation'],foundations:[]},
+ 'aerogel':{kind:'application',primaryField:'thermal',relatedFields:['material'],functions:['cooling'],foundations:[{title:t('열전달 억제','Reduced heat transfer','熱伝達の抑制','抑制传热')}]},
+ 'arc-evaporation':{kind:'application',primaryField:'electromagnetic',relatedFields:['material','thermal'],functions:['conversion'],foundations:[{title:t('아크 방전','Arc discharge','アーク放電','电弧放电')},{title:t('증발·증착','Vaporization & deposition','蒸発・堆積','蒸发与沉积')}]},
+ 'activated-alumina':{kind:'application',primaryField:'chemical',relatedFields:['material'],functions:['cleaning'],foundations:[{title:t('표면 흡착','Surface adsorption','表面吸着','表面吸附')}]},
+ 'lorentz-force':{kind:'basic',primaryField:'electromagnetic',relatedFields:[],functions:['transport'],foundations:[]},
+ 'ferromagnetism':{kind:'basic',primaryField:'electromagnetic',relatedFields:['material'],functions:['charge'],foundations:[]},
+ 'doppler-effect':{kind:'basic',primaryField:'acoustic',relatedFields:[],functions:['measuring'],foundations:[]},
+ 'activated-carbon':{kind:'application',primaryField:'chemical',relatedFields:['material'],functions:['cleaning'],foundations:[{title:t('표면 흡착','Surface adsorption','表面吸着','表面吸附')}]},
+ 'skin-depth':{kind:'basic',primaryField:'electromagnetic',relatedFields:['material'],functions:['charge','measuring'],foundations:[]},
+ 'hydrogenation':{kind:'application',primaryField:'chemical',relatedFields:['material'],functions:['conversion'],foundations:[{title:t('촉매 작용','Catalysis','触媒作用','催化作用')},{title:t('표면 흡착','Surface adsorption','表面吸着','表面吸附')}]},
  'ultrasonic-soldering':{kind:'application',primaryField:'acoustic',relatedFields:['thermal','material'],functions:['joining'],foundations:[cavitation,phaseChange]},
  'acoustic-cavitation':{kind:'basic',primaryField:'acoustic',relatedFields:['fluid'],functions:['cleaning'],foundations:[]},
  'corona-discharge':{kind:'basic',primaryField:'electromagnetic',relatedFields:[],functions:['charge'],foundations:[]},
@@ -81,6 +102,10 @@ export const catalogUi={
 };
 
 export const effectTitle=(item:Effect):EffectText=>effectCatalog[item.id]?.title??item.title;
+export function effectListTitle(item:Effect,locale:Locale){
+ const title=effectTitle(item);
+ return locale==='en'?title.en:`${title[locale]} (${title.en})`;
+}
 export function filterEffects(items:Effect[],query:string,field:EffectField|'all',kind:EffectKind|'all'){
  const terms=query.trim().toLowerCase().split(/\s+/).filter(Boolean);
  return items.filter(item=>{

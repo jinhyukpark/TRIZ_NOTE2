@@ -1,0 +1,17 @@
+{
+  "mode": "Built-in image_gen reference editing",
+  "assets": [
+    {
+      "id": "skin-depth",
+      "source": "assets/content/effects/skin-depth-01-portrait-v1.png",
+      "output": "assets/content/effects/featured/skin-depth-v1.png",
+      "prompt": "Recompose this reference as a LANDSCAPE 16:9 mobile list thumbnail. Preserve the copper conductor on two supports, cyan surface-current visualization and connected AC source. Entire apparatus fits, with compact framing and no huge blank header. Deep blue background, high-quality scientific visualization. No text, no numbers, no labels, no borders. Leave small dark pockets near top-left above conductor and right above AC source for native labels. Do not crop apparatus. Landscape wide composition."
+    },
+    {
+      "id": "hydrogenation",
+      "source": "assets/content/effects/hydrogenation-01-portrait-v1.png",
+      "output": "assets/content/effects/featured/hydrogenation-v1.png",
+      "prompt": "Recompose this reference as a LANDSCAPE 16:9 mobile list thumbnail. Preserve its warm amber catalytic molecular visualization identity and platinum lattice. Clearly show ethene with exactly two carbon atoms, four white hydrogen atoms and a DOUBLE C=C bond (two rods), and separate H2 molecule with two cyan hydrogen atoms, above catalyst surface. Entire molecular apparatus fits in compact wide composition. No text, no labels, no numbers, no borders. Leave small dark pockets above left molecule, above right H2 and near lower lattice for native labels. Do not crop essential atoms. Landscape wide composition."
+    }
+  ]
+}

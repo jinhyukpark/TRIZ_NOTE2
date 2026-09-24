@@ -4,9 +4,10 @@ import {s,colors} from '../theme';
 import {Button} from '../components';
 import {supabase} from '../lib/supabase';
 import {redirectTo} from '../lib/auth';
+import {signInWithGoogle} from '../lib/googleAuth';
 import {useLanguage,languages,Locale} from '../i18n';
 import AppleLogin from '../AppleLogin';
-import LegalLinks from '../LegalLinks';
+import LegalLinks,{ManageSubscription} from '../LegalLinks';
 import {complianceCopy as copy} from '../locales/compliance';
 export default function Auth({recovery,onRecovered}:{recovery:boolean;onRecovered:()=>void}){
  const {t,locale,setLocale}=useLanguage();
@@ -34,7 +35,7 @@ export default function Auth({recovery,onRecovered}:{recovery:boolean;onRecovere
  <Button title={t(busy?'처리 중…':recovery?'비밀번호 변경':mode==='login'?'로그인':'회원가입')} disabled={busy||password.length<(mode==='login'&&!recovery?1:8)||(!recovery&&!email.includes('@'))} onPress={()=>void submit()}/>
  {!recovery&&<><Button secondary disabled={busy} title={t(mode==='login'?'회원가입':'로그인')} onPress={()=>{setMode(mode==='login'?'signup':'login');setError('');}}/><Button secondary disabled={busy||!email.includes('@')} title={t('비밀번호 재설정')} onPress={()=>void reset()}/></>}
  </View><View style={[s.row,{flexWrap:'wrap'}]}>{Object.entries(languages).map(([l,label])=><Button key={l} title={label} secondary={l!==locale} onPress={()=>setLocale(l as Locale)}/>)}</View>
- {!recovery&&<><AppleLogin/><Text style={s.muted}>{copy.legalHint[locale]}</Text><LegalLinks/></>}
+ {!recovery&&<><Button secondary disabled={busy} title={({ko:'Google로 계속하기',en:'Continue with Google',ja:'Googleで続ける',zh:'使用 Google 继续'})[locale]} onPress={()=>{setBusy(true);setError('');void signInWithGoogle().catch(()=>setError(copy.failed[locale])).finally(()=>setBusy(false));}}/><AppleLogin disabled={busy}/><Text style={s.muted}>{copy.legalHint[locale]}</Text><LegalLinks/><ManageSubscription/></>}
  <Text style={s.muted}>{t('계정은 Supabase로 안전하게 관리됩니다.')}</Text>
  </ScrollView></KeyboardAvoidingView>;
 }

@@ -1,5 +1,7 @@
 import type {Locale} from '../i18n';
 import {generatedEffects} from './generatedEffects';
+import {scientificEffects} from './scientificEffects';
+import {expansionEffects} from './expansionEffects';
 export type EffectText=Record<Locale,string>;
 export type EffectStep={image:string;label:EffectText;title:EffectText;body:EffectText;keyPoint:EffectText};
 export type Effect={id:string;title:EffectText;summary:EffectText;steps:EffectStep[]};
@@ -16,7 +18,7 @@ export const effects:Effect[]=[{
   {image:'/assets/effects/ultrasonic-soldering-04.png',label:text('접합','Join','接合','连接'),title:text('솔더가 퍼지며 두 재료를 연결합니다.','Solder spreads to connect the materials.','はんだが広がり、材料をつなぎます。','钎料铺展，连接两种材料。'),body:text('용융 솔더가 구리선과 유리 사이의 접합 계면에 퍼집니다. 이 사례에는 재료에 맞는 전용 솔더와 적절한 공정 조건이 필요합니다.','Molten solder spreads at the interface between the copper wire and glass. This example requires a suitable specialized solder and appropriate process conditions.','溶融はんだが銅線とガラスの接合界面に広がります。この例では材料に合った専用はんだと適切な工程条件が必要です。','熔融钎料在铜线与玻璃之间的接合界面铺展。本例需要适用的专用钎料和合适的工艺条件。'),keyPoint:text('솔더는 두 재료 사이의 접합 매개물입니다.','Solder acts as the joining medium between the materials.','はんだは材料の間をつなぐ接合媒体です。','钎料是连接两种材料的中间介质。')},
   {image:'/assets/effects/ultrasonic-soldering-05.png',label:text('냉각·고정','Cool & set','冷却・固定','冷却固定'),title:text('솔더가 굳으며 접합부가 고정됩니다.','The joint sets as the solder solidifies.','はんだが固まり、接合部を固定します。','钎料凝固，接合部固定。'),body:text('가열을 끝내고 식히면 솔더가 액체에서 고체로 바뀝니다. 굳은 솔더가 구리선과 유리 사이의 연결층이 됩니다.','After heating ends, cooling changes the solder from liquid to solid. The solid solder forms a connecting layer between the copper wire and glass.','加熱を終えて冷却すると、はんだが液体から固体に変わります。固まったはんだが銅線とガラスの間の接合層になります。','停止加热并冷却后，钎料从液态变为固态，形成铜线与玻璃之间的连接层。'),keyPoint:text('배치 → 가열 → 초음파 → 접합 → 냉각·고정','Position → Heat → Ultrasound → Join → Cool & set','配置 → 加熱 → 超音波 → 接合 → 冷却・固定','定位 → 加热 → 超声波 → 连接 → 冷却固定')}
  ]
-},...generatedEffects];
+},...generatedEffects,...scientificEffects,...expansionEffects];
 export const effectUi={
  intro:text('과학적 효과를 이미지와 단계별 설명으로 살펴보세요.','Explore scientific effects through images and step-by-step explanations.','画像と段階ごとの説明で科学的効果を学びましょう。','通过图片和分步说明了解科学效应。'),
  search:text('Effects 검색','Search effects','Effectsを検索','搜索Effects'),

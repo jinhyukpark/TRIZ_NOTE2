@@ -1,14 +1,15 @@
-import React,{useRef,useState} from 'react';
+import React,{useEffect,useRef,useState} from 'react';
 import {View,ScrollView,Pressable,TextInput,StyleSheet,useWindowDimensions,Modal,Keyboard} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Text from '../ContentText';
 import {Button} from '../components';
 import EffectArtwork from '../EffectArtwork';
 import {effects,effectUi as ui} from '../data/effects';
-import {catalogUi,effectCatalog,effectFields,effectKinds,effectFunctions,effectTitle,filterEffects,linkedApplications,resultCount,type EffectField,type EffectKind} from '../data/effectCatalog';
+import {catalogUi,effectCatalog,effectFields,effectKinds,effectFunctions,effectTitle,effectListTitle,filterEffects,linkedApplications,resultCount,type EffectField,type EffectKind} from '../data/effectCatalog';
 import EffectFeatured from '../EffectFeatured';
 import {useLanguage} from '../i18n';
 import {s,colors} from '../theme';
+import {refreshEffectContent} from '../lib/effectContent';
 
 export default function Effects({selected,onSelect}:{selected:string|null;onSelect:(id:string|null)=>void}){
  const {locale}=useLanguage();
@@ -19,8 +20,19 @@ export default function Effects({selected,onSelect}:{selected:string|null;onSele
  const [draftField,setDraftField]=useState<EffectField|'all'>('all');
  const [draftKind,setDraftKind]=useState<EffectKind|'all'>('all');
  const insets=useSafeAreaInsets();
+ const [,setContentRevision]=useState(0);
+ useEffect(()=>{let live=true;void refreshEffectContent().then(count=>{if(live&&count)setContentRevision(n=>n+1);}).catch(()=>{/* Bundled content remains available offline. */});return()=>{live=false;};},[]);
+ const listScroll=useRef<ScrollView>(null);
+ const listOffset=useRef(0);
+ const restoringList=useRef(true);
+ const restoreListPosition=()=>{
+  if(restoringList.current)listScroll.current?.scrollTo({y:listOffset.current,animated:false});
+ };
  const item=effects.find(e=>e.id===selected);
- if(item)return <EffectReader key={item.id} item={{...item,title:effectTitle(item)}} onBack={()=>onSelect(null)} onSelect={onSelect}/>;
+ if(item){
+  restoringList.current=true;
+  return <EffectReader key={item.id} item={{...item,title:effectTitle(item)}} onBack={()=>onSelect(null)} onSelect={onSelect}/>;
+ }
  const matches=filterEffects(effects,query,field,kind);
  const reset=()=>{setQuery('');setField('all');setKind('all');};
  const activeFilters=Number(field!=='all')+Number(kind!=='all');
@@ -28,16 +40,26 @@ export default function Effects({selected,onSelect}:{selected:string|null;onSele
  const closeFilters=()=>setFiltersOpen(false);
  const applyFilters=()=>{setField(draftField);setKind(draftKind);closeFilters();};
  return <>
- <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={s.page}>
+ <ScrollView ref={listScroll} testID="effects-list" keyboardShouldPersistTaps="handled" contentContainerStyle={s.page}
+  contentOffset={{x:0,y:listOffset.current}} scrollEventThrottle={16}
+  onLayout={restoreListPosition} onContentSizeChange={restoreListPosition}
+  onScrollBeginDrag={()=>{restoringList.current=false;}}
+  onScroll={({nativeEvent})=>{
+   const y=Math.max(0,nativeEvent.contentOffset.y);
+   // Ignore the remount's initial zero offset until native layout restores the list.
+   if(restoringList.current&&Math.abs(y-listOffset.current)>1)return;
+   restoringList.current=false;
+   listOffset.current=y;
+  }}>
   <Text style={s.eyebrow}>EFFECT LIBRARY</Text><Text style={s.title}>Effects</Text><Text style={s.muted}>{catalogUi.intro[locale]}</Text>
   <View style={d.searchRow}>
    <TextInput accessibilityLabel={catalogUi.search[locale]} value={query} onChangeText={setQuery} placeholder={catalogUi.search[locale]} placeholderTextColor={colors.muted} style={[s.input,{flex:1,minWidth:0}]}/>
    <Pressable accessibilityRole="button" accessibilityLabel={`${catalogUi.filters[locale]}${activeFilters?` (${activeFilters})`:''}`} accessibilityState={{expanded:filtersOpen}} onPress={openFilters} style={[d.filterButton,activeFilters>0&&{borderColor:colors.lime}]}><Text style={d.linkText}>{catalogUi.filters[locale]}{activeFilters>0?` · ${activeFilters}`:''}</Text></Pressable>
   </View>
   <Text style={s.muted} accessibilityLiveRegion="polite">{resultCount(matches.length,locale)}{activeFilters>0?` · ${[field!=='all'?effectFields[field][locale]:'',kind!=='all'?effectKinds[kind][locale]:''].filter(Boolean).join(' / ')}`:''}</Text>
-  {matches.map(e=><Pressable key={e.id} accessibilityRole="button" accessibilityLabel={effectTitle(e)[locale]} onPress={()=>onSelect(e.id)} style={d.card}>
-   <EffectFeatured id={e.id} title={effectTitle(e)[locale]}/>
-   <View style={{padding:14,gap:8}}><Classification id={e.id}/><Text style={s.heading}>{effectTitle(e)[locale]}</Text><Text style={s.muted}>{e.summary[locale]}</Text></View>
+  {matches.map(e=><Pressable key={e.id} accessibilityRole="button" accessibilityLabel={effectListTitle(e,locale)} onPress={()=>onSelect(e.id)} style={d.card}>
+   <EffectFeatured id={e.id} title={effectListTitle(e,locale)}/>
+   <View style={{padding:14,gap:8}}><Classification id={e.id}/><Text numberOfLines={1} ellipsizeMode="tail" style={d.listTitle}>{effectListTitle(e,locale)}</Text><Text style={s.muted}>{e.summary[locale]}</Text></View>
   </Pressable>)}
   {!matches.length&&<View style={s.card}><Text style={s.muted}>{catalogUi.empty[locale]}</Text><Button secondary title={catalogUi.reset[locale]} onPress={reset}/></View>}
  </ScrollView>
@@ -80,7 +102,7 @@ function EffectReader({item,onBack,onSelect}:{item:(typeof effects)[number];onBa
  const step=item.steps[index],last=index===item.steps.length-1;
  const move=(next:number)=>{setIndex(Math.max(0,Math.min(next,item.steps.length-1)));scroll.current?.scrollTo({y:0,animated:false});};
  return <View style={{flex:1}}>
-  <View style={d.header}><Pressable accessibilityRole="button" accessibilityLabel={ui.list[locale]} onPress={onBack} style={d.back}><Text style={s.heading}>←</Text></Pressable><View style={{flex:1,gap:3}}><Text style={s.eyebrow}>EFFECTS</Text><Text style={[s.heading,{fontSize:17}]}>{item.title[locale]}</Text></View><Text style={s.muted}>{index+1} / {item.steps.length}</Text></View>
+  <View style={d.header}><Pressable accessibilityRole="button" accessibilityLabel={ui.list[locale]} onPress={onBack} style={d.back}><Text style={s.heading}>←</Text></Pressable><View style={{flex:1,gap:3}}><Text style={s.eyebrow}>EFFECTS</Text><Text style={[s.heading,{fontSize:17}]}>{item.title[locale]}</Text>{locale!=='en'&&<Text numberOfLines={1} ellipsizeMode="tail" style={{color:colors.muted,fontSize:12,lineHeight:16}}>({item.title.en})</Text>}</View><Text style={s.muted}>{index+1} / {item.steps.length}</Text></View>
   {/* Keep step navigation outside the scrolling artwork and explanation. */}
   <View testID="effect-step-navigation" style={[s.page,d.stepNavigation]}>{item.steps.map((p,i)=><Pressable key={p.image} accessibilityRole="button" accessibilityLabel={`${i+1}. ${p.label[locale]}`} accessibilityState={{selected:index===i}} onPress={()=>move(i)} style={[d.step,index===i&&d.activeStep]}><Text style={{color:index===i?colors.bg:colors.muted,fontWeight:'800'}}>{String(i+1).padStart(2,'0')}</Text></Pressable>)}</View>
   <ScrollView ref={scroll} style={{flex:1}} contentContainerStyle={[s.page,{gap:14,paddingTop:2},isMobile&&{paddingHorizontal:0}]}>
@@ -115,6 +137,7 @@ function EffectConnections({id,onSelect}:{id:string;onSelect:(id:string)=>void})
  </View>;
 }
 const d=StyleSheet.create({
+ listTitle:{fontSize:18,lineHeight:25,fontWeight:'700',color:colors.ink},
  searchRow:{flexDirection:'row',gap:8,alignItems:'stretch'},
  filterButton:{minHeight:50,maxWidth:'36%',paddingHorizontal:12,justifyContent:'center',borderWidth:1,borderColor:colors.line,borderRadius:8,backgroundColor:colors.panel},
  sheetOverlay:{flex:1,justifyContent:'flex-end',backgroundColor:'rgba(0,0,0,.6)'},

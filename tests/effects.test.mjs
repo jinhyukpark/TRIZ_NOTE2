@@ -6,7 +6,9 @@ const root=new URL('../',import.meta.url);
 const read=p=>fs.readFileSync(new URL(p,root),'utf8');
 const generated=ts.transpileModule(read('src/data/generatedEffects.ts'),{compilerOptions:{module:ts.ModuleKind.ESNext}}).outputText;
 const base=ts.transpileModule(read('src/data/effects.ts'),{compilerOptions:{module:ts.ModuleKind.ESNext}}).outputText.replace(/import \{ generatedEffects \} from '.\/generatedEffects';\n/,'');
-const code=generated+'\n'+base;
+const scientific=ts.transpileModule(read('src/data/scientificEffects.ts'),{compilerOptions:{module:ts.ModuleKind.ESNext}}).outputText;
+const expansion=ts.transpileModule(read('src/data/expansionEffects.ts'),{compilerOptions:{module:ts.ModuleKind.ESNext}}).outputText;
+const code=generated+'\n'+scientific+'\n'+expansion+'\n'+base.replace(/import \{ (scientificEffects|expansionEffects) \} from '.\/(scientificEffects|expansionEffects)';\n/g,'');
 const {effects,effectUi}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
 test('effects are extensible items with ordered, bundled and fully localized steps',()=>{
  assert.equal(new Set(effects.map(e=>e.id)).size,effects.length);
@@ -29,6 +31,8 @@ test('Effects is the middle tab and has detail-aware Android back navigation',()
 });
 test('every Effect step has a bundled bitmap without the baked-in process timeline',()=>{
  for(const effect of effects)for(const step of effect.steps){
+  // New native compositions start with text-free portraits: no cleaning copy is needed.
+  if(/-portrait-v\d+\.png$/.test(step.image))continue;
   const cleaned=step.image.replace(/\.png$/, '-clean-v2.png');
   assert.ok(fs.existsSync(new URL('assets/content/'+cleaned.replace('/assets/',''),root)),cleaned);
   assert.ok(read('src/data/assets.ts').includes(JSON.stringify(cleaned)),cleaned);
@@ -48,7 +52,7 @@ test('ultrasonic soldering uses portrait-native artwork with localized live copy
  for(let i=1;i<=5;i++)assert.match(artwork,new RegExp(`ultrasonic-soldering-0${i}-portrait-v1\\.png`));
  assert.match(artwork,/isCavitation\?cavitationPortraits:ultrasonicPortraits/);
  assert.match(artwork,/const portrait=portraits\[index\]/);
- assert.match(artwork,/\{item\.title\[locale\]\}/);
+ assert.match(artwork,/\{displayTitle\}/);
  assert.match(artwork,/\{step\.title\[locale\]\}/);
  assert.match(artwork,/\{step\.body\[locale\]\}/);
  assert.match(artwork,/\{step\.keyPoint\[locale\]\}/);

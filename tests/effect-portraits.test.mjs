@@ -34,7 +34,8 @@ test('all 45 stages render a contained mobile image, original diagram and transl
    if(specifier==='./theme')return {colors:{lime:'#c5ff2c',line:'#30423d'}};
    if(specifier==='./data/assets')return {assets:new Proxy({}, {get:(_,key)=>fileURLToPath(new URL('assets/content/'+key.replace('/assets/',''),root))})};
    if(specifier.endsWith('.png'))return fileURLToPath(new URL(specifier,url));
-   return load(new URL(specifier+'.ts',url));
+   const dependency=new URL(specifier+'.ts',url);
+   return load(fs.existsSync(dependency)?dependency:new URL(specifier+'.tsx',url));
   },exports);
   return exports;
  }
@@ -42,6 +43,7 @@ test('all 45 stages render a contained mobile image, original diagram and transl
  const render=load(new URL('src/EffectArtwork.tsx',root)).default;
  const flatten=node=>{
   if(!node||typeof node!=='object')return [];
+  if(typeof node.type==='function'&&node.type!==Image)return flatten(node.type(node.props));
   return [node,...React.Children.toArray(node.props?.children).flatMap(flatten)];
  };
  for(width of [320,390,430])for(locale of ['ko','en','ja','zh']){
