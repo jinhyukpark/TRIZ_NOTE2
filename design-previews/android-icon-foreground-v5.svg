@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#353A3C"/>
+      <stop offset="1" stop-color="#111516"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#ring)">
+    <rect x="88" y="276" width="154" height="58" rx="29"/>
+    <rect x="88" y="483" width="154" height="58" rx="29"/>
+    <rect x="88" y="690" width="154" height="58" rx="29"/>
+  </g>
+  <g fill="#07100C">
+    <circle cx="242" cy="305" r="43"/>
+    <circle cx="242" cy="512" r="43"/>
+    <circle cx="242" cy="719" r="43"/>
+  </g>
+  <g transform="translate(167 126) scale(0.72)" fill="none" stroke="#07100C" stroke-width="54" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M594 266 C535 225 468 261 471 329 C413 318 379 370 397 419 C341 441 341 521 396 545 C368 599 412 663 472 651 C469 721 545 756 594 709"/>
+    <path d="M594 266 C653 225 720 261 717 329 C775 318 809 370 791 419 C847 441 847 521 792 545 C820 599 776 663 716 651 C719 721 643 756 594 709"/>
+    <path d="M594 274 L594 704"/>
+    <path d="M471 329 C500 339 518 360 519 397"/>
+    <path d="M397 419 C440 410 468 427 485 457"/>
+    <path d="M396 545 C437 546 463 530 485 502"/>
+    <path d="M472 651 C494 625 505 595 499 566"/>
+    <path d="M717 329 C688 339 670 360 669 397"/>
+    <path d="M791 419 C748 410 720 427 703 457"/>
+    <path d="M792 545 C751 546 725 530 703 502"/>
+    <path d="M716 651 C694 625 683 595 689 566"/>
+  </g>
+</svg>

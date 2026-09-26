@@ -22,13 +22,18 @@ test('PKCE callbacks are exact matched and exchanged only once',async()=>{
  await assert.rejects(auth.handleAuthLink('triznote://auth/callback?error_description=denied'),/denied/);
 });
 test('Google uses the system browser and cancellation does not create a session',async()=>{
- let result={type:'cancel'};const callbacks=[];
+ let result={type:'cancel'};const callbacks=[];const opens=[];
  const google=load('src/lib/googleAuth.ts',{
   './supabase':{supabase:{auth:{signInWithOAuth:async input=>{assert.equal(input.provider,'google');assert.equal(input.options.skipBrowserRedirect,true);return {data:{url:'https://example.com/oauth'},error:null};}}}},
-  'expo-web-browser':{openAuthSessionAsync:async()=>result},
+  'react-native':{Platform:{OS:'android'}},
+  'expo-web-browser':{
+   getCustomTabsSupportingBrowsersAsync:async()=>({browserPackages:['com.android.chrome','com.sec.android.app.sbrowser'],servicePackages:['com.android.chrome','com.sec.android.app.sbrowser'],defaultBrowserPackage:'com.sec.android.app.sbrowser',preferredBrowserPackage:'com.sec.android.app.sbrowser'}),
+   openAuthSessionAsync:async(...args)=>{opens.push(args);return result},
+  },
   './auth':{redirectTo:'triznote://auth/callback',handleAuthLink:async url=>callbacks.push(url)},
  });
  await google.signInWithGoogle();assert.equal(callbacks.length,0);
  result={type:'success',url:'triznote://auth/callback?code=test'};
  await google.signInWithGoogle();assert.deepEqual(callbacks,[result.url]);
+ assert.deepEqual(opens[0][2],{browserPackage:'com.android.chrome',createTask:false,showInRecents:false});
 });

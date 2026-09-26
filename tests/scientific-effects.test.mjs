@@ -13,7 +13,9 @@ function load(url){
  const exports={};cache.set(url.href,exports);
  const code=ts.transpileModule(fs.readFileSync(url,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.React,esModuleInterop:true}}).outputText;
  new Function('require','exports',code)(name=>{
-  if(name==='react')return React;
+  // Static tree audit: treat asynchronously loaded artwork as ready so this
+  // direct component invocation can inspect the final overlay tree.
+  if(name==='react')return {...React,useState:()=>[true,()=>{}],useEffect:()=>{}};
   if(name==='react-native')return {Image,Text:'Text',View:'View',StyleSheet:{create:s=>s},useWindowDimensions:()=>({width})};
   if(name==='./i18n')return {useLanguage:()=>({locale})};
   if(name.endsWith('.png'))return fileURLToPath(new URL(name,url));

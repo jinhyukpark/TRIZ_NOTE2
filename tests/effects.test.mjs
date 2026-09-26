@@ -27,7 +27,7 @@ test('Effects is the middle tab and has detail-aware Android back navigation',()
  const app=read('App.tsx');
  assert.match(app,/\['principles','원리'\],\['effects','Effects'\],\['matrix','모순'\]/);
  assert.match(app,/if\(effect\)\{setEffect\(null\);return true\}/);
- assert.match(app,/<Effects selected=\{effect\} onSelect=\{setEffect\}/);
+ assert.match(app,/<Effects selected=\{effect\} onSelect=\{openEffect\} canAccess=\{subscription.active\}/);
 });
 test('every Effect step has a bundled bitmap without the baked-in process timeline',()=>{
  for(const effect of effects)for(const step of effect.steps){
@@ -47,10 +47,10 @@ test('ultrasonic soldering uses portrait-native artwork with localized live copy
   assert.ok(fs.existsSync(new URL('assets/content/'+portrait.replace('/assets/',''),root)),portrait);
   assert.ok(read('src/data/assets.ts').includes(JSON.stringify(portrait)),portrait);
  }
- assert.match(artwork,/item\.id==='ultrasonic-soldering'/);
- assert.match(artwork,/const ultrasonicPortraits=\[/);
- for(let i=1;i<=5;i++)assert.match(artwork,new RegExp(`ultrasonic-soldering-0${i}-portrait-v1\\.png`));
- assert.match(artwork,/isCavitation\?cavitationPortraits:ultrasonicPortraits/);
+ const manifest=read('src/data/legacyEffectArtwork.ts');
+ assert.match(manifest,/'ultrasonic-soldering':\{portraits:\[/);
+ for(let i=1;i<=5;i++)assert.match(manifest,new RegExp(`ultrasonic-soldering-0${i}-portrait-v1\\.png`));
+ assert.match(artwork,/const portraits=additionalPortrait.portraits/);
  assert.match(artwork,/const portrait=portraits\[index\]/);
  assert.match(artwork,/\{displayTitle\}/);
  assert.match(artwork,/\{step\.title\[locale\]\}/);

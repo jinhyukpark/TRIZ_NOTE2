@@ -7,3 +7,7 @@ verify_jwt = false
 [functions.delete-account]
 # The function verifies the bearer token with getUser and requires fresh credentials.
 verify_jwt = false
+
+[functions.effects-content]
+# handler authenticates with getUser, then checks verified premium entitlement.
+verify_jwt = false

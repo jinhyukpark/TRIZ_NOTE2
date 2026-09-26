@@ -9,6 +9,7 @@ import {useLanguage,languages,Locale} from '../i18n';
 import AppleLogin from '../AppleLogin';
 import LegalLinks,{ManageSubscription} from '../LegalLinks';
 import {complianceCopy as copy} from '../locales/compliance';
+import BrandLogo from '../BrandLogo';
 export default function Auth({recovery,onRecovered}:{recovery:boolean;onRecovered:()=>void}){
  const {t,locale,setLocale}=useLanguage();
  const [mode,setMode]=useState<'login'|'signup'>('login');
@@ -27,7 +28,7 @@ export default function Auth({recovery,onRecovered}:{recovery:boolean;onRecovere
  catch(e){setError(e instanceof Error?e.message:t('다시 시도해주세요.'));}finally{setBusy(false);}
  }
  return <KeyboardAvoidingView style={s.root} behavior={Platform.OS==='ios'?'padding':undefined}><ScrollView contentContainerStyle={[s.page,{paddingTop:48}]} keyboardShouldPersistTaps="handled">
- <Text style={s.eyebrow}>TRIZ NOTE / NATIVE</Text><Text style={[s.title,{fontSize:40}]}>Think different.{'\n'}Build better.</Text><Text style={s.muted}>{t('학습 기록을 이어가세요')}</Text>
+ <BrandLogo large/><Text style={[s.title,{fontSize:40}]}>Think different.{'\n'}Build better.</Text><Text style={s.muted}>{t('학습 기록을 이어가세요')}</Text>
  <View style={s.card}><Text style={s.heading}>{t(recovery?'새 비밀번호':mode==='login'?'로그인':'회원가입')}</Text>
  {!recovery&&<TextInput accessibilityLabel={t('이메일')} placeholder="you@example.com" placeholderTextColor={colors.muted} autoCapitalize="none" keyboardType="email-address" autoComplete="email" value={email} onChangeText={setEmail} style={s.input}/>}
  <TextInput accessibilityLabel={t('비밀번호')} placeholder={t('비밀번호 (8자 이상)')} placeholderTextColor={colors.muted} secureTextEntry autoCapitalize="none" autoComplete={mode==='signup'||recovery?'new-password':'current-password'} value={password} onChangeText={setPassword} style={s.input}/>

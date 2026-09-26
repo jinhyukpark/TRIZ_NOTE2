@@ -1,57 +1,19 @@
-import React from 'react';
-import {Image,StyleSheet,Text,useWindowDimensions,View} from 'react-native';
+import React,{useEffect,useState} from 'react';
+import {ActivityIndicator,Image,StyleSheet,Text,useWindowDimensions,View} from 'react-native';
 import {assets} from './data/assets';
 import type {Effect,EffectStep} from './data/effects';
 import {effectTitle} from './data/effectCatalog';
 import {useLanguage} from './i18n';
 import {colors} from './theme';
-import {cavitationPortraits,cavitationEquipmentLabels,cavitationFlows} from './data/cavitationPortrait';
-import {coronaPortraits,coronaEquipmentLabels} from './data/coronaPortrait';
-import {remainingEffectPortraits} from './data/remainingEffectPortraits';
 import ScientificEffectArtwork from './ScientificEffectArtwork';
 import {scientificArtwork} from './data/scientificArtwork';
 import EquipmentCallout from './EquipmentCallout';
 import {effectCallouts} from './data/effectCallouts';
+import {legacyEffectArtwork,remoteLegacyArtwork} from './data/legacyEffectArtwork';
+import ContentImage from './ContentImage';
+import EffectExplanation,{type ExplanationLabel} from './EffectExplanation';
+import explanationLabels from './data/effectExplanationLabels.json';
 
-// Keep the portrait pilot as direct Metro dependencies. Looking these up via
-// a generated string map can leave a blank frame in an already-running native
-// bundle when the new files have not yet entered Metro's asset graph.
-const ultrasonicPortraits=[
- require('../assets/content/effects/ultrasonic-soldering-01-portrait-v1.png'),
- require('../assets/content/effects/ultrasonic-soldering-02-portrait-v1.png'),
- require('../assets/content/effects/ultrasonic-soldering-03-portrait-v1.png'),
- require('../assets/content/effects/ultrasonic-soldering-04-portrait-v1.png'),
- require('../assets/content/effects/ultrasonic-soldering-05-portrait-v1.png'),
-];
-const solderingEquipmentLabels=[
- {number:'01',x:'39%',y:'34%',text:{ko:'솔더링 팁',en:'Soldering tip',ja:'こて先',zh:'焊头'}},
- {number:'02',x:'8%',y:'57%',text:{ko:'구리선',en:'Copper wire',ja:'銅線',zh:'铜线'}},
- {number:'03',x:'47%',y:'73%',text:{ko:'유리 기판',en:'Glass substrate',ja:'ガラス基板',zh:'玻璃基板'}},
- {number:'04',x:'70%',y:'43%',text:{ko:'공급 노즐',en:'Feed nozzle',ja:'供給ノズル',zh:'供料嘴'}},
-] as const;
-const solderingFlows=[
- [
-  {icon:'⌖',label:{ko:'접합 도구',en:'Joining tools',ja:'接合工具',zh:'连接工具'},detail:{ko:'팁 · 공급 노즐',en:'Tip · feed nozzle',ja:'こて先・供給ノズル',zh:'焊头 · 供料嘴'}},
-  {icon:'◇',label:{ko:'접합 위치',en:'Joint position',ja:'接合位置',zh:'连接位置'},detail:{ko:'정확히 정렬',en:'Precise alignment',ja:'正確に整列',zh:'精确对准'}},
-  {icon:'●',label:{ko:'구리선 · 유리',en:'Copper · glass',ja:'銅線・ガラス',zh:'铜线 · 玻璃'},detail:{ko:'두 재료 준비',en:'Materials ready',ja:'二材料を準備',zh:'准备两种材料'}},
- ],[
-  {icon:'♨',label:{ko:'가열',en:'Heating',ja:'加熱',zh:'加热'},detail:{ko:'팁에서 열 전달',en:'Heat from tip',ja:'こて先から伝熱',zh:'焊头传热'}},
-  {icon:'●',label:{ko:'솔더 공급',en:'Solder feed',ja:'はんだ供給',zh:'供给钎料'},detail:{ko:'접합부에 공급',en:'Feed to joint',ja:'接合部へ供給',zh:'送至接合处'}},
-  {icon:'◉',label:{ko:'용융 솔더',en:'Molten solder',ja:'溶融はんだ',zh:'熔融钎料'},detail:{ko:'액체 상태',en:'Liquid state',ja:'液体状態',zh:'液态'}},
- ],[
-  {icon:'≈',label:{ko:'초음파 진동',en:'Ultrasonic vibration',ja:'超音波振動',zh:'超声振动'},detail:{ko:'팁에서 발생',en:'From the tip',ja:'こて先で発生',zh:'由焊头产生'}},
-  {icon:'↓',label:{ko:'진동 전달',en:'Vibration transfer',ja:'振動伝達',zh:'振动传递'},detail:{ko:'용융 솔더로 전달',en:'Into molten solder',ja:'溶融はんだへ',zh:'传入熔融钎料'}},
-  {icon:'◎',label:{ko:'젖음 촉진',en:'Wetting',ja:'ぬれ促進',zh:'促进润湿'},detail:{ko:'계면에 작용',en:'At the interface',ja:'界面に作用',zh:'作用于界面'}},
- ],[
-  {icon:'●',label:{ko:'용융 솔더',en:'Molten solder',ja:'溶融はんだ',zh:'熔融钎料'},detail:{ko:'접합 매개물',en:'Joining medium',ja:'接合媒体',zh:'连接介质'}},
-  {icon:'◇',label:{ko:'계면 확산',en:'Interface spread',ja:'界面拡散',zh:'界面铺展'},detail:{ko:'고르게 젖음',en:'Even wetting',ja:'均一にぬれる',zh:'均匀润湿'}},
-  {icon:'⇄',label:{ko:'재료 연결',en:'Materials joined',ja:'材料を接合',zh:'连接材料'},detail:{ko:'구리선과 유리',en:'Copper and glass',ja:'銅線とガラス',zh:'铜线与玻璃'}},
- ],[
-  {icon:'❄',label:{ko:'냉각',en:'Cooling',ja:'冷却',zh:'冷却'},detail:{ko:'가열 종료',en:'Heating ends',ja:'加熱終了',zh:'停止加热'}},
-  {icon:'▱',label:{ko:'솔더 응고',en:'Solidification',ja:'はんだ凝固',zh:'钎料凝固'},detail:{ko:'액체에서 고체로',en:'Liquid to solid',ja:'液体から固体へ',zh:'液态变固态'}},
-  {icon:'✓',label:{ko:'접합 고정',en:'Joint fixed',ja:'接合固定',zh:'接头固定'},detail:{ko:'연결층 완성',en:'Bond layer complete',ja:'接合層が完成',zh:'连接层完成'}},
- ],
-] as const;
 
 /**
  * The generated renders supply the apparatus and scientific state. All
@@ -63,43 +25,37 @@ export default function EffectArtwork({item,step,index}:{item:Effect;step:Effect
  const title=effectTitle(item);
  const displayTitle=title[locale];
  const {width:windowWidth}=useWindowDimensions();
+ const [imageReady,setImageReady]=useState(false);
+ useEffect(()=>setImageReady(false),[item.id,index]);
  if(scientificArtwork[item.id])return <ScientificEffectArtwork item={item} step={step} index={index}/>;
  // Prefer artwork with the baked-in timeline removed from the actual bitmap.
  // Keep the original poster as a reversible source, not an opaque UI cover.
  // Versioned cleaned assets prevent Metro/iOS from reusing an older bitmap
  // that still contains the baked-in close icon or process footer.
- const source=assets[step.image.replace(/\.png$/, '-clean-v2.png')] ?? assets[step.image];
- const imageSize=Image.resolveAssetSource(source);
- const aspectRatio=imageSize.width/imageSize.height;
- const mobileSceneAspect=aspectRatio*.66;
- const principleLabel={ko:'핵심 원리',en:'KEY PRINCIPLE',ja:'核心原理',zh:'核心原理'}[locale];
- const mobileSplit=item.id==='heat-pipe'?.673:.66;
- const mobileDetail=1-mobileSplit;
- const additionalPortrait=remainingEffectPortraits[item.id];
- if(windowWidth<700&&(additionalPortrait||item.id==='ultrasonic-soldering'||item.id==='acoustic-cavitation'||item.id==='corona-discharge')){
-  const isCavitation=item.id==='acoustic-cavitation';
-  const isCorona=item.id==='corona-discharge';
-  const portraits=additionalPortrait?.portraits ?? (isCorona?coronaPortraits:isCavitation?cavitationPortraits:ultrasonicPortraits);
-  const equipmentLabels=additionalPortrait?.labelsByStage?.[index] ?? additionalPortrait?.labels ?? (isCorona?coronaEquipmentLabels:isCavitation?cavitationEquipmentLabels:solderingEquipmentLabels);
+ const bundledSource=assets[step.image.replace(/\.png$/, '-clean-v2.png')] ?? assets[step.image];
+ const source=remoteLegacyArtwork[item.id]?.panels?.[index] ?? bundledSource;
+ const additionalPortrait=remoteLegacyArtwork[item.id] ?? legacyEffectArtwork[item.id];
+ if(additionalPortrait){
+  const portraits=additionalPortrait.portraits;
+  const equipmentLabels=additionalPortrait.labelsByStage?.[index] ?? additionalPortrait.labels;
   const portrait=portraits[index] ?? portraits[0];
   // Match the full viewport and the actual portrait aspect ratio.
   // The Image itself needs explicit dimensions: React Native supplies
   // bundled asset dimensions by default, even with absoluteFill positioning.
-  const portraitWidth=windowWidth;
+  const portraitWidth=Math.min(windowWidth,640);
   const portraitSize=Image.resolveAssetSource(portrait);
   const portraitHeight=portraitWidth*portraitSize.height/portraitSize.width;
   const explanationStart=additionalPortrait?.explanationStart ?? .667;
-  const explanationFraction=(additionalPortrait?.explanationEnd ?? .997)-explanationStart;
-  const explanationScale=portraitWidth/explanationFraction;
   return <View style={[a.portraitPoster,{width:portraitWidth}]} accessibilityRole="image" accessibilityLabel={`${item.title[locale]}. ${step.title[locale]}. ${step.body[locale]}. ${step.keyPoint[locale]}`}>
    <View style={[a.portraitApparatus,{width:portraitWidth,height:portraitHeight}]}>
-    <Image source={portrait} resizeMode="contain" style={{width:portraitWidth,height:portraitHeight}} accessible={false}/>
-    <View pointerEvents="none" style={a.portraitHeadingOverlay}>
+    {!imageReady&&<View pointerEvents="none" style={a.imageLoading}><ActivityIndicator color={colors.lime}/></View>}
+    <ContentImage key={`${item.id}-${index}-apparatus`} source={portrait} fallback={legacyEffectArtwork[item.id].portraits[index]} resizeMode="contain" style={{width:portraitWidth,height:portraitHeight}} accessible={false} onLoadStart={()=>setImageReady(false)} onLoad={()=>setImageReady(true)}/>
+    {imageReady&&<><View pointerEvents="none" style={a.portraitHeadingOverlay}>
      <Text style={a.portraitEyebrow}>{String(index+1).padStart(2,'0')}  —  {step.label[locale]}</Text>
      <Text style={[a.portraitTitle,a.portraitOverlayTitle]}>{displayTitle}</Text>
      {locale!=='en'&&<Text numberOfLines={1} ellipsizeMode="tail" style={[a.englishSubtitle,a.portraitOverlayTitle]}>({title.en})</Text>}
     </View>
-    {equipmentLabels.map((label,i)=><EquipmentCallout key={label.number} position={effectCallouts[item.id][index][i]} text={label.text[locale]} aspectRatio={portraitSize.width/portraitSize.height}/>)}
+    {equipmentLabels.map((label,i)=><EquipmentCallout key={label.number} position={effectCallouts[item.id][index][i]} text={label.text[locale]} aspectRatio={portraitSize.width/portraitSize.height}/>)}</>}
    </View>
    <View style={a.heatPipeTimeline}>
     <View style={a.heatPipeTrack}/>
@@ -109,71 +65,14 @@ export default function EffectArtwork({item,step,index}:{item:Effect;step:Effect
     </View>)}
    </View>
    <View style={a.sectionDivider}/>
-   <View style={[a.heatPipeExplanation,{width:portraitWidth,height:explanationScale/aspectRatio}]}>
-    {/* Preserve the original stage-specific charts, illustrations and copy.
-        Start beyond the baked-in divider, with explicit bitmap dimensions. */}
-    <Image source={source} resizeMode="contain" style={{position:'absolute',left:-explanationScale*explanationStart,top:0,width:explanationScale,height:explanationScale/aspectRatio}} accessible={false}/>
-   </View>
-   {locale!=='ko'&&<View style={a.portraitExplanation}>
-    <Text style={a.portraitStage}>{String(index+1).padStart(2,'0')}  —  {step.label[locale]}</Text>
-    <Text style={a.portraitHeadline}>{step.title[locale]}</Text>
-    <Text style={a.portraitBody}>{step.body[locale]}</Text>
-    <View style={a.portraitRule}/>
-    <Text style={a.portraitKeyLabel}>{principleLabel}</Text>
-    <Text style={a.portraitKey}>{step.keyPoint[locale]}</Text>
-   </View>}
+   <EffectExplanation source={source} fallback={bundledSource} width={portraitWidth} start={explanationStart} end={additionalPortrait.explanationEnd} labels={additionalPortrait.explanationLabels?.[index]??(explanationLabels as Record<string,ExplanationLabel[]>)[step.image.split('/').pop()!.replace(/\.png$/,'-clean-v2.png')]??[]}/>
   </View>;
  }
- if(windowWidth<700){
-  // Reuse both panels of the existing artwork at their original proportions.
-  // Explicit bitmap dimensions override RN's intrinsic asset size.
-  const apparatusWidth=windowWidth/mobileSplit;
-  const apparatusHeight=apparatusWidth/aspectRatio;
-  const explanationStart=mobileSplit+.007;
-  const explanationWidth=windowWidth/(.997-explanationStart);
-  const explanationHeight=explanationWidth/aspectRatio;
-  return <View style={[a.heatPipePoster,{width:windowWidth}]} accessibilityRole="image" accessibilityLabel={`${item.title[locale]}. ${step.title[locale]}. ${step.body[locale]}. ${step.keyPoint[locale]}`}>
-  <View style={[a.heatPipeApparatus,{width:windowWidth,height:apparatusHeight}]}>
-   <Image source={source} resizeMode="contain" style={{position:'absolute',left:0,top:0,width:apparatusWidth,height:apparatusHeight}} accessible={false}/>
-  </View>
-   <View style={a.heatPipeTimeline}>
-    <View style={a.heatPipeTrack}/>
-    {item.steps.map((p,i)=><View key={p.image} style={a.heatPipeTimelineItem}>
-     <View style={[a.heatPipeNumber,i===index&&a.activeNumber]}><Text style={[a.heatPipeNumberText,i===index&&a.activeText]}>{String(i+1).padStart(2,'0')}</Text></View>
-     <Text numberOfLines={2} style={[a.heatPipeTimelineText,i===index&&a.activeText]}>{p.label[locale]}</Text>
-    </View>)}
-   </View>
-  <View style={a.sectionDivider}/>
-  <View style={[a.heatPipeExplanation,{width:windowWidth,height:explanationHeight}]}>
-   <Image source={source} resizeMode="contain" style={{position:'absolute',left:-explanationWidth*explanationStart,top:0,width:explanationWidth,height:explanationHeight}} accessible={false}/>
-  </View>
-  {locale!=='ko'&&<View style={a.portraitExplanation}>
-   <Text style={a.portraitStage}>{String(index+1).padStart(2,'0')}  —  {step.label[locale]}</Text>
-   <Text style={a.portraitHeadline}>{step.title[locale]}</Text>
-   <Text style={a.portraitBody}>{step.body[locale]}</Text>
-   <View style={a.portraitRule}/><Text style={a.portraitKeyLabel}>{principleLabel}</Text>
-   <Text style={a.portraitKey}>{step.keyPoint[locale]}</Text>
-  </View>}
- </View>;
- }
- return <View style={[a.frame,{aspectRatio}]} accessibilityRole="image" accessibilityLabel={`${item.title[locale]}. ${step.title[locale]}. ${step.body[locale]}`}>
-  <Image source={source} resizeMode="contain" style={StyleSheet.absoluteFill} accessible={false}/>
-  <View style={a.topMask}><Text style={a.kicker}>TRIZ NOTE  /  EFFECT LIBRARY</Text><Text numberOfLines={1} adjustsFontSizeToFit style={a.effectTitle}>{displayTitle}</Text>{locale!=='en'&&<Text numberOfLines={1} ellipsizeMode="tail" style={a.englishSubtitle}>({title.en})</Text>}</View>
-  <View style={a.rightMask}>
-   <Text style={a.stage}>{String(index+1).padStart(2,'0')}  —  {step.label[locale]}</Text>
-   <Text numberOfLines={3} adjustsFontSizeToFit minimumFontScale={0.65} style={a.headline}>{step.title[locale]}</Text>
-   <Text numberOfLines={4} adjustsFontSizeToFit minimumFontScale={0.65} style={a.body}>{step.body[locale]}</Text>
-   <View style={a.rule}/><Text style={a.keyLabel}>KEY PRINCIPLE</Text>
-   <Text numberOfLines={4} adjustsFontSizeToFit minimumFontScale={0.65} style={a.key}>{step.keyPoint[locale]}</Text>
-  </View>
-  <View style={a.timeline}>{item.steps.map((p,i)=><View key={p.image} style={a.timelineItem}>
-   <View style={[a.number,i===index&&a.activeNumber]}><Text style={[a.numberText,i===index&&a.activeText]}>{String(i+1).padStart(2,'0')}</Text></View>
-   <Text numberOfLines={1} style={[a.timelineText,i===index&&a.activeText]}>{p.label[locale]}</Text>
-  </View>)}</View>
- </View>;
+ return null;
 }
 
 const a=StyleSheet.create({
+ imageLoading:{position:'absolute',left:0,right:0,top:0,bottom:0,alignItems:'center',justifyContent:'center',backgroundColor:'#06100e'},
  frame:{width:'100%',overflow:'hidden',borderRadius:8,borderWidth:1,borderColor:colors.line,backgroundColor:'#07100e'},
  heatPipePoster:{width:'100%',overflow:'hidden',borderRadius:10,backgroundColor:'#06100e'},
  portraitPoster:{width:'100%',overflow:'hidden',borderRadius:10,backgroundColor:'#06100e'},

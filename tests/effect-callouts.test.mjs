@@ -13,8 +13,12 @@ function load(url){
  const exports={};cache.set(url.href,exports);
  const code=ts.transpileModule(fs.readFileSync(url,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.React,esModuleInterop:true}}).outputText;
  new Function('require','exports',code)(name=>{
-  if(name==='react')return React;
-  if(name==='react-native')return {Image,Text:'Text',View:'View',StyleSheet:{create:s=>s,absoluteFill:{position:'absolute',top:0,bottom:0,left:0,right:0}},useWindowDimensions:()=>({width})};
+  // Static tree audit: treat asynchronously loaded artwork as ready so the
+  // localized overlay geometry remains inspectable without mounting React.
+  if(name==='react')return {...React,useState:()=>[true,()=>{}],useEffect:()=>{}};
+  if(name==='react-native-safe-area-context')return {SafeAreaView:'View'};
+  if(name.endsWith('.json'))return JSON.parse(fs.readFileSync(new URL(name,url),'utf8'));
+  if(name==='react-native')return {Image,Modal:'Modal',Pressable:'Pressable',ScrollView:'ScrollView',Text:'Text',View:'View',StyleSheet:{create:s=>s,absoluteFill:{position:'absolute',top:0,bottom:0,left:0,right:0}},useWindowDimensions:()=>({width})};
   if(name==='./i18n')return {useLanguage:()=>({locale})};
   if(name==='./theme')return {colors:{lime:'#c5ff2c',line:'#30423d'}};
   if(name==='./data/assets')return {assets:new Proxy({}, {get:(_,key)=>fileURLToPath(new URL('assets/content/'+key.replace('/assets/',''),root))})};
@@ -23,7 +27,7 @@ function load(url){
  },exports);return exports;
 }
 function flatten(node){
- if(!node||typeof node!=='object')return [];
+ if(!node||typeof node!=='object'||node.props?.visible===false)return [];
  if(typeof node.type==='function'&&node.type!==Image)return [node,...flatten(node.type(node.props))];
  return [node,...React.Children.toArray(node.props?.children).flatMap(flatten)];
 }

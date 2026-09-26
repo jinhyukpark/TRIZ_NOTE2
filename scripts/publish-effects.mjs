@@ -9,27 +9,36 @@ import {createClient} from '@supabase/supabase-js';
 const root=path.resolve(import.meta.dirname,'..'),require=createRequire(import.meta.url),cache=new Map();
 function load(file){
  if(cache.has(file))return cache.get(file);
+ if(file.endsWith('.json'))return JSON.parse(fs.readFileSync(file,'utf8'));
  const exports={};cache.set(file,exports);
  const code=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.React,esModuleInterop:true}}).outputText;
  new Function('require','exports',code)(name=>{
   if(name==='react')return require('react');
   if(name==='react-native')return {};
+  if(file.endsWith('/lib/effectContent.ts')&&name==='./supabase')return {supabase:null};
   const p=path.resolve(path.dirname(file),name);
-  if(name.endsWith('.png'))return p;
-  return load(fs.existsSync(p+'.ts')?p+'.ts':p+'.tsx');
+  if(/\.(png|jpe?g|webp)$/.test(name))return p;
+  return load(p.endsWith('.json')?p:fs.existsSync(p+'.ts')?p+'.ts':p+'.tsx');
  },exports);return exports;
 }
 const {expansionEffects,expansionDrafts}=load(path.join(root,'src/data/expansionEffects.ts'));
 const {expansionArtwork,expansionFeatured,expansionCallouts}=load(path.join(root,'src/data/expansionArtwork.ts'));
 const {effectCatalog}=load(path.join(root,'src/data/effectCatalog.ts'));
 const {diagramShapes,axes}=load(path.join(root,'src/ExpansionDiagram.tsx'));
+const {effects}=load(path.join(root,'src/data/effects.ts'));
+const {scientificArtwork}=load(path.join(root,'src/data/scientificArtwork.ts'));
+const {featuredEffects}=load(path.join(root,'src/data/featuredEffects.ts'));
+const {effectCallouts}=load(path.join(root,'src/data/effectCallouts.ts'));
+const explanationLabels=JSON.parse(fs.readFileSync(path.join(root,'src/data/effectExplanationLabels.json'),'utf8'));
+const {legacyEffectArtwork}=load(path.join(root,'src/data/legacyEffectArtwork.ts'));
+const {assets}=load(path.join(root,'src/data/assets.ts'));
 const ref='sovzalkrotgvnqvpfkjd',url=`https://${ref}.supabase.co`,bucket='effect-content';
 const files=new Map();
 function asset(file){
  const bytes=fs.readFileSync(file),hash=createHash('sha256').update(bytes).digest('hex');
- const key=`expansion-v1/${hash.slice(0,16)}/${path.basename(file)}`;
+ const key=`private-v1/${hash.slice(0,16)}/${path.basename(file)}`;
  files.set(key,{file,bytes,hash});
- return {uri:`${url}/storage/v1/object/public/${bucket}/${key}`,width:bytes.readUInt32BE(16),height:bytes.readUInt32BE(20),sha256:hash};
+ return {uri:`${url}/storage/v1/object/authenticated/${bucket}/${key}`,width:bytes.readUInt32BE(16),height:bytes.readUInt32BE(20),sha256:hash};
 }
 const rows=expansionEffects.map(item=>{
  const art=expansionArtwork[item.id],featured=expansionFeatured[item.id];
@@ -40,18 +49,38 @@ const rows=expansionEffects.map(item=>{
   diagrams:item.steps.map((_,index)=>({shapes:diagramShapes(item.id,index),caption:axes[item.id]&&(item.id!=='activated-carbon'||index===4)&&(item.id!=='photoionisation'||index>=2)?Object.fromEntries(['ko','en','ja','zh'].map((l,i)=>[l,axes[item.id].split('|')[i]])):null}))
  }};
 });
+for(const item of effects.filter(e=>!expansionEffects.some(x=>x.id===e.id))){
+ const legacy=legacyEffectArtwork[item.id],art=scientificArtwork[item.id],featured=featuredEffects[item.id];
+ rows.push({id:item.id,schema_version:1,published:true,payload:{...item,
+  renderer:legacy?'legacy':'native-science',catalog:effectCatalog[item.id],featured:{...featured,image:asset(featured.image)},
+  artwork:legacy?{...legacy,explanationLabels:item.steps.map(s=>explanationLabels[path.basename(s.image).replace(/\.png$/,'-clean-v2.png')]),portraits:legacy.portraits.map(asset),panels:item.steps.map(s=>asset(assets[s.image.replace(/\.png$/,'-clean-v2.png')]??assets[s.image])),callouts:effectCallouts[item.id]}:{images:art.images.map(asset),tags:art.tags,callouts:effectCallouts[item.id]},
+ }});
+}
+const {validEffectPayload}=load(path.join(root,'src/lib/effectContent.ts'));
+process.env.EXPO_PUBLIC_SUPABASE_URL=url;
+for(const row of rows)if(!validEffectPayload(row.payload))throw Error(`Invalid app payload: ${row.id}`);
+if(process.argv.includes('--manifest')){fs.writeSync(1,JSON.stringify(rows));process.exit(0);}
 if(!process.argv.includes('--publish')){console.log(JSON.stringify({effects:rows.length,steps:rows.length*5,images:files.size,bytes:[...files.values()].reduce((n,f)=>n+f.bytes.length,0)}));process.exit(0);}
 const keys=JSON.parse(execFileSync('supabase',['projects','api-keys','--project-ref',ref,'--reveal','--output','json'],{encoding:'utf8',stdio:['ignore','pipe','pipe']}));
 const list=Array.isArray(keys)?keys:keys.api_keys??keys.keys??[];
 const key=list.find(k=>k.name==='service_role')?.api_key??list.find(k=>k.type==='secret')?.api_key;
 if(!key)throw Error('Administrative publisher credential unavailable; no client write permissions will be opened.');
 const client=createClient(url,key,{auth:{persistSession:false,autoRefreshToken:false}});
-const queue=[...files.entries()];let uploaded=0;
+if(!process.argv.includes('--private'))throw Error('Publishing requires --private; public publication is disabled.');
+const {error:bucketError}=await client.storage.updateBucket(bucket,{public:false});if(bucketError)throw bucketError;
+const {data:bucketInfo,error:bucketReadError}=await client.storage.getBucket(bucket);
+if(bucketReadError||bucketInfo?.public!==false)throw Error('Private bucket verification failed');
+if(process.argv.includes('--metadata-only')){
+ const {data:current,error}=await client.from('effect_content').select('id,payload');if(error)throw error;
+ const known=new Set();const collect=v=>{if(!v||typeof v!=='object')return;if(v.uri)known.add(v.uri);Object.values(v).forEach(collect);};current.forEach(r=>collect(r.payload));
+ const check=v=>{if(!v||typeof v!=='object')return;if(v.uri&&!known.has(v.uri))throw Error('Metadata update references an unpublished asset');Object.values(v).forEach(check);};rows.forEach(r=>check(r.payload));
+}
+const queue=process.argv.includes('--metadata-only')?[]:[...files.entries()];let uploaded=0;
 await Promise.all(Array.from({length:4},async()=>{while(queue.length){const [name,f]=queue.shift();
- const {error}=await client.storage.from(bucket).upload(name,f.bytes,{contentType:'image/png',cacheControl:'31536000',upsert:false});
+ const {error}=await client.storage.from(bucket).upload(name,f.bytes,{contentType:'image/png',cacheControl:'60',upsert:false});
  if(error&&!/already exists|duplicate/i.test(error.message))throw error;
- const response=await fetch(`${url}/storage/v1/object/public/${bucket}/${name}`);
- if(!response.ok||createHash('sha256').update(Buffer.from(await response.arrayBuffer())).digest('hex')!==f.hash)throw Error(`Image verification failed: ${name}`);
+ const {data:download,error:downloadError}=await client.storage.from(bucket).download(name);
+ if(downloadError||!download||createHash('sha256').update(Buffer.from(await download.arrayBuffer())).digest('hex')!==f.hash)throw Error(`Image verification failed: ${name}`);
  uploaded++;if(uploaded%10===0||uploaded===files.size)console.log(`Verified images ${uploaded}/${files.size}`);
 }}));
 const {error}=await client.from('effect_content').upsert(rows,{onConflict:'id'});if(error)throw error;

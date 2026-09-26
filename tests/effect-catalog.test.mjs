@@ -15,7 +15,7 @@ test('list titles include English once and visually truncate without losing the 
  assert.equal(catalog.effectListTitle(item,'en'),'Skin effect');
  for(const locale of ['ja','zh'])assert.ok(catalog.effectListTitle(item,locale).endsWith('(Skin effect)'));
  const screen=read('src/screens/Effects.tsx');
- assert.match(screen,/numberOfLines=\{1\} ellipsizeMode="tail" style=\{d.listTitle\}>\{effectListTitle\(e,locale\)\}/);
+ assert.match(screen,/numberOfLines=\{1\} ellipsizeMode="tail" style=\{d.listTitle\}>\{effectListTitle\(item,locale\)\}/);
  assert.match(screen,/accessibilityLabel=\{effectListTitle\(e,locale\)\}/);
 });
 test('detail headings separate English into a smaller single-line subtitle only outside English locale',()=>{

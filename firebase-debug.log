@@ -1,0 +1,50 @@
+[debug] [2026-09-25T16:28:30.064Z] ----------------------------------------------------------------------
+[debug] [2026-09-25T16:28:30.066Z] Command:       /Users/devdevil0625/.nvm/versions/node/v22.14.0/bin/node /Users/devdevil0625/.nvm/versions/node/v22.14.0/bin/firebase projects:list --json
+[debug] [2026-09-25T16:28:30.066Z] CLI Version:   15.4.0
+[debug] [2026-09-25T16:28:30.066Z] Platform:      darwin
+[debug] [2026-09-25T16:28:30.066Z] Node Version:  v22.14.0
+[debug] [2026-09-25T16:28:30.066Z] Time:          Sat Sep 26 2026 01:28:30 GMT+0900 (Korean Standard Time)
+[debug] [2026-09-25T16:28:30.066Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-09-25T16:28:30.068Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-09-25T16:28:30.068Z] > authorizing via signed-in user (jh.park@illunex.com)
+[debug] [2026-09-25T16:28:30.070Z] Checked if tokens are valid: false, expires at: 1772396269119
+[debug] [2026-09-25T16:28:30.070Z] Checked if tokens are valid: false, expires at: 1772396269119
+[debug] [2026-09-25T16:28:30.070Z] > refreshing access token with scopes: []
+[debug] [2026-09-25T16:28:30.070Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-09-25T16:28:30.070Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-09-25T16:28:30.088Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":212,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------dc6eb14427312f54b2bde5e9","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: getaddrinfo ENOTFOUND www.googleapis.com
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2026-09-25T16:28:30.088Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2026-09-25T16:28:30.090Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/auth.js:177:12)
+    at refreshTokens (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/auth.js:590:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getAccessToken (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/apiv2.js:48:18)
+    at async Client.addAuthHeader (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/apiv2.js:174:21)
+    at async Client.request (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/apiv2.js:125:34)
+    at async getProjectPage (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/management/projects.js:287:17)
+    at async getFirebaseProjectPage (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/management/projects.js:304:23)
+    at async listFirebaseProjects (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/management/projects.js:333:29)
+    at async Command.actionFn (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/commands/projects-list.js:51:20)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2026-09-25T16:28:30.350Z] Error: EPERM: operation not permitted, open '/Users/devdevil0625/.config/configstore/firebase-tools.json.3479746012'
+    at Object.openSync (node:fs:562:18)
+    at Function.writeFileSync [as sync] (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/node_modules/write-file-atomic/index.js:205:13)
+    at set all (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/node_modules/configstore/index.js:61:20)
+    at Configstore.delete (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/node_modules/configstore/index.js:101:12)
+    at process.<anonymous> (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/bin/cli.js:65:45)
+    at process.emit (node:events:530:35)
+    at process.exit (node:internal/process/per_thread:184:15)
+    at Timeout._onTimeout (/Users/devdevil0625/.nvm/versions/node/v22.14.0/lib/node_modules/firebase-tools/lib/errorOut.js:20:17)
+    at listOnTimeout (node:internal/timers:594:17)
+    at process.processTimers (node:internal/timers:529:7)
+[error] 
+[error] Error: An unexpected error has occurred.

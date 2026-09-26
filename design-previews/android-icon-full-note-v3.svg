@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D8FF31"/>
+      <stop offset="0.55" stop-color="#BFFF25"/>
+      <stop offset="1" stop-color="#A9F51D"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#33383A"/>
+      <stop offset="1" stop-color="#101415"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" fill="#07100C"/>
+
+  <!-- Android launcher mask preview: the notebook body fills the icon. -->
+  <rect x="64" y="64" width="896" height="896" rx="228" fill="url(#lime)" filter="url(#shadow)"/>
+
+  <!-- Rings stay fully inside the Android safe area. -->
+  <g fill="url(#ring)">
+    <rect x="116" y="274" width="206" height="78" rx="39"/>
+    <rect x="116" y="473" width="206" height="78" rx="39"/>
+    <rect x="116" y="672" width="206" height="78" rx="39"/>
+  </g>
+  <g fill="#07100C">
+    <circle cx="322" cy="313" r="58"/>
+    <circle cx="322" cy="512" r="58"/>
+    <circle cx="322" cy="711" r="58"/>
+  </g>
+
+  <!-- Simple brain mark, centered away from the rings. -->
+  <g fill="none" stroke="#07100C" stroke-width="58" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M600 278
+             C541 237 474 273 477 341
+             C419 330 385 382 403 431
+             C347 453 347 533 402 557
+             C374 611 418 675 478 663
+             C475 733 551 768 600 721"/>
+    <path d="M600 278
+             C659 237 726 273 723 341
+             C781 330 815 382 797 431
+             C853 453 853 533 798 557
+             C826 611 782 675 722 663
+             C725 733 649 768 600 721"/>
+    <path d="M600 286 L600 716"/>
+    <path d="M477 341 C506 351 524 372 525 409"/>
+    <path d="M403 431 C446 422 474 439 491 469"/>
+    <path d="M402 557 C443 558 469 542 491 514"/>
+    <path d="M478 663 C500 637 511 607 505 578"/>
+    <path d="M723 341 C694 351 676 372 675 409"/>
+    <path d="M797 431 C754 422 726 439 709 469"/>
+    <path d="M798 557 C757 558 731 542 709 514"/>
+    <path d="M722 663 C700 637 689 607 695 578"/>
+  </g>
+</svg>

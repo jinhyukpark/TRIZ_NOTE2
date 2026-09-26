@@ -2,11 +2,16 @@
   "expo": {
     "name": "TRIZ Note",
     "slug": "triz-note-native",
-    "version": "1.0.0",
+    "version": "1.0.6",
     "scheme": "triznote",
     "orientation": "default",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/android-icon-note-brain-v6.png",
     "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-mark-brain-v1.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#020B07"
+    },
     "ios": {
       "supportsTablet": true,
       "usesAppleSignIn": true,
@@ -15,12 +20,12 @@
     },
     "android": {
       "package": "com.triznote.app",
+      "versionCode": 7,
+      "icon": "./assets/android-icon-note-brain-v6.png",
       "permissions": ["com.android.vending.BILLING"],
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#F3F4F2",
+        "foregroundImage": "./assets/android-icon-note-brain-v6.png"
       },
       "predictiveBackGestureEnabled": false
     },

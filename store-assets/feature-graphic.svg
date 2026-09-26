@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020b07"/>
+      <stop offset="0.58" stop-color="#07140d"/>
+      <stop offset="1" stop-color="#10251a"/>
+    </linearGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8ff31"/>
+      <stop offset="0.55" stop-color="#bfff25"/>
+      <stop offset="1" stop-color="#a9f51d"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="500" fill="url(#background)"/>
+  <circle cx="116" cy="86" r="180" fill="#bfff25" opacity="0.06"/>
+  <circle cx="918" cy="420" r="240" fill="#3ccf7a" opacity="0.05"/>
+
+  <g transform="translate(80 70)">
+    <rect x="0" y="0" width="310" height="360" rx="56" fill="url(#lime)" filter="url(#glow)"/>
+    <path d="M228 0 H254 Q310 0 310 56 V82 Z" fill="#8ed616" opacity="0.88"/>
+
+    <g fill="#07100c">
+      <rect x="-22" y="80" width="92" height="28" rx="14"/>
+      <rect x="-22" y="166" width="92" height="28" rx="14"/>
+      <rect x="-22" y="252" width="92" height="28" rx="14"/>
+      <circle cx="70" cy="94" r="22"/>
+      <circle cx="70" cy="180" r="22"/>
+      <circle cx="70" cy="266" r="22"/>
+    </g>
+
+    <g transform="translate(72 62) scale(.28)" fill="none" stroke="#07100c" stroke-width="54" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M594 266 C535 225 468 261 471 329 C413 318 379 370 397 419 C341 441 341 521 396 545 C368 599 412 663 472 651 C469 721 545 756 594 709"/>
+      <path d="M594 266 C653 225 720 261 717 329 C775 318 809 370 791 419 C847 441 847 521 792 545 C820 599 776 663 716 651 C719 721 643 756 594 709"/>
+      <path d="M594 274 L594 704"/>
+      <path d="M471 329 C500 339 518 360 519 397 M397 419 C440 410 468 427 485 457 M396 545 C437 546 463 530 485 502 M472 651 C494 625 505 595 499 566"/>
+      <path d="M717 329 C688 339 670 360 669 397 M791 419 C748 410 720 427 703 457 M792 545 C751 546 725 530 703 502 M716 651 C694 625 683 595 689 566"/>
+    </g>
+  </g>
+
+  <g transform="translate(424 142)">
+    <text x="0" y="54" fill="#f2f5f1" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800" letter-spacing="5">TRIZ <tspan fill="#bfff25">NOTE</tspan></text>
+    <text x="2" y="112" fill="#b8c4bd" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="500">과학 효과로 배우는 창의적 문제 해결</text>
+    <rect x="2" y="140" width="420" height="3" rx="2" fill="#bfff25" opacity="0.8"/>
+    <text x="2" y="184" fill="#84978b" font-family="Arial, Helvetica, sans-serif" font-size="18">Effects · 원리 · 모순 · 아이디어 노트</text>
+  </g>
+</svg>

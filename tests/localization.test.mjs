@@ -3,14 +3,14 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../src/'+p,import.meta.url),'utf8'));
 const legacy=read('data/legacy.json');
-const dictionary=Object.assign({},...['ui','labels','notes','native','advanced'].map(n=>read('locales/'+n+'.json')));
-const plain=s=>s.replace(/<[^>]*>/g,'').replace(/&nbsp;/g,' ').trim();
+const dictionary=Object.assign({},...['ui','labels','notes','native','advanced','complete'].map(n=>read('locales/'+n+'.json')));
+const plain=s=>s.replace(/<[^>]*>/g,'').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim();
 function strings(value){
  if(typeof value==='string')return /[가-힣]/.test(value)&&!value.includes('/assets/')&&!/\.(jpg|png)$/.test(value)?[plain(value)]:[];
  return value&&typeof value==='object'?Object.values(value).flatMap(strings):[];
 }
-test('all physical contradiction and system evolution text has three translations',()=>{
- for(const text of new Set([...strings(legacy.physical),...strings(legacy.evolution)])){
+test('all collections, original principle references, examples and illustration captions have three translations',()=>{
+ for(const text of new Set([...strings(legacy.physical),...strings(legacy.evolution),...strings(legacy.standards),...strings(legacy.principles.map(p=>({description:p.expExp,sections:p.content}))),...strings(read('data/additionalExamples.json')),...strings(read('data/advancedIllustrations.json'))])){
   for(const language of ['en','ja','zh']){
    assert.ok(dictionary[text]?.[language],`${language}: ${text}`);
    assert.doesNotMatch(dictionary[text][language],/[가-힣]/);

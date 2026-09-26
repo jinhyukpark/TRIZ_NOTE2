@@ -1,5 +1,5 @@
-import React from 'react';
-import {Image,StyleSheet,Text,useWindowDimensions,View} from 'react-native';
+import React,{useEffect,useState} from 'react';
+import {ActivityIndicator,Image,StyleSheet,Text,useWindowDimensions,View} from 'react-native';
 import type {Effect,EffectStep} from './data/effects';
 import {scientificArtwork,scienceUi as ui} from './data/scientificArtwork';
 import {useLanguage,type Locale} from './i18n';
@@ -19,14 +19,18 @@ export default function ScientificEffectArtwork({item,step,index}:{item:Effect;s
  const width=Math.min(windowWidth,640);
  const config=scientificArtwork[item.id];
  const source=config.images[index];
+ const sourceKey=typeof source==='object'&&'uri' in source?source.uri:`${item.id}-${index}`;
+ const [imageReady,setImageReady]=useState(false);
+ useEffect(()=>setImageReady(false),[sourceKey]);
  const size=Image.resolveAssetSource(source);
  const height=width*size.height/size.width;
  const tags=config.tags[index];
  return <View style={{width,maxWidth:'100%',alignSelf:'center'}} testID={`science-${item.id}-${index}`}>
   <View style={{width,height}}>
-   {typeof source==='object'&&'uri' in source?<ContentImage key={source.uri} source={source} fallback={localEffectImages[item.id].images[index]} resizeMode="contain" accessibilityLabel={step.title[locale]} style={{width,height}}/>:<Image source={source} resizeMode="contain" accessibilityLabel={step.title[locale]} style={{width,height}}/>}
-   <View style={[styles.heading,item.id==='skin-depth'&&index>=2?{width:width*.38}:undefined]} pointerEvents="none"><Text style={styles.eyebrow}>{String(index+1).padStart(2,'0')} — {step.label[locale]}</Text><Text style={[styles.title,{fontSize:width<360?24:28}]}>{item.title[locale]}</Text>{locale!=='en'&&<Text style={styles.englishSubtitle} numberOfLines={1} ellipsizeMode="tail">({item.title.en})</Text>}</View>
-   {tags.map((tag,i)=><EquipmentCallout key={i} position={effectCallouts[item.id][index][i]} text={tag.name[locale]} description={`${tag.name[locale]}. ${tag.role[locale]}`} aspectRatio={size.width/size.height}/>)}
+   {!imageReady&&<View pointerEvents="none" style={styles.imageLoading}><ActivityIndicator color={accent}/></View>}
+   <ContentImage key={`${item.id}-${index}`} source={source} fallback={localEffectImages[item.id].images[index]} resizeMode="contain" accessibilityLabel={step.title[locale]} style={{width,height}} onLoadStart={()=>setImageReady(false)} onLoad={()=>setImageReady(true)}/>
+   {imageReady&&<><View style={[styles.heading,item.id==='skin-depth'&&index>=2?{width:width*.38}:undefined]} pointerEvents="none"><Text style={styles.eyebrow}>{String(index+1).padStart(2,'0')} — {step.label[locale]}</Text><Text style={[styles.title,{fontSize:width<360?24:28}]}>{item.title[locale]}</Text>{locale!=='en'&&<Text style={styles.englishSubtitle} numberOfLines={1} ellipsizeMode="tail">({item.title.en})</Text>}</View>
+   {tags.map((tag,i)=><EquipmentCallout key={i} position={effectCallouts[item.id][index][i]} text={tag.name[locale]} description={`${tag.name[locale]}. ${tag.role[locale]}`} aspectRatio={size.width/size.height}/>)}</>}
   </View>
   <View style={styles.timeline} testID="science-timeline">
    <View style={{position:'absolute',left:'10%',right:'10%',top:42,height:1,backgroundColor:line}}/>
@@ -104,6 +108,7 @@ function HydrogenDiagram({index,width,locale}:{index:number;width:number;locale:
  return <><View style={{flexDirection:'row',justifyContent:'space-between'}}><Text style={styles.part}>{ui.before[locale]}</Text><Text style={styles.part}>{ui.after[locale]}</Text></View><View style={{flexDirection:'row',alignItems:'center'}}><Molecule width={(width-24)/2}/><Text style={styles.part}>→</Text><Molecule width={(width-24)/2} product/></View><Text style={styles.formula}>C₂H₄ + H₂ → C₂H₆</Text>{legend}<Text style={styles.caption}>{ui.conserved[locale]}</Text><Text style={styles.part}>{ui.reusable[locale]}</Text></>;
 }
 const styles=StyleSheet.create({
+ imageLoading:{position:'absolute',left:0,right:0,top:0,bottom:0,alignItems:'center',justifyContent:'center',backgroundColor:'#06100e'},
  englishSubtitle:{color:'#b9c5bf',fontSize:13,lineHeight:18},
  heading:{position:'absolute',top:16,left:16,right:24,gap:7},eyebrow:{fontSize:13,lineHeight:20,color:accent,fontWeight:'700'},title:{color:ink,fontWeight:'800',maxWidth:'80%'},
  timeline:{flexDirection:'row',paddingVertical:20,paddingHorizontal:6,gap:3},node:{borderWidth:1.5,borderRadius:23,width:44,height:44,backgroundColor:'#07110e',alignItems:'center',justifyContent:'center'},number:{fontSize:16,fontWeight:'800'},timelineText:{fontSize:12,lineHeight:17,textAlign:'center'},

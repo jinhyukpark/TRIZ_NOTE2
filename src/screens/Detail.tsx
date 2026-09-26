@@ -27,14 +27,14 @@ export default function Detail({id,userId,saved,done,busy,onSave,onDone,onBack,o
  return <View style={{flex:1}}>
   <View style={d.header}>
    <Pressable accessibilityRole="button" accessibilityLabel={t('원리 목록')} onPress={onBack} style={d.back}><Text style={{color:colors.ink,fontSize:22}}>←</Text></Pressable>
-   <View style={{flex:1,gap:3,minWidth:0}}><Text accessibilityRole="header" style={d.headerTitle}><Text style={{color:colors.lime}}>{String(id).padStart(2,'0')}. </Text>{p.ko}</Text><Text style={{color:colors.muted,fontSize:11,lineHeight:15}}>{p.en}</Text></View>
+   <View style={{flex:1,gap:3,minWidth:0}}><Text accessibilityRole="header" style={d.headerTitle}><Text style={{color:colors.lime}}>{String(id).padStart(2,'0')}. </Text>{p.ko}</Text>{locale!=='en'&&<Text style={{color:colors.muted,fontSize:11,lineHeight:15}}>{p.en}</Text>}</View>
    <Pressable accessibilityRole="button" accessibilityLabel={t(saved?'저장됨':'저장')} accessibilityState={{disabled:busy}} disabled={busy} onPress={()=>userId?onSave():Alert.alert(t('로그인'),t('로그인하면 학습 기록을 동기화할 수 있습니다.'))} style={[d.save,saved&&{borderColor:colors.lime}]}><TabIcon name="saved" color={saved?colors.lime:colors.ink} size={17}/><Text style={{color:saved?colors.lime:colors.ink,fontSize:12}}>{t(saved?'저장됨':'저장')}</Text></Pressable>
   </View>
   <ScrollView key={id} contentContainerStyle={[s.page,{gap:12,paddingTop:14}]} keyboardShouldPersistTaps="handled" automaticallyAdjustKeyboardInsets>
   <View style={[d.panel,d.takeaway]}><Text style={s.eyebrow}>{t('한눈에 이해하기')}</Text><Text style={s.heading}>{p.guide.summary}</Text></View>
   <View style={[d.panel,{padding:0,gap:0,overflow:'hidden'}]}><Diagram src={p.image} title={p.exampleTitle} overlay/><View style={{padding:12,gap:6}}><Text style={s.eyebrow}>{t('3D로 보는 적용 사례')}</Text><Text style={s.heading}>{p.exampleTitle}</Text></View></View>
   <View style={d.panel}><Text style={s.eyebrow}>{t('그림 읽는 순서')}</Text><Text style={s.heading}>{t('이 부분을 살펴보세요')}</Text>
-   {id===30?membraneParts.map(([name,description])=><View key={name} style={d.divider}><View style={d.partTag}><Text accessibilityRole="header" style={d.partTitle}>{t(name)}</Text></View><Text style={s.text}>{t(description)}</Text></View>):p.guide.labels.map((label,i)=><View key={i} style={d.divider}><View style={d.partTag}><Text accessibilityRole="header" style={d.partTitle}>{label}</Text></View><Text style={s.text}>{principleDetails.parts[i]}</Text></View>)}
+   {id===30?membraneParts.map(([name,description])=><View key={name} style={d.divider}><View style={d.partTag}><Text accessibilityRole="header" style={d.partTitle}>{t(name)}</Text></View><Text style={s.text}>{t(description)}</Text></View>):p.guide.labels.map((label,i)=><View key={i} style={d.divider}><View style={d.partTag}><Text accessibilityRole="header" style={d.partTitle}>{t(label)}</Text></View><Text style={s.text}>{principleDetails.parts[i]}</Text></View>)}
    <Text style={[s.muted,{fontSize:12,marginTop:8}]}>{t('그림의 연결선으로 위치를 확인하세요. 작은 글씨는 ‘도해 확대’에서 읽을 수 있어요.')}</Text>
   </View>
   <View style={d.panel}><Text style={s.eyebrow}>{t('작동 과정')}</Text><Text style={s.heading}>{t('세 단계로 이해하기')}</Text>
@@ -44,15 +44,15 @@ export default function Detail({id,userId,saved,done,busy,onSave,onDone,onBack,o
   <Text style={[s.muted,{fontSize:12}]}>{t('원리를 설명하기 위한 3D 개념 도해입니다. 실제 제품의 구조·크기와 다를 수 있습니다.')}</Text>
   <View style={d.panel}><Pressable accessibilityRole="button" accessibilityState={{expanded}} onPress={()=>setExpanded(x=>!x)} style={[s.between,{minHeight:28}]}><Text style={[d.part,{flex:1}]}>{t('원리와 기존 사례 더 읽기')}</Text><Text style={s.text}>{expanded?'⌄':'›'}</Text></Pressable>
    {expanded&&<>
-    {!!p.example&&locale==='ko'&&<View style={d.legacyCase}>
-     <Text style={s.eyebrow}>기존 사례</Text><Text style={s.heading}>{p.exampleTitle}</Text>
-     {id===30?[['덮기','분말형 화물 위에 얇은 막을 씌웁니다.'],['공기 빼기','진공 펌프로 막 아래의 공기를 빼냅니다.'],['고정하기','바깥 공기의 압력이 막을 화물에 밀착시켜 고정합니다.']].map(([label,body])=><View key={label} style={d.caseRow}><Text style={d.caseLabel}>{label}</Text><Text style={[s.text,{flex:1}]}>{body}</Text></View>):p.example.split(/(?<=[.!?])\s+/).filter(Boolean).map((sentence,i)=><Text key={i} style={s.text}>{sentence}</Text>)}
+    {!!p.example&&<View style={d.legacyCase}>
+     <Text style={s.eyebrow}>{t('기존 사례')}</Text><Text style={s.heading}>{p.exampleTitle}</Text>
+     {id===30?[['덮기','분말형 화물 위에 얇은 막을 씌웁니다.'],['공기 빼기','진공 펌프로 막 아래의 공기를 빼냅니다.'],['고정하기','바깥 공기의 압력이 막을 화물에 밀착시켜 고정합니다.']].map(([label,body])=><View key={label} style={d.caseRow}><Text style={d.caseLabel}>{t(label)}</Text><Text style={[s.text,{flex:1}]}>{t(body)}</Text></View>):t(p.example).split(/(?<=[.!?])\s+/).filter(Boolean).map((sentence,i)=><Text key={i} style={s.text}>{t(sentence)}</Text>)}
     </View>}
     <Text style={[s.heading,{marginTop:8}]}>{t('원리 이해하기')}</Text>
-    {locale==='ko'?p.sections.map((x,i)=><View key={i} style={d.ruleCard}>
-     <View style={[s.row,{alignItems:'flex-start'}]}><View style={d.ruleNumber}><Text style={[s.eyebrow,{letterSpacing:0}]}>{String(i+1).padStart(2,'0')}</Text></View><Text style={[d.part,{flex:1,lineHeight:23}]}>{x.title}</Text></View>
-     {!!x.subTitle?.filter(Boolean).length&&<View style={d.examples}><Text style={d.exampleLabel}>적용 예시</Text>{x.subTitle.filter(Boolean).map((y,j)=><View key={j} style={[s.row,{alignItems:'flex-start',gap:8}]}><Text style={{color:colors.muted,fontSize:12,lineHeight:22}}>{j+1}.</Text><Text style={[s.text,{flex:1,lineHeight:22}]}>{y}</Text></View>)}</View>}
-    </View>):<Text style={s.text}>{p.cue}</Text>}
+    {p.sections.map((x,i)=><View key={i} style={d.ruleCard}>
+     <View style={[s.row,{alignItems:'flex-start'}]}><View style={d.ruleNumber}><Text style={[s.eyebrow,{letterSpacing:0}]}>{String(i+1).padStart(2,'0')}</Text></View><Text style={[d.part,{flex:1,lineHeight:23}]}>{t(x.title)}</Text></View>
+     {!!x.subTitle?.filter(Boolean).length&&<View style={d.examples}><Text style={d.exampleLabel}>{t('적용 예시')}</Text>{x.subTitle.filter(Boolean).map((y,j)=><View key={j} style={[s.row,{alignItems:'flex-start',gap:8}]}><Text style={{color:colors.muted,fontSize:12,lineHeight:22}}>{j+1}.</Text><Text style={[s.text,{flex:1,lineHeight:22}]}>{t(y)}</Text></View>)}</View>}
+    </View>)}
    </>}
   </View>
   <ApplicationExercise key={`${id}-${userId??'guest'}`} principle={p} userId={userId}/>

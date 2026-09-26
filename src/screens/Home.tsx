@@ -8,7 +8,7 @@ import {s,colors} from '../theme';
 import type {Collection} from './Knowledge';
 
 export default function Home({completed,bookmarks,onOpen,onExplore,onSolve,onCollection}:{completed:number[];bookmarks:number[];onOpen:(id:number)=>void;onExplore:()=>void;onSolve:()=>void;onCollection:(c:Collection)=>void}){
- const {t}=useLanguage(),principles=usePrinciples(),{fontScale}=useWindowDimensions();
+ const {t,locale}=useLanguage(),principles=usePrinciples(),{fontScale}=useWindowDimensions();
  // Match the web app's local-calendar selection, not a UTC epoch-day offset.
  const now=new Date(),today=principles[(now.getDate()+now.getMonth())%40];
  const count=Math.min(40,completed.length);
@@ -24,7 +24,7 @@ export default function Home({completed,bookmarks,onOpen,onExplore,onSolve,onCol
    <View><Diagram src={today.image} title={today.exampleTitle} overlay/><View pointerEvents="none" style={h.number}><Text style={{color:colors.ink,fontSize:11}}>{t('원리')} {String(today.id).padStart(2,'0')}</Text></View></View>
    <Pressable accessibilityRole="button" accessibilityLabel={t('3분 학습 시작')} onPress={()=>onOpen(today.id)} style={h.copy}>
     <View style={h.chip}><Text style={{fontSize:11,fontWeight:'800',color:colors.bg}}>✧ {t('오늘의 원리')}</Text></View>
-    <View style={{gap:3}}><Text style={[s.title,{fontSize:27}]}>{today.ko}</Text><Text style={s.muted}>{today.en}</Text></View>
+    <View style={{gap:3}}><Text style={[s.title,{fontSize:27}]}>{today.ko}</Text>{locale!=='en'&&<Text style={s.muted}>{today.en}</Text>}</View>
     <Text style={s.text}>{today.cue}</Text><Text style={h.link}>{t('3분 학습 시작')}　→</Text>
    </Pressable>
   </View>
@@ -38,7 +38,7 @@ export default function Home({completed,bookmarks,onOpen,onExplore,onSolve,onCol
    <Text style={s.eyebrow}>{t('빠른 탐색')}</Text>
    <View style={[s.between,{flexWrap:'wrap'}]}><Text style={s.heading}>{t('자주 쓰는 발명원리')}</Text><Pressable accessibilityRole="button" onPress={onExplore} style={{paddingVertical:12}}><Text style={h.link}>{t('모두 보기')}　→</Text></Pressable></View>
    <View style={h.grid}>{[1,13,22,24].map(id=>{const p=principles[id-1];return <Pressable key={id} accessibilityRole="button" accessibilityLabel={`${id} ${p.ko}`} onPress={()=>onOpen(id)} style={[h.mini,{width:fontScale>1.5?'100%':'48%'}]}>
-    <FramedImage source={assets[p.image]} label={p.exampleTitle}/><Text style={s.eyebrow}>{String(id).padStart(2,'0')}{bookmarks.includes(id)?' ☆':''}</Text><Text style={[s.heading,{fontSize:16}]}>{p.ko}</Text><Text style={[s.muted,{fontSize:12,lineHeight:18}]}>{p.en}</Text>
+    <FramedImage source={assets[p.image]} label={p.exampleTitle}/><Text style={s.eyebrow}>{String(id).padStart(2,'0')}{bookmarks.includes(id)?' ☆':''}</Text><Text style={[s.heading,{fontSize:16}]}>{p.ko}</Text>{locale!=='en'&&<Text style={[s.muted,{fontSize:12,lineHeight:18}]}>{p.en}</Text>}
    </Pressable>})}</View>
   </View>
   <View style={h.section}><Text style={s.eyebrow}>{t('더 깊이 탐구하기')}</Text>{(['physical','standards','evolution'] as const).map((c,i)=><Pressable key={c} accessibilityRole="button" onPress={()=>onCollection(c)} style={h.collection}><View accessibilityElementsHidden style={{width:22,height:20,flexDirection:'row'}}>{[0,1].map(n=><View key={n} style={{flex:1,borderWidth:1.5,borderColor:colors.ink,borderTopLeftRadius:n===0?3:0,borderTopRightRadius:n===1?3:0}}/>)}</View><Text style={[h.quickTitle,{flex:1}]}>{t(['물리적 모순 · 4가지 분리','76가지 표준해','시스템 진화'][i])}</Text><Text style={{color:colors.ink,fontSize:25}}>›</Text></Pressable>)}</View>

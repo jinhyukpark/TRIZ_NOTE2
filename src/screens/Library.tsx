@@ -8,7 +8,7 @@ import {FramedImage} from '../components';
 import {libraryLayout,GRID_GAP} from '../layout';
 
 export default function Library({saved,bookmarks,onOpen}:{saved:boolean;bookmarks:number[];onOpen:(id:number)=>void}){
- const {t}=useLanguage(),principles=usePrinciples(),{fontScale}=useWindowDimensions();
+ const {t,locale}=useLanguage(),principles=usePrinciples(),{fontScale}=useWindowDimensions();
  const [availableWidth,setAvailableWidth]=useState(0);
  const [query,setQuery]=useState(''),[mode,setMode]=useState<'icons'|'cards'>('icons');
  useEffect(()=>{AsyncStorage.getItem('library-view').then(x=>{if(x==='cards')setMode(x)}).catch(()=>{});},[]);
@@ -21,7 +21,7 @@ export default function Library({saved,bookmarks,onOpen}:{saved:boolean;bookmark
    contentContainerStyle={[s.page,{gap:0}]} keyboardShouldPersistTaps="handled"
    columnWrapperStyle={columns>1?{gap:GRID_GAP,alignItems:'stretch'}:undefined}
    ListHeaderComponent={<View style={{gap:18,marginBottom:20}}>
-    <Text style={s.eyebrow}>KNOWLEDGE DECK</Text>
+    <Text style={s.eyebrow}>{t('지식 카드')}</Text>
     <Text style={s.title}>{t(saved?'저장한 원리':'40가지 발명원리')}</Text>
     <TextInput accessibilityLabel={t('원리 이름, 키워드, 번호로 검색')} placeholder={t('원리 이름, 키워드, 번호로 검색')} placeholderTextColor={colors.muted} value={query} onChangeText={setQuery} style={s.input}/>
     <View style={[s.between,{flexWrap:'wrap'}]}>
@@ -42,7 +42,7 @@ export default function Library({saved,bookmarks,onOpen}:{saved:boolean;bookmark
      <View style={s.between}><Text style={s.eyebrow}>{String(p.id).padStart(2,'0')}</Text>{bookmarks.includes(p.id)&&<Text style={{color:colors.lime}}>★</Text>}</View>
      <FramedImage source={assets[p.image]} ratio={1.5}/>
      <Text style={s.heading}>{p.ko}</Text>
-     <Text style={s.muted}>{p.en}</Text><Text style={s.text}>{p.cue}</Text>
+     {locale!=='en'&&<Text style={s.muted}>{p.en}</Text>}<Text style={s.text}>{p.cue}</Text>
    </Pressable>}
   />}
  </View>;

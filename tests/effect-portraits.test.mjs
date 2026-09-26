@@ -16,11 +16,12 @@ test('all 45 stages render a contained mobile image, original diagram and transl
  const nodeRequire=createRequire(import.meta.url);
  const React=nodeRequire('react');
  let width=390,locale='ko';
+ let stateCall=0;
  const Image=Object.assign(function Image(){},{resolveAssetSource(path){
   const png=fs.readFileSync(path);
   return {width:png.readUInt32BE(16),height:png.readUInt32BE(20)};
  }});
- const rn={Image,StyleSheet:{create:s=>s},Text:'Text',View:'View',useWindowDimensions:()=>({width})};
+ const rn={Image,Modal:'Modal',Pressable:'Pressable',ScrollView:'ScrollView',StyleSheet:{create:s=>s},Text:'Text',View:'View',useWindowDimensions:()=>({width})};
  const cache=new Map();
  function load(url){
   if(cache.has(url.href))return cache.get(url.href);
@@ -28,7 +29,9 @@ test('all 45 stages render a contained mobile image, original diagram and transl
   cache.set(url.href,exports);
   const compiled=ts.transpileModule(fs.readFileSync(url,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.React,esModuleInterop:true}}).outputText;
   new Function('require','exports',compiled)(specifier=>{
-   if(specifier==='react')return React;
+   if(specifier==='react')return {...React,useState:initial=>{stateCall+=1;return [stateCall===1||stateCall===4?true:initial,()=>{}];},useEffect:()=>{}};
+   if(specifier==='react-native-safe-area-context')return {SafeAreaView:'View'};
+   if(specifier.endsWith('.json'))return JSON.parse(fs.readFileSync(new URL(specifier,url),'utf8'));
    if(specifier==='react-native')return rn;
    if(specifier==='./i18n')return {useLanguage:()=>({locale})};
    if(specifier==='./theme')return {colors:{lime:'#c5ff2c',line:'#30423d'}};
@@ -42,13 +45,14 @@ test('all 45 stages render a contained mobile image, original diagram and transl
  const {effects}=load(new URL('src/data/effects.ts',root));
  const render=load(new URL('src/EffectArtwork.tsx',root)).default;
  const flatten=node=>{
-  if(!node||typeof node!=='object')return [];
+  if(!node||typeof node!=='object'||node.props?.visible===false)return [];
   if(typeof node.type==='function'&&node.type!==Image)return flatten(node.type(node.props));
   return [node,...React.Children.toArray(node.props?.children).flatMap(flatten)];
  };
  for(width of [320,390,430])for(locale of ['ko','en','ja','zh']){
   for(const item of effects.filter(e=>configs[e.id])){
    for(const [index,step] of item.steps.entries()){
+    stateCall=0;
     const nodes=flatten(render({item,step,index}));
     const images=nodes.filter(n=>n.type===Image);
     assert.equal(images.length,2,item.id);
@@ -96,9 +100,9 @@ test('equipment labels support all four locales and remain within portrait bound
 });
 test('mobile layout keeps original explanation artwork and explicit contain dimensions',()=>{
  const artwork=fs.readFileSync(new URL('src/EffectArtwork.tsx',root),'utf8');
- assert.match(artwork,/remainingEffectPortraits\[item.id\]/);
- assert.match(artwork,/source=\{portrait\} resizeMode="contain" style=\{\{width:portraitWidth,height:portraitHeight\}\}/);
+ assert.match(artwork,/remoteLegacyArtwork\[item.id\] \?\? legacyEffectArtwork\[item.id\]/);
+ assert.match(artwork,/source=\{portrait\} fallback=\{legacyEffectArtwork\[item.id\].portraits\[index\]\} resizeMode="contain" style=\{\{width:portraitWidth,height:portraitHeight\}\}/);
  assert.match(artwork,/portraitWidth\*portraitSize.height\/portraitSize.width/);
- assert.match(artwork,/source=\{source\} resizeMode="contain"/);
+ assert.match(artwork,/<EffectExplanation source=\{source\} fallback=\{bundledSource\}/);
  assert.match(artwork,/label.text\[locale\]/);
 });
